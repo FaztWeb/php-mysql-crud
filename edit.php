@@ -39,9 +39,12 @@ if (isset($_POST['update'])) {
         <div class="form-group">
         <textarea name="description" class="form-control" cols="30" rows="10"><?php echo $description;?></textarea>
         </div>
-        <button class="btn-success" name="update">
+        <button class="btn btn-success" name="update">
           Update
-</button>
+        </button>
+         <a href="index.php"  class="btn btn-danger float-right" name="cancelar">
+          Cancelar
+        </a>
       </form>
       </div>
     </div>
