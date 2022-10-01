@@ -21,7 +21,7 @@ if (isset($_POST['update'])) {
 
   $query = "UPDATE task set title = '$title', description = '$description' WHERE id=$id";
   mysqli_query($conn, $query);
-  $_SESSION['message'] = 'Task Updated Successfully';
+  $_SESSION['message'] = 'Tabla actualizada con exito!';   /*  MENSAJE EMERGENTE CUANDO SE ACTUALIZA UNA TABLA */
   $_SESSION['message_type'] = 'warning';
   header('Location: index.php');
 }
@@ -40,7 +40,7 @@ if (isset($_POST['update'])) {
         <textarea name="description" class="form-control" cols="30" rows="10"><?php echo $description;?></textarea>
         </div>
         <button class="btn-success" name="update">
-          Update
+          Actualizar
 </button>
       </form>
       </div>
