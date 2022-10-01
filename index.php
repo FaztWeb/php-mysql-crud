@@ -35,7 +35,7 @@
           <tr>
             <th>Title</th>
             <th>Description</th>
-            <th>Created At</th>
+           
             <th>Action</th>
           </tr>
         </thead>
@@ -49,7 +49,7 @@
           <tr>
             <td><?php echo $row['title']; ?></td>
             <td><?php echo $row['description']; ?></td>
-            <td><?php echo $row['created_at']; ?></td>
+            
             <td>
               <a href="edit.php?id=<?php echo $row['id']?>" class="btn btn-secondary">
                 <i class="fas fa-marker"></i>

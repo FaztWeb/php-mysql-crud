@@ -4,8 +4,8 @@ session_start();
 $conn = mysqli_connect(
   'localhost',
   'root',
-  'password123',
-  'php_mysql_crud'
+  '',
+  'db_novio_crud'
 ) or die(mysqli_erro($mysqli));
 
 ?>
