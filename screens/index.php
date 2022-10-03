@@ -22,10 +22,10 @@
       <div class="card card-body">
         <form action="../save_tasks/save_task.php" method="POST">
           <div class="form-group">
-            <input type="text" name="title" class="form-control" placeholder="Titulo" autofocus>
+            <input type="text" name="title" class="form-control" placeholder="Ciudad" autofocus>
           </div>
           <div class="form-group">
-            <textarea name="description" rows="2" class="form-control" placeholder="Descripcion"></textarea>
+            <textarea name="description" rows="2" class="form-control" placeholder="Descripcion de la ciudad"></textarea>
           </div>
           <input type="submit" name="save_task" class="btn btn-success btn-block" value="Guardar">
         </form>
@@ -65,10 +65,14 @@
             <td><?php echo $row['description']; ?></td>
             <!-- EDITAR DATOS  -->
             <td>
+              <!-- REDIRECCION EDITAR -->
               <a href="../edit/edit.php?id=<?php echo $row['id']?>" class="btn btn-secondary">
+              <!-- ICONO EDITAR -->
                 <i class="fas fa-marker"></i>
               </a>
+              <!-- REDIRECCION ELIMINAR -->
               <a href="../delete/delete_task.php?id=<?php echo $row['id']?>" class="btn btn-danger">
+              <!-- ICONO ELIMINAR -->
                 <i class="far fa-trash-alt"></i>
               </a>
             </td>

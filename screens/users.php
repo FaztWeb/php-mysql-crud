@@ -24,6 +24,33 @@
           <div class="form-group">
             <input type="text" name="titleUsers" class="form-control" placeholder="Titulo" autofocus>
           </div>
+          <div class="form-group">
+            <div >
+              <h4 >Genero</h4>
+                  <div class="form-control">
+                      <label>masculino<label>
+                      <input type="checkbox">
+                  </div>
+                  <div class="form-control">
+                      <label>femenino<label>
+                      <input type="checkbox">
+                  </div>
+            </div>
+          </div>
+          <div class="form-control" class="form-group">
+          <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu dropdown-menu-dark">
+    <li><a class="dropdown-item active" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+</div>
+          </div>
           <div >
             <textarea name="descriptionUsers" rows="2" class="form-control" placeholder="Descripcion"></textarea>
           </div>
