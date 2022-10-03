@@ -1,6 +1,6 @@
 <?php
 
-include("db.php");
+include("../dbConnect/db.php"); 
 
 if(isset($_GET['id'])) {
   $id = $_GET['id'];
@@ -14,7 +14,7 @@ if(isset($_GET['id'])) {
 
   $_SESSION['message'] = 'Tabla eliminada con exito!';
   $_SESSION['message_type'] = 'danger';
-  header('Location: index.php');
+  header('Location:../screens/index.php');
 }
 
 ?>

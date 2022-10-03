@@ -29,7 +29,7 @@
       <div class="card-body cardBody">
         <h5 class="card-title"><strong>Ciudades</strong></h5>
         <p class="card-text">Esta tabla contiene informacion de la ciudades</p>
-        <a class="navbar-brand button" href="index.php">Ingresar</a>
+        <a class="navbar-brand button" href="./screens/index.php">Ingresar</a>
         </button>
       </div>
     </div>
@@ -40,7 +40,7 @@
       <div class="card-body">
       <h5 class="card-title"><strong>Usuarios</strong></h5>
         <p class="card-text">Esta tabla contiene la informacion de los usuarios.</p>
-        <a class="navbar-brand button" href="users.php">Ingresar</a>
+        <a class="navbar-brand button" href="./screens/users.php">Ingresar</a>
       </div>
     </div>
   </div>
