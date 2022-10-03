@@ -3,12 +3,16 @@
 include('../dbConnect/db.php');
 
 if (isset($_POST['save_taskUsers'])) {
-  $titleUsers = $_POST['titleUsers'];
-  $descriptionUsers = $_POST['descriptionUsers'];
-  $cityUsers = $_POST['cityUsers'];
+  $Nombres = $_POST['Nombres'];
+  $Apellidos = $_POST['Apellidos'];
+  $Empresa = $_POST['Empresa'];
+  $Ciudad = $_POST['Ciudad'];
+  $TelefonoEmpresa = $_POST['TelefonoEmpresa'];
+  $idGenero = $_POST['idGenero'];
 
 
-  $query = "INSERT INTO taskUsers(titleUsers, descriptionUsers, cityUsers) VALUES ('$titleUsers', '$descriptionUsers','$cityUsers')";
+  $query = "INSERT INTO basicos(Nombres, Apellidos, Empresa, Ciudad, TelefonoEmpresa, idGenero ) 
+  VALUES ('$Nombres', '$Apellidos','$Empresa','$Ciudad','$TelefonoEmpresa','$idGenero')";
   $result = mysqli_query($conn, $query);
   if(!$result) {
     die("Query Failed.");
@@ -23,3 +27,6 @@ if (isset($_POST['save_taskUsers'])) {
 }
 
 ?>
+
+
+
