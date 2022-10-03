@@ -5,7 +5,7 @@ $conn = mysqli_connect(
   'localhost',
   'root',
   '',
-  'db_novio_crud'
+  'sistema'
 ) or die(mysqli_erro($mysqli));
 
 ?>

@@ -22,10 +22,10 @@
       <div class="card card-body">
         <form action="../save_tasks/save_task.php" method="POST">
           <div class="form-group">
-            <input type="text" name="title" class="form-control" placeholder="Ciudad" autofocus>
+            <input type="text" name="Ciudad" class="form-control" placeholder="Ciudad" autofocus>
           </div>
           <div class="form-group">
-            <textarea name="description" rows="2" class="form-control" placeholder="Descripcion de la ciudad"></textarea>
+            <textarea name="Observaciones" rows="2" class="form-control" placeholder="Descripcion de la ciudad"></textarea>
           </div>
           <input type="submit" name="save_task" class="btn btn-success btn-block" value="Guardar">
         </form>
@@ -49,7 +49,7 @@
         //
         //  SELECCIONA LA TABLA DE LA BASE DE DATOS CON CODIGO SQL 
         //
-          $query = "SELECT * FROM task";
+          $query = "SELECT * FROM ciudades";
           //
         //SELECCIONA LA VARIBALE $conn del archivo ../dbConnect/db.php
         //
@@ -61,17 +61,17 @@
           while($row = mysqli_fetch_assoc($result_tasks)) { ?>
           <!-- DATOS A ITERAR -->
           <tr>
-            <td><?php echo $row['title']; ?></td>
-            <td><?php echo $row['description']; ?></td>
+            <td><?php echo $row['Ciudad']; ?></td>
+            <td><?php echo $row['Observaciones']; ?></td>
             <!-- EDITAR DATOS  -->
             <td>
               <!-- REDIRECCION EDITAR -->
-              <a href="../edit/edit.php?id=<?php echo $row['id']?>" class="btn btn-secondary">
+              <a href="../edit/edit.php?IdCiudad=<?php echo $row['IdCiudad']?>" class="btn btn-secondary">
               <!-- ICONO EDITAR -->
                 <i class="fas fa-marker"></i>
               </a>
               <!-- REDIRECCION ELIMINAR -->
-              <a href="../delete/delete_task.php?id=<?php echo $row['id']?>" class="btn btn-danger">
+              <a href="../delete/delete_task.php?IdCiudad=<?php echo $row['IdCiudad']?>" class="btn btn-danger">
               <!-- ICONO ELIMINAR -->
                 <i class="far fa-trash-alt"></i>
               </a>

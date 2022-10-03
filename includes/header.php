@@ -12,8 +12,14 @@
   <body>
 
     <nav class="navbar navbar-dark bg-dark">
-      <div class="container">
+      <div style="display:flex; justify-content: flex-start;" class="container">
+      <div >
         <a class="navbar-brand" href="../home.php">HOME</a>
       </div>
+      <div >
+        <a class="navbar-brand" href="../seekers/seeker.php">Buscador</a>
+      </div>
+      </div>
+      
     </nav>
 

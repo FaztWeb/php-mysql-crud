@@ -2,9 +2,9 @@
 <?php include("../dbConnect/db.php"); ?>
 <?php include('../includes/header.php'); ?>
 
-<main class="container p-4">
+<main class="container p-3">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-3">
       <!-- SESSION MENSAJES -->
 
       <?php if (isset($_SESSION['message'])) { ?>
@@ -16,56 +16,61 @@
       </div>
       <?php session_unset(); } ?>
       <div>
-          <h1 style="width: 14rem;">Usuarios</h1>
+          <h1 style="width: 14rem;">Basicos</h1>
       </div>
       <!-- FORMURLARIO DEFINE METODO DE PETICION Y RUTA DE LOS DATOS -->
       <div class="card card-body">
       <form action="../save_tasks/save_taskUsers.php" method="POST">
           <div class="form-group">
-            <input type="text" name="titleUsers" class="form-control" placeholder="Titulo" autofocus>
+            <input type="text" name="titleUsers" class="form-control" placeholder="Nombre" autofocus>
           </div>
           <div class="form-group">
-            <div >
-              <h4 >Genero</h4>
-                  <div class="form-control">
-                      <label>masculino<label>
-                      <input type="checkbox">
-                  </div>
-                  <div class="form-control">
-                      <label>femenino<label>
-                      <input type="checkbox">
-                  </div>
-            </div>
+            <input type="text" name="titleUsers" class="form-control" placeholder="Apellido" autofocus>
           </div>
-          <div class="form-control" class="form-group">
-          <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
-  </button>
-  <ul class="dropdown-menu dropdown-menu-dark">
-    <li><a class="dropdown-item active" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="#">Separated link</a></li>
-  </ul>
-</div>
+          <div class="form-group">
+            <input type="text" name="titleUsers" class="form-control" placeholder="Empresa" autofocus>
           </div>
+         
+          <div  class="form-group">
+              <select class="form-select" aria-label="Default select example">
+                  <option selected>Ciudad</option>
+                  <option value="1">Medellin</option>
+                  <option value="2">Cali</option>
+                  <option value="3">Barranquilla</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="text" name="titleUsers" class="form-control" placeholder="Telefono" autofocus>
+          </div>
+          
+
+        <div  class="form-group">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Genero</option>
+              <option value="1">Masculino</option>
+              <option value="2">Femenino</option>
+            </select>
+        </div>
           <div >
             <textarea name="descriptionUsers" rows="2" class="form-control" placeholder="Descripcion"></textarea>
           </div>
-          <input type="submit" name="save_taskUsers" class="btn btn-success btn-block" value="Guardar">
+          <input type="submit" name="save_basicos" class="btn btn-success btn-block" value="Guardar">
         </form>
       </div>
     </div>
 
     <!--  TABLA QUE RENDERIZA LOS DATOS GUARDADOS EN LA BASE DE DATOS  -->
-    <div class="col-md-8">
+    <div class="col-md-7">
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th>Titulo</th>
-            <th>Descripcion</th>
+          <th>idBasicos</th>
+            <th>Nombre</th>
+            <th>apellido</th>
+            <th>Empresa</th>
+            <th>Ciudad</th>
+            <th>TelefonoEmpresaDirecto</th>
+            <th>Genero</th>
            
             <th>Acccion</th>
           </tr>
@@ -76,7 +81,7 @@
         //
         //  SELECCIONA LA TABLA DE LA BASE DE DATOS CON CODIGO SQL 
         //
-          $query = "SELECT * FROM taskUsers";
+          $query = "SELECT * FROM basicos, ciudades";
         //
         //SELECCIONA LA VARIBALE $conn del archivo ../dbConnect/db.php
         //
@@ -85,10 +90,16 @@
         //EL WHILE SE VA ENCARGAR DE ITERAR LOS DATOS DE LA BASE DE DATOS Y DEFINE COLUMNAS CON LA ASIGNACION $row =
         //
           while($row = mysqli_fetch_assoc($result_tasks)) { ?>
-          <tr>
+          <tr >
             <!-- DATOS A ITERAR --> 
-            <td><?php echo $row['titleUsers']; ?></td>
-            <td><?php echo $row['descriptionUsers']; ?></td>
+            
+            <td><a href="../details/detail.php"><?php echo $row['IdBasicos']; ?></a></td>
+            <td><?php echo $row['Nombres']; ?></td>
+            <td><?php echo $row['Apellidos']; ?></td>
+            <td><?php echo $row['Empresa']; ?></td>
+            <td><?php echo $row['Ciudad']; ?></td>
+            <td><?php echo $row['TelefonoEmpresa']; ?></td>
+            <td><?php echo $row['idGenero']; ?></td>
             <!-- EDITAR DATOS  -->
             <td>
               <!-- REDIRECCION EDITAR -->
@@ -97,7 +108,7 @@
                 <i class="fas fa-marker"></i>
               </a>
               <!-- REDIRECCION ELIMINAR -->
-              <a href="../delete/delete_taskUsers.php?id=<?php echo $row['id']?>" class="btn btn-danger">
+              <a onchange="" href="../delete/delete_taskUsers.php?id=<?php echo $row['id']?>" class="btn btn-danger">
               <!-- ICONO ELIMINAR -->
                 <i class="far fa-trash-alt"></i>
               </a>

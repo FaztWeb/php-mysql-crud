@@ -38,8 +38,8 @@
   <div class="col">
   <div class="cart">
       <div class="card-body">
-      <h5 class="card-title"><strong>Usuarios</strong></h5>
-        <p class="card-text">Esta tabla contiene la informacion de los usuarios.</p>
+      <h5 class="card-title"><strong>Basicos</strong></h5>
+        <p class="card-text">Esta tabla contiene la informacion de los Basicos.</p>
         <a class="navbar-brand button" href="./screens/users.php">Ingresar</a>
       </div>
     </div>
