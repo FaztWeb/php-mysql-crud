@@ -27,7 +27,7 @@ if (isset($_POST['save_task'])) {
   //
   $_SESSION['message'] = 'Tabla guardada con exito!';
   $_SESSION['message_type'] = 'success';
-  header('Location:../screens/index.php');
+  header('Location:../screens/cities.php');
 
 
 }

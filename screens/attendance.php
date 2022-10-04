@@ -16,24 +16,17 @@
       </div>
       <?php session_unset(); } ?>
       <div>
-        <h1 style="width: 14rem;">Usuarios</h1>
+        <h1 style="width: 14rem;">Asistencia</h1>
       </div>
       <!-- FORMURLARIO DEFINE METODO DE PETICION Y RUTA DE LOS DATOS -->
       <div class="card card-body">
         <form action="../save_tasks/save_task.php" method="POST">
           <div class="form-group">
-            <input type="text" name="Usuario" class="form-control" placeholder="Usuario" autofocus>
+            <input type="text" name="Asistencia" class="form-control" placeholder="Asistencia" autofocus>
           </div>
           <div class="form-group">
-            <input type="text" name="clave" class="form-control" placeholder="clave" autofocus>
+            <textarea name="Observaciones" rows="2" class="form-control" placeholder="Observaciones"></textarea>
           </div>
-          <div class="form-group">
-            <input type="text" name="Nombre" class="form-control" placeholder="Nombre" autofocus>
-          </div>
-          <div class="form-group">
-            <input type="text" name="Nivel" class="form-control" placeholder="Nivel" autofocus>
-          </div>
-         
           <input type="submit" name="save_task" class="btn btn-success btn-block" value="Guardar">
         </form>
       </div>
@@ -44,10 +37,8 @@
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th>Usuario</th>
-            <th>Clave</th>
-            <th>Nombre</th>
-            <th>Nivel</th>
+            <th>Asistencia</th>
+            <th>Descripcion de la Asistencia</th>
            
             <th>Acccion</th>
           </tr>
@@ -58,7 +49,7 @@
         //
         //  SELECCIONA LA TABLA DE LA BASE DE DATOS CON CODIGO SQL 
         //
-          $query = "SELECT * FROM usuarios";
+          $query = "SELECT * FROM asistencia";
           //
         //SELECCIONA LA VARIBALE $conn del archivo ../dbConnect/db.php
         //
@@ -70,19 +61,17 @@
           while($row = mysqli_fetch_assoc($result_tasks)) { ?>
           <!-- DATOS A ITERAR -->
           <tr>
-            <td><?php echo $row['Usuario']; ?></td>
-            <td><?php echo $row['clave']; ?></td>
-            <td><?php echo $row['Nombre']; ?></td>
-            <td><?php echo $row['Nivel']; ?></td>
+            <td><?php echo $row['Asistencia']; ?></td>
+            <td><?php echo $row['Observaciones']; ?></td>
             <!-- EDITAR DATOS  -->
             <td>
               <!-- REDIRECCION EDITAR -->
-              <a href="../edit/edit.php?IdUsuarios=<?php echo $row['IdUsuarios']?>" class="btn btn-secondary">
+              <a href="../edit/edit.php?IdAsistencia=<?php echo $row['IdAsistencia']?>" class="btn btn-secondary">
               <!-- ICONO EDITAR -->
                 <i class="fas fa-marker"></i>
               </a>
               <!-- REDIRECCION ELIMINAR -->
-              <a href="../delete/delete_task.php?IdUsuarios=<?php echo $row['IdUsuarios']?>" class="btn btn-danger">
+              <a href="../delete/delete_task.php?IdAsistencia=<?php echo $row['IdAsistencia']?>" class="btn btn-danger">
               <!-- ICONO ELIMINAR -->
                 <i class="far fa-trash-alt"></i>
               </a>

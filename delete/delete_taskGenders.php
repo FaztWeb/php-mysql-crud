@@ -2,9 +2,9 @@
 
 include("../dbConnect/db.php"); 
 
-if(isset($_GET['IdCiudad'])) {
-  $IdCiudad = $_GET['IdCiudad'];
-  $query = "DELETE FROM ciudades WHERE IdCiudad = $IdCiudad";
+if(isset($_GET['IdGeneros'])) {
+  $IdGeneros = $_GET['IdGeneros'];
+  $query = "DELETE FROM generos WHERE IdGeneros = $IdGeneros";
   $result = mysqli_query($conn, $query);
   if(!$result) {
     die("Query Failed.");
@@ -14,7 +14,7 @@ if(isset($_GET['IdCiudad'])) {
 
   $_SESSION['message'] = 'Tabla eliminada con exito!';
   $_SESSION['message_type'] = 'danger';
-  header('Location:../screens/cities.php');
+  header('Location:../screens/genders.php');
 }
 
 ?>

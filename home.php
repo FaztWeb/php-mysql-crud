@@ -1,4 +1,4 @@
-<?php include('includes/header.php'); ?>
+<?php include('includes/header_home.php'); ?>
 
 <!doctype html>
 <html lang="en">
@@ -22,15 +22,35 @@
   </head>
   <body>
     <div class="contentBody">
-
+    
     <div class="grid ">
-  <div class="col colum"> 
-    <div class="cart">
-      <div class="card-body cardBody">
-        <h5 class="card-title"><strong>Ciudades</strong></h5>
-        <p class="card-text">Esta tabla contiene informacion de la ciudades</p>
-        <a class="navbar-brand button" href="./screens/index.php">Ingresar</a>
-        </button>
+
+    <div class="col">
+  <div class="cart">
+      <div class="card-body">
+      <h5 class="card-title"><strong>Acompañastes</strong></h5>
+      <p class="card-text">Esta tabla contiene la informacion de la tabla Acompañastes.</p>
+      <a class="navbar-brand button" href="./screens/escorts.php">Ingresar</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+  <div class="cart">
+      <div class="card-body">
+      <h5 class="card-title"><strong>Actividades</strong></h5>
+        <p class="card-text">Esta tabla contiene la informacion de las Actividades .</p>
+        <a class="navbar-brand button" href="./screens/activities.php">Ingresar</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+  <div class="cart">
+      <div class="card-body">
+      <h5 class="card-title"><strong>Asistencia</strong></h5>
+        <p class="card-text">Esta tabla contiene la informacion de la tabla Asistencia.</p>
+        <a class="navbar-brand button" href="./screens/attendance.php">Ingresar</a>
       </div>
     </div>
   </div>
@@ -40,6 +60,67 @@
       <div class="card-body">
       <h5 class="card-title"><strong>Basicos</strong></h5>
         <p class="card-text">Esta tabla contiene la informacion de los Basicos.</p>
+        <a class="navbar-brand button" href="./screens/basics.php">Ingresar</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col colum"> 
+    <div class="cart">
+      <div class="card-body cardBody">
+        <h5 class="card-title"><strong>Ciudades</strong></h5>
+        <p class="card-text">Esta tabla contiene informacion de la ciudades</p>
+        <a class="navbar-brand button" href="./screens/cities.php">Ingresar</a>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+  <div class="cart">
+      <div class="card-body">
+      <h5 class="card-title"><strong>Departamento</strong></h5>
+        <p class="card-text">Esta tabla contiene la informacion de la tabla Departamento.</p>
+        <a class="navbar-brand button" href="./screens/department.php">Ingresar</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+  <div class="cart">
+      <div class="card-body">
+      <h5 class="card-title"><strong>Estado</strong></h5>
+      <p class="card-text">Esta tabla contiene la informacion de la tabla Estado.</p>
+      <a class="navbar-brand button" href="./screens/state.php">Ingresar</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+  <div class="cart">
+      <div class="card-body">
+      <h5 class="card-title"><strong>Eventos</strong></h5>
+        <p class="card-text">Esta tabla contiene la informacion de los Eeventos .</p>
+        <a class="navbar-brand button" href="./screens/event.php">Ingresar</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+  <div class="cart">
+      <div class="card-body">
+      <h5 class="card-title"><strong>Generos</strong></h5>
+        <p class="card-text">Esta tabla contiene la informacion de los Generos.</p>
+        <a class="navbar-brand button" href="./screens/genders.php">Ingresar</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+  <div class="cart">
+      <div class="card-body">
+      <h5 class="card-title"><strong>Usuarios</strong></h5>
+        <p class="card-text">Esta tabla contiene la informacion de los Usuarios .</p>
         <a class="navbar-brand button" href="./screens/users.php">Ingresar</a>
       </div>
     </div>
@@ -48,9 +129,9 @@
   <div class="col">
   <div class="cart">
       <div class="card-body">
-      <h5 class="card-title"><strong>Titulo</strong></h5>
-        <p class="card-text">descripcion contenido de la tabla .</p>
-        <a class="navbar-brand button" href="index.php">boton</a>
+      <h5 class="card-title"><strong>Intereses</strong></h5>
+        <p class="card-text">Esta tabla contiene la informacion de los Intereses .</p>
+        <a class="navbar-brand button" href="./screens/interests.php">Ingresar</a>
       </div>
     </div>
   </div>
@@ -58,9 +139,9 @@
   <div class="col">
   <div class="cart">
       <div class="card-body">
-      <h5 class="card-title"><strong>Titulo</strong></h5>
-        <p class="card-text">descripcion contenido de la tabla .</p>
-        <a class="navbar-brand button" href="index.php">boton</a>
+      <h5 class="card-title"><strong>Invitados Por</strong></h5>
+        <p class="card-text">Esta tabla contiene la informacion de los Invitados Por .</p>
+        <a class="navbar-brand button" href="./screens/guestsFrom.php">Ingresar</a>
       </div>
     </div>
   </div>
@@ -68,9 +149,9 @@
   <div class="col">
   <div class="cart">
       <div class="card-body">
-      <h5 class="card-title"><strong>Titulo</strong></h5>
-        <p class="card-text">descripcion contenido de la tabla .</p>
-        <a class="navbar-brand button" href="index.php">boton</a>
+      <h5 class="card-title"><strong>Origen DB</strong></h5>
+      <p class="card-text">Esta tabla contiene la informacion de la tabla Origen DB.</p>
+      <a class="navbar-brand button" href="./screens/origindb.php">Ingresar</a>
       </div>
     </div>
   </div>
@@ -78,9 +159,9 @@
   <div class="col">
   <div class="cart">
       <div class="card-body">
-      <h5 class="card-title"><strong>Titulo</strong></h5>
-        <p class="card-text">descripcion contenido de la tabla .</p>
-        <a class="navbar-brand button" href="index.php">boton</a>
+      <h5 class="card-title"><strong>Rango Edad</strong></h5>
+      <p class="card-text">Esta tabla contiene la informacion de la tabla Rango Edad.</p>
+      <a class="navbar-brand button" href="./screens/rangeAge.php">Ingresar</a>
       </div>
     </div>
   </div>
@@ -88,9 +169,9 @@
   <div class="col">
   <div class="cart">
       <div class="card-body">
-      <h5 class="card-title"><strong>Titulo</strong></h5>
-        <p class="card-text">descripcion contenido de la tabla .</p>
-        <a class="navbar-brand button" href="index.php">boton</a>
+      <h5 class="card-title"><strong>Tratamiento</strong></h5>
+      <p class="card-text">Esta tabla contiene la informacion de la tabla tratamiento.</p>
+      <a class="navbar-brand button" href="./screens/treatment.php">Ingresar</a>
       </div>
     </div>
   </div>
@@ -98,9 +179,9 @@
   <div class="col">
   <div class="cart">
       <div class="card-body">
-      <h5 class="card-title"><strong>Titulo</strong></h5>
-        <p class="card-text">descripcion contenido de la tabla .</p>
-        <a class="navbar-brand button" href="index.php">boton</a>
+      <h5 class="card-title"><strong>Trebol2</strong></h5>
+      <p class="card-text">Esta tabla contiene la informacion de la tabla Trebol2.</p>
+      <a class="navbar-brand button" href="./screens/clover2.php">Ingresar</a>
       </div>
     </div>
   </div>
@@ -108,69 +189,9 @@
   <div class="col">
   <div class="cart">
       <div class="card-body">
-      <h5 class="card-title"><strong>Titulo</strong></h5>
-        <p class="card-text">descripcion contenido de la tabla .</p>
-        <a class="navbar-brand button" href="index.php">boton</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-  <div class="cart">
-      <div class="card-body">
-      <h5 class="card-title"><strong>Titulo</strong></h5>
-        <p class="card-text">descripcion contenido de la tabla .</p>
-        <a class="navbar-brand button" href="index.php">boton</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-  <div class="cart">
-      <div class="card-body">
-      <h5 class="card-title"><strong>Titulo</strong></h5>
-        <p class="card-text">descripcion contenido de la tabla .</p>
-        <a class="navbar-brand button" href="index.php">boton</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-  <div class="cart">
-      <div class="card-body">
-      <h5 class="card-title"><strong>Titulo</strong></h5>
-        <p class="card-text">descripcion contenido de la tabla .</p>
-        <a class="navbar-brand button" href="index.php">boton</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-  <div class="cart">
-      <div class="card-body">
-      <h5 class="card-title"><strong>Titulo</strong></h5>
-        <p class="card-text">descripcion contenido de la tabla .</p>
-        <a class="navbar-brand button" href="index.php">boton</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-  <div class="cart">
-      <div class="card-body">
-      <h5 class="card-title"><strong>Titulo</strong></h5>
-        <p class="card-text">descripcion contenido de la tabla .</p>
-        <a class="navbar-brand button" href="index.php">boton</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-  <div class="cart">
-      <div class="card-body">
-      <h5 class="card-title"><strong>Titulo</strong></h5>
-        <p class="card-text">descripcion contenido de la tabla .</p>
-        <a class="navbar-brand button" href="index.php">boton</a>
+      <h5 class="card-title"><strong>Usuarios</strong></h5>
+        <p class="card-text">Esta tabla contiene la informacion de la tabla Asistencia.</p>
+        <a class="navbar-brand button" href="./screens/users.php">Ingresar</a>
       </div>
     </div>
   </div>
@@ -187,6 +208,4 @@
 
 
  
-    <div>
-      <a class="navbar-brand" href="home.php">PHP MySQL CRUD</a>
-      </div>
+  
