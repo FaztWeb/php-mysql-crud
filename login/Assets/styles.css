@@ -1,0 +1,44 @@
+body{
+   
+    background-color: aqua;
+  
+}
+
+.containerWelcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    padding-top: 500px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.containerWelcome .containerWelcome_Grid{
+display: grid;
+grid-template-rows: 30%;
+align-items: center;
+}
+
+.containerWelcome .containerWelcome_Grid label, .containerWelcome .containerWelcome_Grid .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerWelcome .containerWelcome_Grid h1{
+font-size: 55px;
+}
+.containerWelcome .containerWelcome_Grid label{
+    font-size: 30px;
+    }
+
+    .containerWelcome .containerWelcome_Grid a{
+        font-size: 16px;
+        background-color: blue;
+        color: white;
+        border-radius: 20px;
+        box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) ;
+        margin-left: 40%;
+        margin-right: 40%; 
+        }
