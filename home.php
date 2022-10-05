@@ -171,7 +171,7 @@
       <div class="card-body">
       <h5 class="card-title"><strong>Tratamiento</strong></h5>
       <p class="card-text">Esta tabla contiene la informacion de la tabla tratamiento.</p>
-      <a class="navbar-brand button" href="./screens/treatment.php">Ingresarr</a>
+      <a class="navbar-brand button" href="./screens/treatment.php">Ingresar</a>
       </div>
     </div>
   </div>
