@@ -1,0 +1,12 @@
+.conainer{
+    background-color: rgb(142, 129, 129);
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25); 
+    border-radius: 20px;  
+    padding: 20px;
+    margin: 20px;
+}
+
+
+.form-group input{
+    width: 30%;
+}
