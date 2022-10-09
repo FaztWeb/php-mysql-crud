@@ -14,7 +14,7 @@
     <nav class="navbar navbar-dark bg-dark">
       <div style="display:flex; justify-content: flex-start;" class="container">
       <div >
-        <a class="navbar-brand" href="./seekers/seeker.php">Buscador</a>
+        <a class="navbar-brand" href="../seekers/seeker.php">Buscador</a>
       </div>
       </div>
       
