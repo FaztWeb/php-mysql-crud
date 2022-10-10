@@ -1,5 +1,5 @@
 <?php include("../../../dbConnect/db.php"); ?>
-<?php include('../../../includes/header.php'); ?>
+<?php include('../../../includes/header_detail_basics.php'); ?>
 
 <!doctype html>
 <html lang="en">
@@ -52,35 +52,14 @@
     <div class="table">
       <table class="table table-hover table-#dbd7d2"> 
         <thead>
-          <tr>
-            <th scope="col">IdBasicos</th>
-            <th scope="col">IdEstado</th>
-            <th scope="col">IdTratamiento</th>
-            <th scope="col">TratamientoPersonal</th>
+        <tr>
+            <th scope="col">IdBasicos</th> 
             <th scope="col">Nombres</th>
             <th scope="col">Apellidos</th>
-            <th scope="col">OtroAcompanante</th>
-            <th scope="col">IdAcompanantes</th>
-            <th scope="col">Cargo</th>
 
             <th scope="col">Empresa</th>
             <th scope="col">TelefonoEmpresa</th>
-            <th scope="col">TelefonoEmpresaDirecto</th>
             <th scope="col">CelularEmpresa</th>
-            <th scope="col">CorreoEmpresarial</th>
-            <th scope="col">AsistenteSecretaria</th>
-            <th scope="col">DireccionEmpresa</th>
-            <th scope="col">IDCiudadEmpresa</th>
-
-            <th scope="col">iDDepartamento</th>
-            <th scope="col">DireccionResidencia</th>
-            <th scope="col">IDCiudadResidencia</th>
-            <th scope="col">IdDepartamentoResidencia</th>
-            <th scope="col">CelularPersonal</th>
-            <th scope="col">CorreoPersonal</th>
-            <th scope="col">Cedula</th>
-            <th scope="col">idGenero</th>
-            <th scope="col">idRangosEdad</th>
             
             <th scope="col">Acccion</th>
           </tr>
@@ -103,43 +82,23 @@
           while($row = mysqli_fetch_assoc($result_tasks)) { ?>
           <!-- DATOS A ITERAR --> 
           <tr>
-            <td class="itremTD"><?php echo $row['IdBasicos']; ?></td>
-            <td class="itremTD"><?php echo $row['IdEstado']; ?></td>
-            <td class="itremTD"><?php echo $row['IdTratamiento']; ?></td>
-            <td class="itremTD"><?php echo $row['TratamientoPersonal']; ?></td>
+            <td class="itremTD"><a href="../detail_basics_id/detail_basics_id.php"><?php echo $row['IdBasicos']; ?></a></td>
+           
             <td class="itremTD"><?php echo $row['Nombres']; ?></td>
             <td class="itremTD"><?php echo $row['Apellidos']; ?></td>
-            <td class="itremTD"><?php echo $row['OtroAcompanante']; ?></td>
-            <td class="itremTD"><?php echo $row['IdAcompanantes']; ?></td>
-            <td class="itremTD"><?php echo $row['Cargo']; ?></td>
 
             <td class="itremTD"><?php echo $row['Empresa']; ?></td>
             <td class="itremTD"><?php echo $row['TelefonoEmpresa']; ?></td>
-            <td class="itremTD"><?php echo $row['TelefonoEmpresaDirecto']; ?></td>
             <td class="itremTD"><?php echo $row['CelularEmpresa']; ?></td>
-            <td class="itremTD"><?php echo $row['CorreoEmpresarial']; ?></td>
-            <td class="itremTD"><?php echo $row['AsistenteSecretaria']; ?></td>
-            <td class="itremTD"><?php echo $row['DireccionEmpresa']; ?></td>
-            <td class="itremTD"><?php echo $row['IDCiudadEmpresa']; ?></td>
-
-            <td class="itremTD"><?php echo $row['iDDepartamento']; ?></td>
-            <td class="itremTD"><?php echo $row['DireccionResidencia']; ?></td>
-            <td class="itremTD"><?php echo $row['IDCiudadResidencia']; ?></td>
-            <td class="itremTD"><?php echo $row['IdDepartamentoResidencia']; ?></td>
-            <td class="itremTD"><?php echo $row['CelularPersonal']; ?></td>
-            <td class="itremTD"><?php echo $row['CorreoPersonal']; ?></td>
-            <td class="itremTD"><?php echo $row['Cedula']; ?></td>
-            <td class="itremTD"><?php echo $row['idGenero']; ?></td>
-            <td class="itremTD"><?php echo $row['idRangosEdad']; ?></td>
             <!-- EDITAR DATOS  -->
             <td class="itremTD" >
               <!-- REDIRECCION EDITAR -->
-              <a href="../edit/edit.php?IdAsistencia=<?php echo $row['IdAsistencia']?>" class="btn btn-secondary">
+              <a href="../edit/edit.php?IdBasicos=<?php echo $row['IdBasicos']?>" class="btn btn-secondary">
               <!-- ICONO EDITAR -->
                 <i class="fas fa-marker"></i>
               </a>
               <!-- REDIRECCION ELIMINAR -->
-              <a href="../delete/delete_task.php?IdAsistencia=<?php echo $row['IdAsistencia']?>" class="btn btn-danger">
+              <a href="../delete/delete_task.php?IdBasicos=<?php echo $row['IdBasicos']?>" class="btn btn-danger">
               <!-- ICONO ELIMINAR -->
                 <i class="far fa-trash-alt"></i>
               </a>
