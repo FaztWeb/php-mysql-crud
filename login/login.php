@@ -30,16 +30,16 @@
       <div class="main">
          <div class="col-md-6 col-sm-12">
             <div class="login-form">
-               <form>
+               <form action="../validation/validation.php" method="post">
                   <div class="form-group">
                      <label>Usuario</label>
-                     <input type="text" class="form-control" placeholder="Usuario">
+                     <input type="text" class="form-control" placeholder="Usuario" name="loginUser">
                   </div>
                   <div class="form-group">
                      <label>Contraseña</label>
-                     <input type="password" class="form-control" placeholder="Contraseña">
+                     <input type="password" class="form-control" placeholder="Contraseña" name="loginPassword">
                   </div>
-                  <button type="submit" class="btn btn-black"><a  href="../home/home.php">Ingresar</a></button>
+                  <input type="submit" value="loginSubmit" class="btn btn-black"></input>
                   
                </form>
             </div>
