@@ -1,5 +1,5 @@
 <?php include("../../dbConnect/db.php"); ?>
-<?php include('../../includes/header.php'); ?>
+<?php include('../../includes/header_basics.php'); ?>
 
 <!doctype html>
 <html lang="en">
