@@ -9,7 +9,7 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
       <!--  ESTILOS CSS -->
-      <link rel="stylesheet" href="./Assets/styles.css" >
+      <link rel="stylesheet" href="./Assets/style.css" >
       <!--  TIPO GRAFIA -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,12 +18,12 @@
   <body>
     <br>
         <div class="title">
-            <h1>Basicos</h1>
+            <h1>Agregar Basicos</h1>
         </div>
     
     <div class="card-body conainer">
 
-<form>
+    <form action="../save_tasks/save_taskBasics.php" method="POST">
         <div class="container-space">
                 
                 <div class="form-group item  select ">

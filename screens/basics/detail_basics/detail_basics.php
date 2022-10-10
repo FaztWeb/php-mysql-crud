@@ -28,19 +28,21 @@
       </h1>
   </div>
   <div>
-      <form class="searchForm">
+      <form action="../../../search/search.php" method="get" class="searchForm">
           <div class="search">
             <label class="labelTitle">titulo: </label>
-            <input class="searchInput" type="text" name="busqueda" id="busqueda" placeholder="Ejemplo: Nombres">
+            <input class="searchInput" type="text" name="busquedaTitle" id="busquedaTitle" placeholder="Ejemplo: Nombres">
           </div>
           <div class="search">
             <label class="labelTitle labelTitleLarge">parametro a buscar: </label>
-            <input class="searchInput" type="text" name="busqueda" id="busqueda" placeholder="Ejemplo: Adriana">
+            <input class="searchInput" type="text" name="busquedaParams" id="busquedaParams" placeholder="Ejemplo: Adriana">
           </div>
           
             <div class="search">
             <input type="submit" value="buscar" class="btn_search">
           </div>
+      </form>
+
           <div class="btnAgg ">
           <a class="navbar-brand button" href="../basics.php">Agregar Basicos</a>
           </div>
@@ -93,7 +95,7 @@
             <!-- EDITAR DATOS  -->
             <td class="itremTD" >
               <!-- REDIRECCION EDITAR -->
-              <a href="../edit/edit.php?IdBasicos=<?php echo $row['IdBasicos']?>" class="btn btn-secondary">
+              <a href="../../../edit/editBasics/editBasics.php?IdBasicos=<?php echo $row['IdBasicos']?>" class="btn btn-secondary">
               <!-- ICONO EDITAR -->
                 <i class="fas fa-marker"></i>
               </a>

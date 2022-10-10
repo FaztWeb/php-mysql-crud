@@ -1,5 +1,5 @@
 <?php
-include('../../dbConnect/db.php');
+include('../.././dbConnect/db.php');
 $TratamientoPersonal = '';
 $Nombres= '';
 $Apellidos= '';
@@ -30,13 +30,16 @@ if  (isset($_GET['IdBasicos'])) {
     $Apellidos = $row['Apellidos'];
     $OtroAcompanante = $row['OtroAcompanante'];
     $Cargo = $row['Cargo'];
+    $Empresa = $row['Empresa'];
     $TelefonoEmpresa = $row['TelefonoEmpresa'];
     $TelefonoEmpresaDirecto = $row['TelefonoEmpresaDirecto'];
     $CelularEmpresa = $row['CelularEmpresa'];
     $CorreoEmpresarial = $row['CorreoEmpresarial'];
     $AsistenteSecretaria = $row['AsistenteSecretaria'];
+    $CorreoAsistenteSecretaria = $row['CorreoAsistenteSecretaria'];
     $DireccionEmpresa = $row['DireccionEmpresa'];
     $DireccionResidencia = $row['DireccionResidencia'];
+    $TelefonoResidencia = $row['TelefonoResidencia'];
     $CelularPersonal = $row['CelularPersonal'];
     $CorreoPersonal = $row['CorreoPersonal'];
     $Cedula = $row['Cedula'];
@@ -52,13 +55,16 @@ if (isset($_POST['update'])) {
   $Apellidos= $_POST['Apellidos'];
   $OtroAcompanante = $_POST['OtroAcompanante'];
   $Cargo= $_POST['Cargo'];
+  $Empresa= $_POST['Empresa'];
   $TelefonoEmpresa = $_POST['TelefonoEmpresa'];
   $TelefonoEmpresaDirecto= $_POST['TelefonoEmpresaDirecto'];
   $CelularEmpresa = $_POST['CelularEmpresa'];
   $CorreoEmpresarial= $_POST['CorreoEmpresarial'];
   $AsistenteSecretaria = $_POST['AsistenteSecretaria'];
+  $CorreoAsistenteSecretaria = $_POST['CorreoAsistenteSecretaria'];
   $DireccionEmpresa= $_POST['DireccionEmpresa'];
   $DireccionResidencia = $_POST['DireccionResidencia'];
+  $TelefonoResidencia = $_POST['TelefonoResidencia'];
   $CelularPersonal= $_POST['CelularPersonal'];
   $CorreoPersonal = $_POST['CorreoPersonal'];
   $Cedula= $_POST['Cedula'];
@@ -68,80 +74,43 @@ if (isset($_POST['update'])) {
   $query = "UPDATE basicos set 
   TratamientoPersonal = '$TratamientoPersonal', Nombres = '$Nombres',
   Apellidos = '$Apellidos', OtroAcompanante = '$OtroAcompanante',
-  Cargo = '$Cargo', TelefonoEmpresa = '$TelefonoEmpresa',
+  Cargo = '$Cargo',Empresa = '$Empresa', TelefonoEmpresa = '$TelefonoEmpresa',
   TelefonoEmpresaDirecto = '$TelefonoEmpresaDirecto', CelularEmpresa = '$CelularEmpresa',
   CorreoEmpresarial = '$CorreoEmpresarial', AsistenteSecretaria = '$AsistenteSecretaria',
+  CorreoAsistenteSecretaria = '$CorreoAsistenteSecretaria',
   DireccionEmpresa = '$DireccionEmpresa', DireccionResidencia = '$DireccionResidencia',
+  TelefonoResidencia = '$TelefonoResidencia',
   CelularPersonal = '$CelularPersonal', CorreoPersonal = '$CorreoPersonal',
   Cedula = '$Cedula', idGenero = '$idGenero',
   idRangosEdad = '$idRangosEdad'
    WHERE IdBasicos=$IdBasicos";
 
+
+
   mysqli_query($conn, $query);
   $_SESSION['message'] = 'Tabla actualizada con exito!';   /*  MENSAJE EMERGENTE CUANDO SE ACTUALIZA UNA TABLA */
   $_SESSION['message_type'] = 'warning';
-  header('Location:../screens/users.php');
+  header('Location:../screens/basics/detail_basics/detail_basics.php');
 }
 
 ?>
-<?php include('../includes/header.php'); ?>
-<div class="container p-4">
-  <div class="row">
-    <div class="col-md-4 mx-auto">
-      <div class="card card-body">
-      <form action="editUsers.php?IdBasicos=<?php echo $_GET['IdBasicos']; ?>" method="POST">
-      <div>
-          <h3>Editar basicos</h3>
-      </div>
-       <!--  <div class="form-group">
-          <input name="titleUsers" type="text" class="form-control" value="<?php echo $titleUsers; ?>" placeholder="Update Title">
-        </div>
-        <div class="form-group">
-        <textarea name="descriptionUsers" class="form-control" cols="30" rows="10"><?php echo $descriptionUsers;?></textarea>
-        </div> -->
-
-
-
-
-
-        <button class="btn-success" name="update">
-          Actualizar
-</button>
-      </form>
-      </div>
-    </div>
-  </div>
-</div>
-<?php include('../includes/footer.php'); ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!--  ESTILOS CSS -->
-      <link rel="stylesheet" href="./Assets/styles.css" >
+<?php include('../../includes/header.php'); ?>
+<!--  ESTILOS CSS -->
+<link rel="stylesheet" href="./Assets/styles.css" >
       <!--  TIPO GRAFIA -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <br>
+    
+      
+     <br>
         <div class="title">
-            <h1>Basicos</h1>
+            <h1>Editar Basicos</h1>
         </div>
     
     <div class="card-body conainer">
 
-<form>
+    <form action="editUsers.php?IdBasicos=<?php echo $_GET['IdBasicos']; ?>" method="POST">
         <div class="container-space">
                 
                 <div class="form-group item  select ">
@@ -160,7 +129,7 @@ if (isset($_POST['update'])) {
                 </div>
                 <div class="form-group item">
                     <label for="street2_id" class="control-label">Apellidos</label>
-                    <input type="text" class="form-control" id="street2_id" name="street2" placeholder="Apellidos">
+                    <input name="Apellidos" type="text" class="form-control" value="<?php echo $Apellidos; ?>" placeholder="Update Title">
                 </div>
                 <div class="form-group item  select ">
                 <div class="selectItems">
@@ -208,19 +177,23 @@ if (isset($_POST['update'])) {
 
                 <div class="form-group item"> <!-- City-->
                     <label for="city_id" class="control-label">Cargo</label>
-                    <input type="text" class="form-control" id="city_id" name="city" placeholder="Cargo">
+                    <input name="Cargo" type="text" class="form-control" value="<?php echo $Cargo; ?>" placeholder="Update Title">
                 </div> 
                 <div class="form-group item"> <!-- City-->
                     <label for="city_id" class="control-label">Empresa</label>
-                    <input type="text" class="form-control" id="city_id" name="city" placeholder="Empresa">
+                    <input name="Empresa" type="text" class="form-control" value="<?php echo $Empresa; ?>" placeholder="Update Title">
                 </div>
                 <div class="form-group item"> <!-- City-->
                     <label for="city_id" class="control-label">Telefono Empresa</label>
-                    <input type="text" class="form-control" id="city_id" name="city" placeholder="Telefono Empresa">
+                    <input name="TelefonoEmpresa" type="text" class="form-control" value="<?php echo $TelefonoEmpresa; ?>" placeholder="Update Title">
                 </div> 
                 <div class="form-group itemTwo"> <!-- City-->
-                    <label for="city_id" class="control-label">Telefono Directo</label>
-                    <input type="text" class="form-control" id="city_id" name="city" placeholder="Telefono Directo">
+                    <label for="city_id" class="control-label">TelefonoEmpresaDirecto</label>
+                    <input name="TelefonoEmpresaDirecto" type="text" class="form-control" value="<?php echo $TelefonoEmpresaDirecto; ?>" placeholder="Update Title">
+                </div>
+                <div class="form-group itemTwo"> <!-- City-->
+                    <label for="city_id" class="control-label">CelularEmpresa</label>
+                    <input name="CelularEmpresa" type="text" class="form-control" value="<?php echo $CelularEmpresa; ?>" placeholder="Update Title">
                 </div>      
 
                 
@@ -229,53 +202,75 @@ if (isset($_POST['update'])) {
         <div class="container-space">
                 
                 <div class="form-group itemTwo"> <!-- City-->
-                    <label for="city_id" class="control-label">Correo Empresaeial</label>
-                    <input type="text" class="form-control" id="city_id" name="city" placeholder="Correo Empresaeial">
+                    <label for="city_id" class="control-label">Correo Empresarial</label>
+                    <input name="CorreoEmpresarial" type="text" class="form-control" value="<?php echo $CorreoEmpresarial; ?>" placeholder="Update Title">
                 </div> 
                 <div class="form-group itemTwo"> <!-- City-->
                     <label for="city_id" class="control-label">Asistente Secretaria</label>
-                    <input type="text" class="form-control" id="city_id" name="city" placeholder="Asistente Secretaria">
+                    <input name="AsistenteSecretaria" type="text" class="form-control" value="<?php echo $AsistenteSecretaria; ?>" placeholder="Update Title">
+                </div>
+                <div class="form-group itemTwo"> <!-- City-->
+                    <label for="city_id" class="control-label">Correo Asistente Secretaria</label>
+                    <input name="CorreoAsistenteSecretaria" type="text" class="form-control" value="<?php echo $CorreoAsistenteSecretaria; ?>" placeholder="Update Title">
                 </div> 
                 <div class="form-group itemTwo"> <!-- City-->
                     <label for="city_id" class="control-label">Direccion Empresa</label>
-                    <input type="text" class="form-control" id="city_id" name="city" placeholder="Direccion Empresa">
+                    <input name="DireccionEmpresa" type="text" class="form-control" value="<?php echo $DireccionEmpresa; ?>" placeholder="Update Title">
                 </div>
                 <div class="form-group itemTwo"> <!-- City-->
                     <label for="city_id" class="control-label">Direccion Residencia</label>
-                    <input type="text" class="form-control" id="city_id" name="city" placeholder="Direccion Residencia">
+                    <input name="DireccionResidencia" type="text" class="form-control" value="<?php echo $DireccionResidencia; ?>" placeholder="Update Title">
                 </div>
                 <div class="form-group itemTwo"> <!-- City-->
                     <label for="city_id" class="control-label">Telefono Residencia</label>
-                    <input type="text" class="form-control" id="city_id" name="city" placeholder="Telefono Residencia">
+                    <input name="TelefonoResidencia" type="text" class="form-control" value="<?php echo $TelefonoResidencia; ?>" placeholder="Update Title">
                 </div> 
                 <div class="form-group itemTwo"> <!-- City-->
                     <label for="city_id" class="control-label">Celular Personal</label>
-                    <input type="text" class="form-control" id="city_id" name="city" placeholder="Celular Personal">
+                    <input name="TelefonoResidencia" type="text" class="form-control" value="<?php echo $TelefonoResidencia; ?>" placeholder="Update Title">
                 </div> 
                 <div class="form-group itemTwo"> <!-- City-->
                     <label for="city_id" class="control-label">Correo Personal</label>
-                    <input type="text" class="form-control" id="city_id" name="city" placeholder="Correo Personal">
+                    <input name="CorreoPersonal" type="text" class="form-control" value="<?php echo $CorreoPersonal; ?>" placeholder="Update Title">
                 </div>  
                 <div class="form-group itemTwo"> <!-- City-->
                     <label for="city_id" class="control-label">Cedula</label>
-                    <input type="text" class="form-control" id="city_id" name="city" placeholder="Cedula">
+                    <input name="Cedula" type="text" class="form-control" value="<?php echo $Cedula; ?>" placeholder="Update Title">
+                </div>
+                <div class="form-group itemTwo"> <!-- City-->
+                    <label for="city_id" class="control-label">idGenero</label>
+                    <input name="idGenero" type="text" class="form-control" value="<?php echo $idGenero; ?>" placeholder="Update Title">
                 </div>
                 <br>
                 <div class="form-group itemTwo"> <!-- City-->
+
+                <button class="btn-success" name="update">
+                Actualizar
+                </button>
                    
                         <p>Click para Ver Detalle <a href="./detail_basics/detail_basics.php"><strong>Basicos</strong></a></p>
                    
                 </div>                   
 
         </div>
-        <div class="button">
-        <div class="form-group item"> <!-- Submit Button -->
-                    <button type="submit" class="btn btn-dark">ENVIAR </button>
-                </div>
-        </div>
-</form>
+      </form>
+      
+    
+ 
 
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  </body>
-</html>
+<?php include('../../includes/footer.php'); ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+  
