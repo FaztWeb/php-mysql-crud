@@ -45,12 +45,36 @@ body{font-family: 'Dosis', sans-serif!important;
     justify-content: center;
     align-items: center;
 }
-.selectItems{
-    padding-right: 15px;
-}
+
 .selectItems label{
     display: flex; 
     align-items: center;
 }
 .button{
-    padding-left:24px;}
+    padding-left:24px;
+}
+.btnAgg{
+    display: flex;
+    align-items: center;
+    background-color: blue;
+    color: white;
+    border-radius: 20px;
+    width: 155px;
+    margin-bottom: 14px;
+    margin-top: 14px;
+}
+
+.searchForm{
+display: grid;
+grid-template-columns: 25% 25% 25% 25%;
+}
+
+.search{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.labelTitle{
+   font-size: 22px;
+}
