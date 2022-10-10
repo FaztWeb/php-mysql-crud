@@ -179,6 +179,8 @@
   <div class="col">
   <div class="cart">
       <div class="card-body">
+<<<<<<< HEAD:home.php
+=======
       <h5 class="card-title"><strong>Trebol2</strong></h5>
       <p class="card-text">Esta tabla contiene la informacion de la tabla Trebol2.</p>
       <a class="navbar-brand button" href="../screens/clover2.php">Ingresar</a>
@@ -189,6 +191,7 @@
   <div class="col">
   <div class="cart">
       <div class="card-body">
+>>>>>>> stktvera:home/home.php
       <h5 class="card-title"><strong>Usuarios</strong></h5>
         <p class="card-text">Esta tabla contiene la informacion de la tabla Asistencia.</p>
         <a class="navbar-brand button" href="../screens/users.php">Ingresar</a>
