@@ -60,7 +60,7 @@
       <div class="card-body">
       <h5 class="card-title"><strong>Basicos</strong></h5>
         <p class="card-text">Esta tabla contiene la informacion de los Basicos.</p>
-        <a class="navbar-brand button" href="../screens/basics/basics.php">Ingresar</a>
+        <a class="navbar-brand button" href="../screens/basics/detail_basics/detail_basics.php">Ingresar</a>
       </div>
     </div>
   </div>
