@@ -17,9 +17,20 @@
         <a class="navbar-brand" href="../home/home.php">HOME</a>
       </div>
       <div >
-        <a class="navbar-brand" href="../seekers/seeker.php">Buscador</a>
+      <li class="nav-item dropdown">
+          <a class=" dropdown-toggle navbar-brand"  
+          href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Buscador
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="../seekers/seeker.php">Busqueda Parametrizada</a></li>
+            <li><a class="dropdown-item" href="../screens/basics/detail_basics/detail_basics.php">Busqueda Parametrizada</a></li>
+          </ul>
+        </li>
+      </div>
+      <div >
+        <a class="navbar-brand" href=".././welcome.php">Cerrar sesion</a>
       </div>
       </div>
       
     </nav>
-

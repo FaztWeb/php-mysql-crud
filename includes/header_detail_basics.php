@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
     <!-- FONT AWESOEM -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+     <!--  ESTILOS CSS -->
+     <link rel="stylesheet" href="../Assets/style.css" >
   </head>
   <body>
 
-
     <nav class="navbar navbar-dark bg-dark">
       <div style="display:flex; justify-content: flex-start;" class="container">
-      
+      <div >
+        <a class="navbar-brand" href="../../../home/home.php">HOME</a>
+      </div>
       <div >
       <li class="nav-item dropdown">
           <a class=" dropdown-toggle navbar-brand"  
@@ -22,15 +25,17 @@
             Buscador
           </a>
           <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="../screens/basics/detail_basics/detail_basics.php">Busqueda General</a></li>
-            <li><a class="dropdown-item" href="../seekers/seeker.php">Busqueda Parametrizada</a></li>
+            <li><a class="dropdown-item" href="../../../seekers/seeker.php">Busqueda Parametrizada</a></li>
           </ul>
         </li>
       </div>
       <div >
-        <a class="navbar-brand" href=".././welcome.php">Cerrar sesion</a>
+        <a class="navbar-brand" href="../../.././welcome.php">Cerrar sesion</a>
       </div>
       </div>
       
     </nav>
 
+
+   
+   

@@ -1,131 +1,13 @@
-<?php
-include('../../dbConnect/db.php');
-$TratamientoPersonal = '';
-$Nombres= '';
-$Apellidos= '';
-$OtroAcompanante= '';
-$Cargo= '';
-$TelefonoEmpresa= '';
-$TelefonoEmpresaDirecto= '';
-$CelularEmpresa= '';
-$CorreoEmpresarial= '';
-$AsistenteSecretaria= '';
-$DireccionEmpresa= '';
-$DireccionResidencia= '';
-$CelularPersonal= '';
-$CorreoPersonal= '';
-$Cedula= '';
-$idGenero= '';
-$idRangosEdad= '';
+<?php include("../../dbConnect/db.php"); ?>
+<?php include('../../includes/header.php'); ?>
 
-
-if  (isset($_GET['IdBasicos'])) {
-  $IdBasicos = $_GET['IdBasicos'];
-  $query = "SELECT * FROM basicos WHERE IdBasicos=$IdBasicos";
-  $result = mysqli_query($conn, $query);
-  if (mysqli_num_rows($result) == 1) {
-    $row = mysqli_fetch_array($result);
-    $TratamientoPersonal = $row['TratamientoPersonal'];
-    $Nombres = $row['Nombres'];
-    $Apellidos = $row['Apellidos'];
-    $OtroAcompanante = $row['OtroAcompanante'];
-    $Cargo = $row['Cargo'];
-    $TelefonoEmpresa = $row['TelefonoEmpresa'];
-    $TelefonoEmpresaDirecto = $row['TelefonoEmpresaDirecto'];
-    $CelularEmpresa = $row['CelularEmpresa'];
-    $CorreoEmpresarial = $row['CorreoEmpresarial'];
-    $AsistenteSecretaria = $row['AsistenteSecretaria'];
-    $DireccionEmpresa = $row['DireccionEmpresa'];
-    $DireccionResidencia = $row['DireccionResidencia'];
-    $CelularPersonal = $row['CelularPersonal'];
-    $CorreoPersonal = $row['CorreoPersonal'];
-    $Cedula = $row['Cedula'];
-    $idGenero = $row['idGenero'];
-    $idRangosEdad = $row['idRangosEdad'];
-  }
-}
-
-if (isset($_POST['update'])) {
-  $IdBasicos = $_GET['IdBasicos'];
-  $TratamientoPersonal= $_POST['TratamientoPersonal'];
-  $Nombres = $_POST['Nombres'];
-  $Apellidos= $_POST['Apellidos'];
-  $OtroAcompanante = $_POST['OtroAcompanante'];
-  $Cargo= $_POST['Cargo'];
-  $TelefonoEmpresa = $_POST['TelefonoEmpresa'];
-  $TelefonoEmpresaDirecto= $_POST['TelefonoEmpresaDirecto'];
-  $CelularEmpresa = $_POST['CelularEmpresa'];
-  $CorreoEmpresarial= $_POST['CorreoEmpresarial'];
-  $AsistenteSecretaria = $_POST['AsistenteSecretaria'];
-  $DireccionEmpresa= $_POST['DireccionEmpresa'];
-  $DireccionResidencia = $_POST['DireccionResidencia'];
-  $CelularPersonal= $_POST['CelularPersonal'];
-  $CorreoPersonal = $_POST['CorreoPersonal'];
-  $Cedula= $_POST['Cedula'];
-  $idGenero = $_POST['idGenero'];
-  $idRangosEdad= $_POST['idRangosEdad'];
-  
-  $query = "UPDATE basicos set 
-  TratamientoPersonal = '$TratamientoPersonal', Nombres = '$Nombres',
-  Apellidos = '$Apellidos', OtroAcompanante = '$OtroAcompanante',
-  Cargo = '$Cargo', TelefonoEmpresa = '$TelefonoEmpresa',
-  TelefonoEmpresaDirecto = '$TelefonoEmpresaDirecto', CelularEmpresa = '$CelularEmpresa',
-  CorreoEmpresarial = '$CorreoEmpresarial', AsistenteSecretaria = '$AsistenteSecretaria',
-  DireccionEmpresa = '$DireccionEmpresa', DireccionResidencia = '$DireccionResidencia',
-  CelularPersonal = '$CelularPersonal', CorreoPersonal = '$CorreoPersonal',
-  Cedula = '$Cedula', idGenero = '$idGenero',
-  idRangosEdad = '$idRangosEdad'
-   WHERE IdBasicos=$IdBasicos";
-
-  mysqli_query($conn, $query);
-  $_SESSION['message'] = 'Tabla actualizada con exito!';   /*  MENSAJE EMERGENTE CUANDO SE ACTUALIZA UNA TABLA */
-  $_SESSION['message_type'] = 'warning';
-  header('Location:../screens/users.php');
-}
-
-?>
-<?php include('../includes/header.php'); ?>
-<div class="container p-4">
-  <div class="row">
-    <div class="col-md-4 mx-auto">
-      <div class="card card-body">
-      <form action="editUsers.php?IdBasicos=<?php echo $_GET['IdBasicos']; ?>" method="POST">
-      <div>
-          <h3>Editar basicos</h3>
-      </div>
-       <!--  <div class="form-group">
-          <input name="titleUsers" type="text" class="form-control" value="<?php echo $titleUsers; ?>" placeholder="Update Title">
-        </div>
-        <div class="form-group">
-        <textarea name="descriptionUsers" class="form-control" cols="30" rows="10"><?php echo $descriptionUsers;?></textarea>
-        </div> -->
-
-
-
-
-
-        <button class="btn-success" name="update">
-          Actualizar
-</button>
-      </form>
-      </div>
-    </div>
-  </div>
-</div>
-<?php include('../includes/footer.php'); ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
       <!--  ESTILOS CSS -->
       <link rel="stylesheet" href="./Assets/styles.css" >
       <!--  TIPO GRAFIA -->
@@ -156,7 +38,7 @@ if (isset($_POST['update'])) {
                 </div>
                 <div class="form-group item">
                     <label for="street1_id" class="control-label">Nombre</label>
-                    <input name="Nombres" type="text" class="form-control" value="<?php echo $Nombres; ?>" placeholder="Update Title">
+                    <input type="text" class="form-control" id="street1_id" name="street1" placeholder="Nombre">
                 </div>
                 <div class="form-group item">
                     <label for="street2_id" class="control-label">Apellidos</label>
