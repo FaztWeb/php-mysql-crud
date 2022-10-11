@@ -9,7 +9,7 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
       <!--  ESTILOS CSS -->
-      <link rel="stylesheet" href="../Assets/style.css" >
+      <link rel="stylesheet" href="../Assets/styles.css" >
       <!--  TIPO GRAFIA -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,7 +72,7 @@
         //
         //  SELECCIONA LA TABLA DE LA BASE DE DATOS CON CODIGO SQL 
         //
-          $query = "SELECT * FROM basicos";
+          $query = "SELECT * FROM basicos ORDER BY IdBasicos ASC";
           //
         //SELECCIONA LA VARIBALE $conn del archivo ../dbConnect/db.php
         //
@@ -109,6 +109,13 @@
           <?php } ?>
         </tbody>
       </table>
+      <div class="paginador">
+            <ul>
+                <li>
+                    <a href="#"></a> <!-- 7:51 Paginador con php y mysql-21 -->
+                </li>
+            </ul>
+      </div>
     </div>
   </div>
    <!-- BOOTRAP API -->

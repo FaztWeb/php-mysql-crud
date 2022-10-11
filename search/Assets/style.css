@@ -1,0 +1,80 @@
+body{font-family: 'Dosis', sans-serif!important;
+    font-size: 18px;
+}
+.title{
+    padding-left: 30px;
+}
+.title h1{
+    font-size: 55px!important;
+}
+.conainer{
+    background-color: rgb(24, 132, 0);
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25); 
+    border-radius: 20px;  
+    padding: 20px;
+    margin: 20px;
+}
+.form-group input, .select{
+    width: 80%;
+}
+
+.conainer form  {
+    background-color:white;
+   
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.container-space{
+    margin: 25px;
+    height: 48em;
+}
+.item{
+    margin: 10px;
+}
+.itemTwo{
+    margin: 10px;
+}
+.itemTwo a {
+   text-decoration: none;
+   color: black;
+
+}
+.gridSelect{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.selectItems label{
+    display: flex; 
+    align-items: center;
+}
+.button{
+    padding-left:24px;
+}
+.btnAgg{
+    display: flex;
+    align-items: center;
+    background-color: blue;
+    color: white;
+    border-radius: 20px;
+    width: 155px;
+    margin-bottom: 14px;
+    margin-top: 14px;
+}
+
+.searchForm{
+display: grid;
+grid-template-columns: 25% 25% 25% 25%;
+}
+
+.search{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.labelTitle{
+   font-size: 22px;
+}
