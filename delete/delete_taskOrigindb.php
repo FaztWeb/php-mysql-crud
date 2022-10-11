@@ -2,9 +2,9 @@
 
 include("../dbConnect/db.php"); 
 
-if(isset($_GET['IdInvitadoPor'])) {
-  $IdInvitadoPor = $_GET['IdInvitadoPor'];
-  $query = "DELETE FROM invitadospor WHERE IdInvitadoPor = $IdInvitadoPor";
+if(isset($_GET['IdOrigenesBD'])) {
+  $IdOrigenesBD = $_GET['IdOrigenesBD'];
+  $query = "DELETE FROM origenbd WHERE IdOrigenesBD = $IdOrigenesBD";
   $result = mysqli_query($conn, $query);
   if(!$result) {
     die("Query Failed.");

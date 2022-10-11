@@ -1,29 +1,29 @@
 <?php
 include('../dbConnect/db.php');
-$Genero = '';
+$Estado = '';
 $Observaciones= '';
 
-if  (isset($_GET['IdGeneros'])) {
-  $IdGeneros = $_GET['IdGeneros'];
-  $query = "SELECT * FROM generos WHERE IdGeneros=$IdGeneros";
+if  (isset($_GET['IdEstado'])) {
+  $IdEstado = $_GET['IdEstado'];
+  $query = "SELECT * FROM estado WHERE IdEstado=$IdEstado";
   $result = mysqli_query($conn, $query);
   if (mysqli_num_rows($result) == 1) {
     $row = mysqli_fetch_array($result);
-    $Genero = $row['Genero'];
+    $Estado = $row['Estado'];
     $Observaciones = $row['Observaciones'];
   }
 }
 
 if (isset($_POST['update'])) {
-  $IdGeneros = $_GET['IdGeneros'];
-  $Genero= $_POST['Genero'];
+  $IdEstado = $_GET['IdEstado'];
+  $Estado= $_POST['Estado'];
   $Observaciones = $_POST['Observaciones'];
 
-  $query = "UPDATE generos set Genero = '$Genero', Observaciones = '$Observaciones' WHERE IdGeneros=$IdGeneros";
+  $query = "UPDATE estado set Estado = '$Estado', Observaciones = '$Observaciones' WHERE IdEstado=$IdEstado";
   mysqli_query($conn, $query);
   $_SESSION['message'] = 'Tabla actualizada con exito!';   /*  MENSAJE EMERGENTE CUANDO SE ACTUALIZA UNA TABLA */
   $_SESSION['message_type'] = 'warning';
-  header('Location:../screens/genders.php');
+  header('Location:../screens/state.php');
 }
 
 ?>
@@ -32,12 +32,12 @@ if (isset($_POST['update'])) {
   <div class="row">
     <div class="col-md-4 mx-auto">
       <div class="card card-body">
-      <form action="editGenders.php?IdGeneros=<?php echo $_GET['IdGeneros']; ?>" method="POST">
+      <form action="editState.php?IdEstado=<?php echo $_GET['IdEstado']; ?>" method="POST">
       <div>
-          <h3>Editar Generos</h3>
+          <h3>Editar Ciudades</h3>
       </div>
         <div class="form-group">
-          <input name="Genero" type="text" class="form-control" value="<?php echo $Genero; ?>" placeholder="Update Title">
+          <input name="Estado" type="text" class="form-control" value="<?php echo $Estado; ?>" placeholder="Estado">
         </div>
         <div class="form-group">
         <textarea name="Observaciones" class="form-control" cols="30" rows="10"><?php echo $Observaciones;?></textarea>

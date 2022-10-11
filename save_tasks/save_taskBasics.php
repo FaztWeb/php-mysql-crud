@@ -45,7 +45,7 @@ if (isset($_POST['save_taskBasics'])) {
   $_SESSION['message_type'] = 'success';
   header('Location:../screens/basics/detail_basics/detail_basics.php');
 
- 
+
 
 }
 

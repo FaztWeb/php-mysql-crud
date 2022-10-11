@@ -77,7 +77,7 @@
             <!-- EDITAR DATOS  -->
             <td>
               <!-- REDIRECCION EDITAR -->
-              <a href="../edit/edit.php?IdUsuarios=<?php echo $row['IdUsuarios']?>" class="btn btn-secondary">
+              <a href="../edit/editUsers.php?IdUsuarios=<?php echo $row['IdUsuarios']?>" class="btn btn-secondary">
               <!-- ICONO EDITAR -->
                 <i class="fas fa-marker"></i>
               </a>

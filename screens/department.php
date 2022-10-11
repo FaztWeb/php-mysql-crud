@@ -20,7 +20,7 @@
       </div>
       <!-- FORMURLARIO DEFINE METODO DE PETICION Y RUTA DE LOS DATOS -->
       <div class="card card-body">
-        <form action="../save_tasks/save_taskDepartament.php" method="POST">
+        <form action="../save_tasks/save_taskDepartment.php" method="POST">
           <div class="form-group">
             <input type="text" name="Departamento" class="form-control" placeholder="Departamento" autofocus>
           </div>
@@ -64,12 +64,12 @@
             <!-- EDITAR DATOS  -->
             <td>
               <!-- REDIRECCION EDITAR -->
-              <a href="../edit/edit.php?IdDepartamento=<?php echo $row['IdDepartamento']?>" class="btn btn-secondary">
+              <a href="../edit/editDepartament.php?IdDepartamento=<?php echo $row['IdDepartamento']?>" class="btn btn-secondary">
               <!-- ICONO EDITAR -->
                 <i class="fas fa-marker"></i>
               </a>
               <!-- REDIRECCION ELIMINAR -->
-              <a href="../delete/delete_task.php?IdDepartamento=<?php echo $row['IdDepartamento']?>" class="btn btn-danger">
+              <a href="../delete/delete_taskDepartament.php?IdDepartamento=<?php echo $row['IdDepartamento']?>" class="btn btn-danger">
               <!-- ICONO ELIMINAR -->
                 <i class="far fa-trash-alt"></i>
               </a>

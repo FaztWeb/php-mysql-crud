@@ -49,7 +49,7 @@
         //
         //  SELECCIONA LA TABLA DE LA BASE DE DATOS CON CODIGO SQL 
         //
-          $query = "SELECT * FROM invitadospor";
+          $query = "SELECT * FROM ciudades";
           //
         //SELECCIONA LA VARIBALE $conn del archivo ../dbConnect/db.php
         //

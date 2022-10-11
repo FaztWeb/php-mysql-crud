@@ -66,7 +66,7 @@
             <!-- EDITAR DATOS  -->
             <td>
               <!-- REDIRECCION EDITAR -->
-              <a href="../edit/edit.php?IdAsistencia=<?php echo $row['IdAsistencia']?>" class="btn btn-secondary">
+              <a href="../edit/editAttendance.php?IdAsistencia=<?php echo $row['IdAsistencia']?>" class="btn btn-secondary">
               <!-- ICONO EDITAR -->
                 <i class="fas fa-marker"></i>
               </a>

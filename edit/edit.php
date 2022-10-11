@@ -23,7 +23,7 @@ if (isset($_POST['update'])) {
   mysqli_query($conn, $query);
   $_SESSION['message'] = 'Tabla actualizada con exito!';   /*  MENSAJE EMERGENTE CUANDO SE ACTUALIZA UNA TABLA */
   $_SESSION['message_type'] = 'warning';
-  header('Location:../screens/index.php');
+  header('Location:../screens/cities.php');
 }
 
 ?>
