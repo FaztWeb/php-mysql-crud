@@ -69,6 +69,10 @@
         <tbody >
 
         <?php
+
+        $sql_register = mysqli_query($conn,"SELECT COUNT(*) AS sistema from basicos where editBasics = 1");
+        $result_register = mysqli_fetch_array($sql_register);
+        $total_registro = $result_register[]
         //
         //  SELECCIONA LA TABLA DE LA BASE DE DATOS CON CODIGO SQL 
         //
@@ -111,9 +115,16 @@
       </table>
       <div class="paginador">
             <ul>
-                <li>
-                    <a href="#"></a> <!-- 7:51 Paginador con php y mysql-21 -->
-                </li>
+                <li><a href="#">|<</a></li> <!-- 7:51 Paginador con php y mysql-21 -->
+                <li><a href="#"><<</a></li>
+                <li class="pageSelected">1</li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">>></a></li>
+                <li><a href="#">>|</a></li>
+
             </ul>
       </div>
     </div>
