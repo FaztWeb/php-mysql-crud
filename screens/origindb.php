@@ -20,9 +20,9 @@
       </div>
       <!-- FORMURLARIO DEFINE METODO DE PETICION Y RUTA DE LOS DATOS -->
       <div class="card card-body">
-        <form action="../save_tasks/save_task.php" method="POST">
+        <form action="../save_tasks/save_taskOrigindb.php" method="POST">
           <div class="form-group">
-            <input type="text" name="OrigenDB" class="form-control" placeholder="Origen BD" autofocus>
+            <input type="text" name="OrigenBD" class="form-control" placeholder="Origen BD" autofocus>
           </div>
           <div class="form-group">
             <textarea name="Observaciones" rows="2" class="form-control" placeholder="Observaciones"></textarea>

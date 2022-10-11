@@ -20,7 +20,7 @@
       </div>
       <!-- FORMURLARIO DEFINE METODO DE PETICION Y RUTA DE LOS DATOS -->
       <div class="card card-body">
-        <form action="../save_tasks/save_task.php" method="POST">
+        <form action="../save_tasks/save_taskActivities.php" method="POST">
           <div class="form-group">
             <input type="text" name="Actividad" class="form-control" placeholder="Actividad" autofocus>
           </div>

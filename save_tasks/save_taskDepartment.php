@@ -7,13 +7,13 @@ include('../dbConnect/db.php');
 //$title = $_POST['escribe el name que aparece en el input en este caso seria =  title'];
 //
 if (isset($_POST['save_task'])) {
-  $Ciudad = $_POST['Ciudad'];
-  $Observaciones = $_POST['Observaciones'];
+  $Departamento = $_POST['Departamento'];
+  
   //
   //INSERTA LOS DATOS CON INSERT INTO, ESCRIBE EL NOMBRE DE LA TABLA EN ESTE CASO SERIA TASK DESCRIBE QUE VALORES VAS GUADAR EN TASK
   //( EN ESTE CASO SERIA  title, description) LOS CUALES ESTAN ALMACENADOS EN LAS VARIABLES VALUES('$title', '$description')";
   //
-  $query = "INSERT INTO ciudades(Ciudad, Observaciones) VALUES ('$Ciudad', '$Observaciones')";
+  $query = "INSERT INTO departamento(Departamento) VALUES ('$Departamento')";
   //
   // ENVIAR LOS DATOS A LA BASE DE DATOS ../dbConnect/db.php VARIAVLE $conn EN CASO DE ERROR MUESTRA EL ERROR
   //
@@ -27,7 +27,7 @@ if (isset($_POST['save_task'])) {
   //
   $_SESSION['message'] = 'Tabla guardada con exito!';
   $_SESSION['message_type'] = 'success';
-  header('Location:../screens/cities.php');
+  header('Location:../screens/department.php');
 
 
 }

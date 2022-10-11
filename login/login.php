@@ -23,7 +23,7 @@
 
   <div class="sidenav">
          <div class="login-main-text">
-            <h2>SITEMA NOVIO<br></h2>
+            <h2>SISTEMA NOVIO<br></h2>
             <p>Solo Personal Autorizado</p>
          </div>
       </div>

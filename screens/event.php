@@ -20,7 +20,7 @@
       </div>
       <!-- FORMURLARIO DEFINE METODO DE PETICION Y RUTA DE LOS DATOS -->
       <div class="card card-body">
-        <form action="../save_tasks/save_task.php" method="POST">
+        <form action="../save_tasks/save_taskEvent.php" method="POST">
           <div class="form-group">
             <input type="text" name="Evento" class="form-control" placeholder="Evento" autofocus>
           </div>
@@ -63,8 +63,8 @@
           <!-- DATOS A ITERAR -->
           <tr>
             <td><?php echo $row['Evento']; ?></td>
-            <td><?php echo $row['Fecha']; ?></td>
             <td><?php echo $row['Observaciones']; ?></td>
+            <td><?php echo $row['Fecha']; ?></td>
             <!-- EDITAR DATOS  -->
             <td>
               <!-- REDIRECCION EDITAR -->

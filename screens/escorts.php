@@ -16,13 +16,13 @@
       </div>
       <?php session_unset(); } ?>
       <div>
-        <h1 style="width: 14rem;">Acompañastes</h1>
+        <h1 style="width: 14rem;">Acompañantes</h1>
       </div>
       <!-- FORMURLARIO DEFINE METODO DE PETICION Y RUTA DE LOS DATOS -->
       <div class="card card-body">
         <form action="../save_tasks/save_task.php" method="POST">
           <div class="form-group">
-            <input type="text" name="Acompanantes" class="form-control" placeholder="Acompanantes" autofocus>
+            <input type="text" name="Acompanantes" class="form-control" placeholder="Acompañantes" autofocus>
           </div>
           <div class="form-group">
             <textarea name="Observaciones" rows="2" class="form-control" placeholder="Observaciones"></textarea>

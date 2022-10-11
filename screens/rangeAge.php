@@ -20,7 +20,7 @@
       </div>
       <!-- FORMURLARIO DEFINE METODO DE PETICION Y RUTA DE LOS DATOS -->
       <div class="card card-body">
-        <form action="../save_tasks/save_task.php" method="POST">
+        <form action="../save_tasks/save_taskRangeAge.php" method="POST">
           <div class="form-group">
             <input type="text" name="RangoEdad" class="form-control" placeholder="Rango Edad" autofocus>
           </div>
