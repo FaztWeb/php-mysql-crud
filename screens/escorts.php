@@ -20,7 +20,7 @@
       </div>
       <!-- FORMURLARIO DEFINE METODO DE PETICION Y RUTA DE LOS DATOS -->
       <div class="card card-body">
-        <form action="../save_tasks/save_task.php" method="POST">
+        <form action="../save_tasks/save_taskEscorts.php" method="POST">
           <div class="form-group">
             <input type="text" name="Acompanantes" class="form-control" placeholder="Acompañantes" autofocus>
           </div>
@@ -71,7 +71,7 @@
                 <i class="fas fa-marker"></i>
               </a>
               <!-- REDIRECCION ELIMINAR -->
-              <a href="../delete/delete_task.php?IdAcompanantes=<?php echo $row['IdAcompanantes']?>" class="btn btn-danger">
+              <a href="../delete/delete_taskEscorts.php?IdAcompanantes=<?php echo $row['IdAcompanantes']?>" class="btn btn-danger">
               <!-- ICONO ELIMINAR -->
                 <i class="far fa-trash-alt"></i>
               </a>

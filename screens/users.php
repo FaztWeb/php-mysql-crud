@@ -82,7 +82,7 @@
                 <i class="fas fa-marker"></i>
               </a>
               <!-- REDIRECCION ELIMINAR -->
-              <a href="../delete/delete_task.php?IdUsuarios=<?php echo $row['IdUsuarios']?>" class="btn btn-danger">
+              <a href="../delete/delete_taskUsers.php?IdUsuarios=<?php echo $row['IdUsuarios']?>" class="btn btn-danger">
               <!-- ICONO ELIMINAR -->
                 <i class="far fa-trash-alt"></i>
               </a>

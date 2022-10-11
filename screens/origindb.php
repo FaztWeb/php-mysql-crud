@@ -66,12 +66,12 @@
             <!-- EDITAR DATOS  -->
             <td>
               <!-- REDIRECCION EDITAR -->
-              <a href="../edit/edit.php?IdOrigenBD=<?php echo $row['IdOrigenBD']?>" class="btn btn-secondary">
+              <a href="../edit/edit.php?IdInvitadoPor=<?php echo $row['IdInvitadoPor']?>" class="btn btn-secondary">
               <!-- ICONO EDITAR -->
                 <i class="fas fa-marker"></i>
               </a>
               <!-- REDIRECCION ELIMINAR -->
-              <a href="../delete/delete_task.php?IdOrigenBD=<?php echo $row['IdOrigenBD']?>" class="btn btn-danger">
+              <a href="../delete/delete_taskOrigindb.php?IdInvitadoPor=<?php echo $row['IdInvitadoPor']?>" class="btn btn-danger">
               <!-- ICONO ELIMINAR -->
                 <i class="far fa-trash-alt"></i>
               </a>
