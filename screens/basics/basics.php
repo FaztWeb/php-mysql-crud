@@ -27,97 +27,96 @@
 
                                 <div class="form-group item  select ">
                                 <div class="selectItems">
-                                        <label for="state_id" class="control-label">Tratamiento Personal</label>
+                                        <label  class="control-label">Tratamiento Personal</label>
                                     <!--  tratamiento codigo -->
                                     </div> 
                                 </div>
 
                                 <div class="form-group item">
-                                    <label for="street1_id" class="control-label">Nombre</label>
+                                    <label  class="control-label">Nombre</label>
                                     <input type="text" class="form-control"  name="Nombres" placeholder="Nombre">
                                 </div>
                                 <div class="form-group item">
-                                    <label for="street2_id" class="control-label">Apellidos</label>
+                                    <label  class="control-label">Apellidos</label>
                                     <input type="text" class="form-control"  name="Apellidos" placeholder="Apellidos">
                                 </div>
                                 <div class="form-group item">
-                                    <label for="street2_id" class="control-label">Otro Acompanante</label>
+                                    <label  class="control-label">Otro Acompanante</label>
                                     <input type="text" class="form-control"  name="OtroAcompanante" placeholder="OtroAcompanante">
                                 </div>
-                                <div class="form-group item"> <!-- City-->
-                                    <label for="city_id" class="control-label">Cargo</label>
+                                <div class="form-group item">
+                                    <label  class="control-label">Cargo</label>
                                     <input type="text" class="form-control"  name="Cargo" placeholder="Cargo">
                                 </div>
-                                <div class="form-group item"> <!-- City-->
-                                    <label for="city_id" class="control-label">Empresa</label>
+                                <div class="form-group item">
+                                    <label  class="control-label">Empresa</label>
                                     <input type="text" class="form-control"  name="Empresa" placeholder="Empresa">
                                 </div>
-                                <div class="form-group item"> <!-- City-->
-                                    <label for="city_id" class="control-label">Telefono Empresa</label>
-                                    <input type="text" class="form-control"  name="TelefonoEmpresa" placeholder="Telefono Empresa">
+                                <div class="form-group item">
+                                    <label  class="control-label">TelefonoEmpresa</label>
+                                    <input type="text" class="form-control"  name="TelefonoEmpresa" placeholder="TelefonoEmpresa">
                                 </div>
-                                <div class="form-group itemTwo"> <!-- City-->
-                                    <label for="city_id" class="control-label">TelefonoEmpresaDirecto</label>
-                                    <input type="text" class="form-control"  name="TelefonoEmpresaDirecto" placeholder=" TelefonoEmpresaDirecto">
-                                </div> 
-                                <div class="form-group itemTwo"> <!-- City-->
-                                    <label for="city_id" class="control-label">Celular Empresa</label>
-                                    <input type="text" class="form-control"  name="CelularEmpresa" placeholder=" CelularEmpresa">
-                                </div> 
+                                <div class="form-group item">
+                                    <label  class="control-label">TelefonoEmpresaDirecto</label>
+                                    <input type="text" class="form-control"  name="TelefonoEmpresaDirecto" placeholder="TelefonoEmpresaDirecto">
+                                </div>
+                                <div class="form-group item">
+                                    <label  class="control-label">CelularEmpresa</label>
+                                    <input type="text" class="form-control"  name="CelularEmpresa" placeholder="CelularEmpresa">
+                                </div>
 
                                 <div class="form-group select item gridSelect"> <!-- State Button -->
                                 
                                     <div class="selectItems">
-                                        <label for="state_id" class="control-label">Ciudad</label>
+                                        <label  class="control-label">Ciudad</label>
                                         <!-- codigo ciudad -->
                                     </div> 
                                     <div class="selectItems">
-                                        <label for="state_id" class="control-label">Genero</label>
+                                        <label  class="control-label">Genero</label>
                                     <!-- poner aqui codigo de genero  -->
                                     </div>
                                 </div>
                                 
                         </div>
                         <div class="container-space">
-                                
-                                <div class="form-group itemTwo"> <!-- City-->
-                                    <label for="city_id" class="control-label">CorreoEmpresarial</label>
-                                    <input type="text" class="form-control"  name="CorreoEmpresarial" placeholder="Correo Empresaeial">
-                                </div> 
-                                <div class="form-group itemTwo"> <!-- City-->
-                                    <label for="city_id" class="control-label">Asistente Secretaria</label>
-                                    <input type="text" class="form-control"  name="AsistenteSecretaria" placeholder="Asistente Secretaria">
+                                <div class="form-group itemTwo">
+                                    <label  class="control-label">CorreoEmpresarial</label>
+                                    <input type="text" class="form-control"  name="CorreoEmpresarial" placeholder="CorreoEmpresarial">
                                 </div>
-                                <div class="form-group itemTwo"> <!-- City-->
-                                    <label for="city_id" class="control-label">CorreoAsistenteSecretaria</label>
+                                <div class="form-group itemTwo">
+                                    <label  class="control-label">AsistenteSecretaria</label>
+                                    <input type="text" class="form-control"  name="AsistenteSecretaria" placeholder="AsistenteSecretaria">
+                                </div>
+                                <div class="form-group itemTwo">
+                                    <label  class="control-label">CorreoAsistenteSecretaria</label>
                                     <input type="text" class="form-control"  name="CorreoAsistenteSecretaria" placeholder="CorreoAsistenteSecretaria">
-                                </div>  
-                                <div class="form-group itemTwo"> <!-- City-->
-                                    <label for="city_id" class="control-label">Direccion Empresa</label>
-                                    <input type="text" class="form-control" name="DireccionEmpresa" placeholder="Direccion Empresa">
                                 </div>
-                                <div class="form-group itemTwo"> <!-- City-->
-                                    <label for="city_id" class="control-label">Direccion Residencia</label>
-                                    <input type="text" class="form-control" name="DireccionResidencia" placeholder="Direccion Residencia">
+                                <div class="form-group itemTwo">
+                                    <label  class="control-label">DireccionEmpresa</label>
+                                    <input type="text" class="form-control"  name="DireccionEmpresa" placeholder="DireccionEmpresa">
                                 </div>
-                                <div class="form-group itemTwo"> <!-- City-->
-                                    <label for="city_id" class="control-label">Telefono Residencia</label>
-                                    <input type="text" class="form-control"  name="TelefonoResidencia" placeholder="Telefono Residencia">
-                                </div> 
-                                <div class="form-group itemTwo"> <!-- City-->
-                                    <label for="city_id" class="control-label">CelularPersonal</label>
-                                    <input type="text" class="form-control" name="CelularPersonal" placeholder="Celular Personal">
-                                </div> 
-                                <div class="form-group itemTwo"> <!-- City-->
-                                    <label for="city_id" class="control-label">Correo Personal</label>
-                                    <input type="text" class="form-control" name="CorreoPersonal" placeholder="Correo Personal">
-                                </div>  
-                                <div class="form-group itemTwo"> <!-- City-->
-                                    <label for="city_id" class="control-label">Cedula</label>
-                                    <input type="text" class="form-control" name="Cedula" placeholder="Cedula">
+                                <div class="form-group itemTwo">
+                                    <label  class="control-label">DireccionResidencia</label>
+                                    <input type="text" class="form-control"  name="DireccionResidencia" placeholder="DireccionResidencia">
                                 </div>
+                                <div class="form-group itemTwo">
+                                    <label  class="control-label">TelefonoResidencia</label>
+                                    <input type="text" class="form-control"  name="TelefonoResidencia" placeholder="TelefonoResidencia">
+                                </div>
+                                <div class="form-group itemTwo">
+                                    <label  class="control-label">CelularPersonal</label>
+                                    <input type="text" class="form-control"  name="CelularPersonal" placeholder="CelularPersonal">
+                                </div>
+                                <div class="form-group itemTwo">
+                                    <label  class="control-label">CorreoPersonal</label>
+                                    <input type="text" class="form-control"  name="CorreoPersonal" placeholder="CorreoPersonal">
+                                </div>
+                                <div class="form-group itemTwo">
+                                    <label  class="control-label">Cedula</label>
+                                    <input type="text" class="form-control"  name="Cedula" placeholder="Cedula">
+                                </div>                                
                                 
-                                <br>
+                                
                                 <div class="form-group itemTwo"> <!-- City-->
                                         <p>Click para Ver Detalle <a href="./detail_basics/detail_basics.php"><strong>Basicos</strong></a></p>
                                 </div>                   

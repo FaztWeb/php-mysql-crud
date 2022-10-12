@@ -21,7 +21,14 @@
   <main class="container p-4">
   <div class="row">
 
-
+  <?php if (isset($_SESSION['message'])) { ?>
+      <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
+        <?= $_SESSION['message']?>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <?php session_unset(); } ?>
   <div>
       <h1>
         Basicos
@@ -79,8 +86,8 @@
           while($row = mysqli_fetch_assoc($result_tasks)) { ?>
           <!-- DATOS A ITERAR --> 
           <tr>
-            <td class="itremTD"><a href="../detail_basics_id/detail_basics_id.php"><?php echo $row['IdBasicos']; ?></a></td>
-          
+          <td class="itremTD"><a href="../detail_basics_id/detail_basics_id.php?IdBasicos=<?php echo $row['IdBasicos']?>"><?php echo $row['IdBasicos']; ?></a></td>
+            
             <td class="itremTD"><?php echo $row['Nombres']; ?></td>
             <td class="itremTD"><?php echo $row['Apellidos']; ?></td>
 
@@ -95,7 +102,7 @@
                 <i class="fas fa-marker"></i>
               </a>
               <!-- REDIRECCION ELIMINAR -->
-              <a href="../delete/delete_task.php?IdBasicos=<?php echo $row['IdBasicos']?>" class="btn btn-danger">
+              <a href="../../../delete/delete_taskBasics.php?IdBasicos=<?php echo $row['IdBasicos']?>" class="btn btn-danger">
               <!-- ICONO ELIMINAR -->
                 <i class="far fa-trash-alt"></i>
               </a>
