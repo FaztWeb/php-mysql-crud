@@ -44,7 +44,7 @@ if (isset($_POST['update'])) {
         </div>
         <button class="btn-success" name="update">
           Actualizar
-</button>
+        </button>
       </form>
       </div>
     </div>

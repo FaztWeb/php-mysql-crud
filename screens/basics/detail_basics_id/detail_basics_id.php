@@ -1,7 +1,5 @@
 <?php
 include('../../../dbConnect/db.php');
-$Ciudad = '';
-$Observaciones= '';
 
 if  (isset($_GET['IdBasicos'])) {
   $IdBasicos = $_GET['IdBasicos'];
