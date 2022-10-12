@@ -70,26 +70,17 @@
 
         <?php
 
-        $sql_register = mysqli_query($conn,"SELECT COUNT(*) AS sistema from basicos where editBasics = 1");
-        $result_register = mysqli_fetch_array($sql_register);
-        $total_registro = $result_register[]
-        //
-        //  SELECCIONA LA TABLA DE LA BASE DE DATOS CON CODIGO SQL 
-        //
-          $query = "SELECT * FROM basicos ORDER BY IdBasicos ASC";
-          //
-        //SELECCIONA LA VARIBALE $conn del archivo ../dbConnect/db.php
+
+          $query = "SELECT * FROM basicos ";
         //
           $result_tasks = mysqli_query($conn, $query);
-          //
-        //EL WHILE SE VA ENCARGAR DE ITERAR LOS DATOS DE LA BASE DE DATOS Y DEFINE COLUMNAS CON LA ASIGNACION $row =
-        //    
+          
 
           while($row = mysqli_fetch_assoc($result_tasks)) { ?>
           <!-- DATOS A ITERAR --> 
           <tr>
             <td class="itremTD"><a href="../detail_basics_id/detail_basics_id.php"><?php echo $row['IdBasicos']; ?></a></td>
-           
+          
             <td class="itremTD"><?php echo $row['Nombres']; ?></td>
             <td class="itremTD"><?php echo $row['Apellidos']; ?></td>
 
