@@ -16,34 +16,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
     </head>
     <body>
-         <br>
+        <br>
         <div class="title">
             <h1>Agregar Basicos</h1>
         </div>
             <div class="card-body conainer">
                     <form action="../../save_tasks/save_taskBasics.php" method="POST">
                         <div class="container-space">
-                      
+                    
 
                                 <div class="form-group item  select ">
                                 <div class="selectItems">
                                         <label for="state_id" class="control-label">Tratamiento Personal</label>
-                                        <select class="form-control " name="TratamientoPersonal">
-                                            <?php
-                                                $query = "SELECT * FROM tratamiento";
-                                                $result_tasks = mysqli_query($conn, $query);
-                                                while($row = mysqli_fetch_assoc($result_tasks)) { ?>
-                                                <option 
-                                                        value="AL"><?php echo $row['Tratamiento']; ?>
-                                                </option>
-                                            <?php } ?>
-                                        </select> 
+                                    <!--  tratamiento codigo -->
                                     </div> 
                                 </div>
 
                                 <div class="form-group item">
                                     <label for="street1_id" class="control-label">Nombre</label>
-                                    <input type="text" class="form-control"  name="Nombre" placeholder="Nombre">
+                                    <input type="text" class="form-control"  name="Nombres" placeholder="Nombre">
                                 </div>
                                 <div class="form-group item">
                                     <label for="street2_id" class="control-label">Apellidos</label>
@@ -78,29 +69,11 @@
                                 
                                     <div class="selectItems">
                                         <label for="state_id" class="control-label">Ciudad</label>
-                                        <select class="form-control " name="Ciudad">
-                                        <?php
-                                                $query = "SELECT * FROM ciudades";
-                                                $result_tasks = mysqli_query($conn, $query);
-                                                while($row = mysqli_fetch_assoc($result_tasks)) { ?>
-                                                <option 
-                                                        value="AL"><?php echo $row['Ciudad']; ?>
-                                                </option>
-                                            <?php } ?>
-                                        </select> 
+                                        <!-- codigo ciudad -->
                                     </div> 
                                     <div class="selectItems">
                                         <label for="state_id" class="control-label">Genero</label>
-                                        <select class="form-control" name="Genero">
-                                        <?php
-                                                $query = "SELECT * FROM generos";
-                                                $result_tasks = mysqli_query($conn, $query);
-                                                while($row = mysqli_fetch_assoc($result_tasks)) { ?>
-                                                <option 
-                                                        value="AL"><?php echo $row['Genero']; ?>
-                                                </option>
-                                            <?php } ?>
-                                        </select> 
+                                    <!-- poner aqui codigo de genero  -->
                                     </div>
                                 </div>
                                 
@@ -151,11 +124,11 @@
                         </div>
                         <div class="button">
                         <div class="form-group item"> <!-- Submit Button -->
-                                    <button type="submit" name="save_task" class="btn btn-dark" value="Guardar">ENVIAR </button>
+                                    <button type="submit" name="save_taskBasics" class="btn btn-dark" value="Guardar">ENVIAR </button>
                                 </div>
                         </div>
             </form>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>

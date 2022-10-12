@@ -3,14 +3,14 @@
 include('../dbConnect/db.php');
 
 if (isset($_POST['save_taskBasics'])) {
-  $TratamientoPersonal= $_POST['TratamientoPersonal'];
+
   $Nombres = $_POST['Nombres'];
   $Apellidos= $_POST['Apellidos'];
   $OtroAcompanante = $_POST['OtroAcompanante'];
   $Cargo= $_POST['Cargo'];
   $Empresa= $_POST['Empresa'];
   $TelefonoEmpresa = $_POST['TelefonoEmpresa'];
-  $TelefonoEmpresaDirecto= $_POST['TelefonoEmpresaDirecto'];
+  /* $TelefonoEmpresaDirecto= $_POST['TelefonoEmpresaDirecto'];
   $CelularEmpresa = $_POST['CelularEmpresa'];
   $CorreoEmpresarial= $_POST['CorreoEmpresarial'];
   $AsistenteSecretaria = $_POST['AsistenteSecretaria'];
@@ -20,21 +20,23 @@ if (isset($_POST['save_taskBasics'])) {
   $TelefonoResidencia = $_POST['TelefonoResidencia'];
   $CelularPersonal= $_POST['CelularPersonal'];
   $CorreoPersonal = $_POST['CorreoPersonal'];
-  $Cedula= $_POST['Cedula'];
-  $idGenero = $_POST['idGenero'];
-  $idRangosEdad= $_POST['idRangosEdad'];
+  $Cedula= $_POST['Cedula']; */
+
+
+  /* $idGenero = $_POST['idGenero']; */
+ /*  $idRangosEdad= $_POST['idRangosEdad']; */
 
 
   $query = "INSERT INTO basicos(
     Nombres, Apellidos,OtroAcompanante,Cargo, Empresa, Ciudad, TelefonoEmpresa,
-    TelefonoEmpresaDirecto,CelularEmpresa,CorreoEmpresarial,AsistenteSecretaria,
+    /* TelefonoEmpresaDirecto,CelularEmpresa,CorreoEmpresarial,AsistenteSecretaria,
     CorreoAsistenteSecretaria,DireccionEmpresa,DireccionResidencia,TelefonoResidencia,
-    CelularPersonal,CorreoPersonal,Cedula,idGenero,idRangosEdad ) 
+    CelularPersonal,CorreoPersonal,Cedula */ ) 
   VALUES (
     '$Nombres', '$Apellidos','$OtroAcompanante','$Cargo','$TelefonoEmpresa',
-    '$TelefonoEmpresaDirecto','$CelularEmpresa','$CorreoEmpresarial','$AsistenteSecretaria',
+    /* '$TelefonoEmpresaDirecto','$CelularEmpresa','$CorreoEmpresarial','$AsistenteSecretaria',
     '$CorreoAsistenteSecretaria','$DireccionEmpresa','$DireccionResidencia','$TelefonoResidencia',
-    '$CelularPersonal','$CorreoPersonal','$Cedula','$idGenero','$idRangosEdad')";
+    '$CelularPersonal','$CorreoPersonal','$Cedula' */)";
   $result = mysqli_query($conn, $query);
   if(!$result) {
     die("Query Failed.");
