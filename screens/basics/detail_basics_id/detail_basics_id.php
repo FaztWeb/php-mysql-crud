@@ -1,3 +1,5 @@
+ <!--  ESTILOS CSS -->
+ <link rel="stylesheet" href="./Assets/styles.css" >
 <?php
 include('../../../dbConnect/db.php');
 
@@ -29,17 +31,24 @@ if  (isset($_GET['IdBasicos'])) {
 }
 
 ?>
-<?php include('../../../includes/header.php'); ?>
 
-  
-<div class="table">
+<?php include('../../../includes/header_detail_basics.php'); ?>
+
+<main>
+<div class="table table-responsive">
       <table class="table table-hover table-#dbd7d2"> 
         <thead>
         <tr>
-            <th scope="col">IdBasicos</th> 
+            <th scope="col">IdBasicos</th>
+            <th scope="col">IdEstado</th>
+            <th scope="col">IdTratamiento</th>
+            <th scope="col">TratamientoPersonal</th>
             <th scope="col">Nombres</th>
             <th scope="col">Apellidos</th>
+            <th scope="col">OtroAcompanante</th>
+            <th scope="col">IdAcompanantes</th>
             <th scope="col">Cargo</th>
+            <th scope="col">Empresa</th>
             <th scope="col">TelefonoEmpresa</th>
             <th scope="col">TelefonoEmpresaDirecto</th>
             <th scope="col">CelularEmpresa</th>
@@ -47,13 +56,20 @@ if  (isset($_GET['IdBasicos'])) {
             <th scope="col">AsistenteSecretaria</th>
             <th scope="col">CorreoAsistenteSecretaria</th>
             <th scope="col">DireccionEmpresa</th>
+            <th scope="col">IDCiudadEmpresa</th>
+            <th scope="col">iDDepartamento</th>
             <th scope="col">DireccionResidencia</th>
+            <th scope="col">IDCiudadResidencia</th>
+            <th scope="col">IdDepartamentoResidencia</th>
+
             <th scope="col">TelefonoResidencia</th>
             <th scope="col">CelularPersonal</th>
             <th scope="col">CorreoPersonal</th>
             <th scope="col">Cedula</th>
+            <th scope="col">idGenero</th>
+            
 
-            <th scope="col">Acccion</th>
+            
           </tr>
         </thead>
         <tbody >
@@ -69,12 +85,16 @@ if  (isset($_GET['IdBasicos'])) {
           while($row = mysqli_fetch_assoc($result_tasks)) { ?>
           <!-- DATOS A ITERAR --> 
           <tr>
-          <td class="itremTD"><a href="../detail_basics_id/detail_basics_id.php?IdBasicos=<?php echo $row['IdBasicos']?>"><?php echo $row['IdBasicos']; ?></a></td>
-            
+          <td class="itremTD"><?php echo $row['IdBasicos']; ?></td>
+          <td class="itremTD"><?php echo $row['IdEstado']; ?></td>
+          <td class="itremTD"><?php echo $row['IdTratamiento']; ?></td>
+          <td class="itremTD"><?php echo $row['TratamientoPersonal']; ?></td>
             <td class="itremTD"><?php echo $row['Nombres']; ?></td>
             <td class="itremTD"><?php echo $row['Apellidos']; ?></td>
             <td class="itremTD"><?php echo $row['OtroAcompanante']; ?></td>
+            <td class="itremTD"><?php echo $row['IdAcompanantes']; ?></td>
             <td class="itremTD"><?php echo $row['Cargo']; ?></td>
+            <td class="itremTD"><?php echo $row['Empresa']; ?></td>
             <td class="itremTD"><?php echo $row['TelefonoEmpresa']; ?></td>
             <td class="itremTD"><?php echo $row['TelefonoEmpresaDirecto']; ?></td>
             <td class="itremTD"><?php echo $row['CelularEmpresa']; ?></td>
@@ -82,36 +102,32 @@ if  (isset($_GET['IdBasicos'])) {
             <td class="itremTD"><?php echo $row['AsistenteSecretaria']; ?></td>
             <td class="itremTD"><?php echo $row['CorreoAsistenteSecretaria']; ?></td>
             <td class="itremTD"><?php echo $row['DireccionEmpresa']; ?></td>
+            <td class="itremTD"><?php echo $row['IDCiudadEmpresa']; ?></td>
+            <td class="itremTD"><?php echo $row['iDDepartamento']; ?></td>
             <td class="itremTD"><?php echo $row['DireccionResidencia']; ?></td>
+            <td class="itremTD"><?php echo $row['IDCiudadResidencia']; ?></td>
+            <td class="itremTD"><?php echo $row['IdDepartamentoResidencia']; ?></td>
             <td class="itremTD"><?php echo $row['TelefonoResidencia']; ?></td>
             <td class="itremTD"><?php echo $row['CelularPersonal']; ?></td>
             <td class="itremTD"><?php echo $row['CorreoPersonal']; ?></td>
             <td class="itremTD"><?php echo $row['Cedula']; ?></td>
+            <td class="itremTD"><?php echo $row['idGenero']; ?></td>
 
             <!-- EDITAR DATOS  -->
-            <td class="itremTD" >
-              <!-- REDIRECCION EDITAR -->
-              <a href="../../../edit/editBasics/editBasics.php?IdBasicos=<?php echo $row['IdBasicos']?>" class="btn btn-secondary">
-              <!-- ICONO EDITAR -->
-                <i class="fas fa-marker"></i>
-              </a>
-              <!-- REDIRECCION ELIMINAR -->
-              <a href="../../../delete/delete_taskBasics.php?IdBasicos=<?php echo $row['IdBasicos']?>" class="btn btn-danger">
-              <!-- ICONO ELIMINAR -->
-                <i class="far fa-trash-alt"></i>
-              </a>
-            </td>
+            
           </tr>
           <?php } ?>
         </tbody>
       </table>
       
     </div>
-
-
+</main>
+   
 
  <!-- BOOTRAP API -->
  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
 <?php include('../../../includes/footer.php'); ?>
+
+
 
