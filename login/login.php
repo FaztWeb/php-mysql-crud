@@ -8,23 +8,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Sistema Novio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
    <!--  template -->
    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <!--  ESTILOS CSS -->
- <link rel="stylesheet" href="styles.css" >
+ <link rel="stylesheet" href="style.css" >
 <!-- Tipografia -->
  <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+      <!-- ICONO -->
+      <link rel="icon" href="../Assets/img/icon_sistema-novio.ico">
   </head>
   <body>
 
   <div class="sidenav">
-         <div class="login-main-text">
-            <h2>SISTEMA NOVIO<br></h2>
-            <p>Solo Personal Autorizado</p>
+         <div class="log-main">
+         <img src="../Assets/img/sistema_novio_icono.png">
          </div>
       </div>
       <div class="main">
