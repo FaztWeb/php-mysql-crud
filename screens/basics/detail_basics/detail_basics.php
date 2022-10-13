@@ -9,7 +9,7 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
       <!--  ESTILOS CSS -->
-      <link rel="stylesheet" href="../Assets/style.css" >
+      <link rel="stylesheet" href="../Assets/styles.css" >
       <!--  TIPO GRAFIA -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,14 @@
   <main class="container p-4">
   <div class="row">
 
-
+  <?php if (isset($_SESSION['message'])) { ?>
+      <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
+        <?= $_SESSION['message']?>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <?php session_unset(); } ?>
   <div>
       <h1>
         Basicos
@@ -69,23 +76,18 @@
         <tbody >
 
         <?php
-        //
-        //  SELECCIONA LA TABLA DE LA BASE DE DATOS CON CODIGO SQL 
-        //
-          $query = "SELECT * FROM basicos";
-          //
-        //SELECCIONA LA VARIBALE $conn del archivo ../dbConnect/db.php
+
+
+          $query = "SELECT * FROM basicos ";
         //
           $result_tasks = mysqli_query($conn, $query);
-          //
-        //EL WHILE SE VA ENCARGAR DE ITERAR LOS DATOS DE LA BASE DE DATOS Y DEFINE COLUMNAS CON LA ASIGNACION $row =
-        //    
+          
 
           while($row = mysqli_fetch_assoc($result_tasks)) { ?>
           <!-- DATOS A ITERAR --> 
           <tr>
-            <td class="itremTD"><a href="../detail_basics_id/detail_basics_id.php"><?php echo $row['IdBasicos']; ?></a></td>
-           
+          <td class="itremTD"><a href="../detail_basics_id/detail_basics_id.php?IdBasicos=<?php echo $row['IdBasicos']?>"><?php echo $row['IdBasicos']; ?></a></td>
+            
             <td class="itremTD"><?php echo $row['Nombres']; ?></td>
             <td class="itremTD"><?php echo $row['Apellidos']; ?></td>
 
@@ -100,7 +102,7 @@
                 <i class="fas fa-marker"></i>
               </a>
               <!-- REDIRECCION ELIMINAR -->
-              <a href="../delete/delete_task.php?IdBasicos=<?php echo $row['IdBasicos']?>" class="btn btn-danger">
+              <a href="../../../delete/delete_taskBasics.php?IdBasicos=<?php echo $row['IdBasicos']?>" class="btn btn-danger">
               <!-- ICONO ELIMINAR -->
                 <i class="far fa-trash-alt"></i>
               </a>
@@ -109,6 +111,20 @@
           <?php } ?>
         </tbody>
       </table>
+      <div class="paginador">
+            <ul>
+                <li><a href="#">|<</a></li> <!-- 7:51 Paginador con php y mysql-21 -->
+                <li><a href="#"><<</a></li>
+                <li class="pageSelected">1</li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">>></a></li>
+                <li><a href="#">>|</a></li>
+
+            </ul>
+      </div>
     </div>
   </div>
    <!-- BOOTRAP API -->

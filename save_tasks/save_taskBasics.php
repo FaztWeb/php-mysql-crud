@@ -3,7 +3,7 @@
 include('../dbConnect/db.php');
 
 if (isset($_POST['save_taskBasics'])) {
-  $TratamientoPersonal= $_POST['TratamientoPersonal'];
+
   $Nombres = $_POST['Nombres'];
   $Apellidos= $_POST['Apellidos'];
   $OtroAcompanante = $_POST['OtroAcompanante'];
@@ -21,20 +21,20 @@ if (isset($_POST['save_taskBasics'])) {
   $CelularPersonal= $_POST['CelularPersonal'];
   $CorreoPersonal = $_POST['CorreoPersonal'];
   $Cedula= $_POST['Cedula'];
-  $idGenero = $_POST['idGenero'];
-  $idRangosEdad= $_POST['idRangosEdad'];
+
+
 
 
   $query = "INSERT INTO basicos(
-    Nombres, Apellidos,OtroAcompanante,Cargo, Empresa, Ciudad, TelefonoEmpresa,
-    TelefonoEmpresaDirecto,CelularEmpresa,CorreoEmpresarial,AsistenteSecretaria,
-    CorreoAsistenteSecretaria,DireccionEmpresa,DireccionResidencia,TelefonoResidencia,
-    CelularPersonal,CorreoPersonal,Cedula,idGenero,idRangosEdad ) 
+    Nombres, Apellidos, OtroAcompanante, Cargo, Empresa, TelefonoEmpresa, TelefonoEmpresaDirecto, 
+    CelularEmpresa,CorreoEmpresarial,AsistenteSecretaria,CorreoAsistenteSecretaria,
+    DireccionEmpresa,DireccionResidencia,TelefonoResidencia,
+    CelularPersonal,CorreoPersonal,Cedula ) 
   VALUES (
-    '$Nombres', '$Apellidos','$OtroAcompanante','$Cargo','$TelefonoEmpresa',
+    '$Nombres', '$Apellidos','$OtroAcompanante','$Cargo','$Empresa','$TelefonoEmpresa',
     '$TelefonoEmpresaDirecto','$CelularEmpresa','$CorreoEmpresarial','$AsistenteSecretaria',
-    '$CorreoAsistenteSecretaria','$DireccionEmpresa','$DireccionResidencia','$TelefonoResidencia',
-    '$CelularPersonal','$CorreoPersonal','$Cedula','$idGenero','$idRangosEdad')";
+    '$CorreoAsistenteSecretaria','$DireccionEmpresa','$DireccionResidencia','$TelefonoResidencia'
+    ,'$CelularPersonal','$CorreoPersonal','$Cedula')";
   $result = mysqli_query($conn, $query);
   if(!$result) {
     die("Query Failed.");

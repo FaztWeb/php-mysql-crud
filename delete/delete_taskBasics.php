@@ -2,9 +2,9 @@
 
 include("../dbConnect/db.php"); 
 
-if(isset($_GET['id'])) {
-  $id = $_GET['id'];
-  $query = "DELETE FROM taskUsers WHERE id = $id";
+if(isset($_GET['IdBasicos'])) {
+  $IdBasicos = $_GET['IdBasicos'];
+  $query = "DELETE FROM basicos WHERE IdBasicos = $IdBasicos";
   $result = mysqli_query($conn, $query);
   if(!$result) {
     die("Query Failed.");
@@ -14,7 +14,7 @@ if(isset($_GET['id'])) {
 
   $_SESSION['message'] = 'Tabla eliminada con exito!';
   $_SESSION['message_type'] = 'danger';
-  header('Location:../screens/users.php');
+  header('Location:../screens/basics/detail_basics/detail_basics.php');
 }
 
 ?>

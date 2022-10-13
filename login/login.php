@@ -13,18 +13,19 @@
    <!--  template -->
    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <!--  ESTILOS CSS -->
- <link rel="stylesheet" href="styles.css" >
+ <link rel="stylesheet" href="style.css" >
 <!-- Tipografia -->
  <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+      <!-- ICONO -->
+      <link rel="icon" href="../Assets/img/icon_sistema-novio.ico">
   </head>
   <body>
 
   <div class="sidenav">
-         <div class="login-main-text">
-            <h2>SISTEMA NOVIO<br></h2>
-            <p>Solo Personal Autorizado</p>
+         <div class="log-main">
+         <img src="../Assets/img/sistema_novio_icono.png">
          </div>
       </div>
       <div class="main">

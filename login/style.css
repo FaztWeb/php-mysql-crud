@@ -38,11 +38,11 @@ body {
 
 @media screen and (min-width: 768px){
     .main{
-        margin-left: 40%; 
+        margin-left: 45.5%; 
     }
 
     .sidenav{
-        width: 40%;
+        width: 43.5%;
         position: fixed;
         z-index: 1;
         top: 0;
@@ -59,15 +59,7 @@ body {
 }
 
 
-.login-main-text{
-    margin-top: 20%;
-    padding: 60px;
-    color: #fff;
-}
-
-.login-main-text h2{
-    font-weight: 300;
-}
+.log-main{margin-right: 20px;}
 
 .btn-black{
     background-color: #000 !important;
