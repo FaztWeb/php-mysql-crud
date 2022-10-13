@@ -38,7 +38,7 @@
         <thead>
           <tr>
             <th>Estado</th>
-            <th>Descripcion del Estado</th>
+            <th>Observaciones</th>
            
             <th>Acccion</th>
           </tr>

@@ -38,7 +38,7 @@
         <thead>
           <tr>
             <th>Asistencia</th>
-            <th>Descripcion de la Asistencia</th>
+            <th>Observaciones</th>
            
             <th>Acccion</th>
           </tr>

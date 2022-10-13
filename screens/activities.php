@@ -25,7 +25,7 @@
             <input type="text" name="Actividad" class="form-control" placeholder="Actividad" autofocus>
           </div>
           <div class="form-group">
-            <textarea name="Observaciones" rows="2" class="form-control" placeholder="Descripcion de la ciudad"></textarea>
+            <textarea name="Observaciones" rows="2" class="form-control" placeholder="Observaciones"></textarea>
           </div>
           <input type="submit" name="save_task" class="btn btn-success btn-block" value="Guardar">
         </form>
@@ -38,7 +38,7 @@
         <thead>
           <tr>
             <th>Actividad</th>
-            <th>Descripcion de la Actividad</th>
+            <th>Observaciones</th>
            
             <th>Acccion</th>
           </tr>

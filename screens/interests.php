@@ -38,7 +38,7 @@
         <thead>
           <tr>
             <th>Interes</th>
-            <th>Observaciones de los Interes</th>
+            <th>Observaciones</th>
            
             <th>Acccion</th>
           </tr>

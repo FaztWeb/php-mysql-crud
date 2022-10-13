@@ -41,7 +41,7 @@ if (isset($_POST['save_taskBasics'])) {
   }
   
 
-  $_SESSION['message'] = 'Tabla guardada con exito!';
+  $_SESSION['message'] = 'Registro Guardado con exito!';
   $_SESSION['message_type'] = 'success';
   header('Location:../screens/basics/detail_basics/detail_basics.php');
 

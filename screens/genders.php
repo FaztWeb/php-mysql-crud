@@ -38,7 +38,7 @@
         <thead>
           <tr>
             <th>Nombre del Genero</th>
-            <th>Observaciones del Genero</th>
+            <th>Observaciones</th>
            
             <th>Acccion</th>
           </tr>
