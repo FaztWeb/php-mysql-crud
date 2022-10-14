@@ -46,7 +46,7 @@
         <thead>
           <tr>
             <th>Acompañantes</th>
-            <th>Observaciones de los Acompanantes</th>
+            <th>Observaciones </th>
            
             <th>Acccion</th>
           </tr>

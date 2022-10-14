@@ -34,7 +34,7 @@ if (isset($_POST['update'])) {
       <div class="card card-body">
       <form action="editEscorts.php?IdAcompanantes=<?php echo $_GET['IdAcompanantes']; ?>" method="POST">
       <div>
-          <h3>Editar Ciudades</h3>
+          <h3>Editar Acompañantes</h3>
       </div>
         <div class="form-group">
           <input name="Acompanantes" type="text" class="form-control" value="<?php echo $Acompanantes; ?>" placeholder="Acompanantes">

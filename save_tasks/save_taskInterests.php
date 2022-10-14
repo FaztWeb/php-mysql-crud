@@ -25,7 +25,7 @@ if (isset($_POST['save_task'])) {
   // REDIRECCION A LA VISTA DESPUES DE ENVIAR LOS DATOS Location:../index.php
   // MENSAJES DE SESSION DESPUES DE ENVIAR LOS DATOS A LA BASE DE DATOS 
   //
-  $_SESSION['message'] = 'Tabla guardada con exito!';
+  $_SESSION['message'] = 'Registro Guardado con exito!';
   $_SESSION['message_type'] = 'success';
   header('Location:../screens/interests.php');
 

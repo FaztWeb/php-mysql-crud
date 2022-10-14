@@ -16,7 +16,7 @@ if (isset($_POST['save_taskGenders'])) {
   }
   
 
-  $_SESSION['message'] = 'Tabla guardada con exito!';
+  $_SESSION['message'] = 'Registro Guardado con exito!';
   $_SESSION['message_type'] = 'success';
   header('Location:../screens/genders.php');
 
