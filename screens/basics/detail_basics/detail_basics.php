@@ -38,7 +38,7 @@
       </h1>
   </div>
   <div>
-      <form action="../../../search/search.php" method="get" class="searchForm">
+      <form  action="detail_basics.php" method="get" class="searchForm">
           
           <div class="input-group mb-3">
                 <div class="input-group-append">
@@ -53,21 +53,22 @@
                 </div>
 
                   <input 
-                  name="busquedaParams" 
-                  id="busquedaParams" 
+                  name="busqueda" 
+                  id="campo" 
                   type="text" 
                   class="form-control" 
-                  placeholder="Recipient's username" 
+                  placeholder="Ejemplo: adriana" 
                   aria-label="Recipient's username" 
                   aria-describedby="basic-addon2"
                   style="border-radius:6px;margin-left:4.75em;"
                   >
 
                   <div style="width:3.5em; padding-left:8px;" class="search">
-                    <a 
+                    <input 
                       type="submit" 
+                      name="enviar"
                       class="btn btn-outline-success btn-block">
-                      <i class="fa-solid fa-magnifying-glass"></i>
+                      
                   </a>
               </div>
         </div>
@@ -80,8 +81,6 @@
               href="../basics.php">Agregar Basicos
             </a>
           </div>
-
-          
       </form>
 
         
@@ -107,13 +106,19 @@
 
         <?php
 
+if(isset($_GET['enviar'])){
+  $busqueda = $_GET['busqueda'];
 
-          $query = "SELECT * FROM basicos ";
+          $query = "SELECT * FROM basicos WHERE Nombres  LIKE '%$busqueda%' 
+          OR Apellidos LIKE '%$busqueda%' 
+          OR Empresa LIKE '%$busqueda%'
+          OR TelefonoEmpresa LIKE '%$busqueda%'
+          OR CelularEmpresa LIKE '%$busqueda%'";
         //
           $result_tasks = mysqli_query($conn, $query);
           
 
-          while($row = mysqli_fetch_assoc($result_tasks)) { ?>
+          while($row = $result_tasks->fetch_array()) { ?>
           <!-- DATOS A ITERAR --> 
           <tr>
           <td class="itremTD"><a href="../detail_basics_id/detail_basics_id.php?IdBasicos=<?php echo $row['IdBasicos']?>"><?php echo $row['IdBasicos']; ?></a></td>
@@ -138,7 +143,9 @@
               </a>
             </td>
           </tr>
-          <?php } ?>
+
+          
+          <?php }} ?>
         </tbody>
       </table>
       <div class="paginador">
@@ -163,3 +170,26 @@
 </main>
   </body>
 </html>
+
+
+
+
+
+
+
+<?php
+  /*     if(isset($_GET['enviar'])){
+        $busqueda = $_GET['busqueda'];
+
+        $consulta = $conn->query("SELECT * FROM basicos WHERE Nombres  LIKE '%$busqueda%'");
+
+        while($row = $consulta->fetch_array()){
+          echo $row['Nombres']; 
+        }
+      } */
+?>
+
+
+
+
+

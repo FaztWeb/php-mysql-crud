@@ -40,12 +40,9 @@
                      <label>Contraseña</label>
                      <input type="password" class="form-control" placeholder="Contraseña" name="loginPassword">
                   </div>
-<<<<<<< HEAD
+
                   <input type="submit" value="Ingresar" class="btn btn-outline-dark"></input>
-=======
-                  <input type="submit" value="Ingresar" class="btn btn-black"></input>
-                  
->>>>>>> cd325c8e0dc38b99c1fdd26640ad75eccb4c56aa
+
                </form>
             </div>
          </div>
