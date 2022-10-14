@@ -1,5 +1,5 @@
  <!--  ESTILOS CSS -->
- <link rel="stylesheet" href="./Assets/styles.css" >
+ <link rel="stylesheet" href="./Assets/style.css" >
 <?php
 include('../../../dbConnect/db.php');
 

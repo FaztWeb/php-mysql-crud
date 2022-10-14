@@ -81,6 +81,7 @@
               href="../basics.php">Agregar Basicos
             </a>
           </div>
+          <p>Clik en Enviar para desplegar datos </p>
       </form>
 
         
