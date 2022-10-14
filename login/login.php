@@ -40,8 +40,7 @@
                      <label>Contraseña</label>
                      <input type="password" class="form-control" placeholder="Contraseña" name="loginPassword">
                   </div>
-                  <input type="submit" value="loginSubmit" class="btn btn-black"></input>
-                  
+                  <input type="submit" value="Ingresar" class="btn btn-outline-dark"></input>
                </form>
             </div>
          </div>

@@ -9,7 +9,7 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!--  ESTILOS CSS -->
-    <link rel="stylesheet" href="./Assets/styles.css" >
+    <link rel="stylesheet" href="./Assets/style.css" >
     <!--  TIPO GRAFIA -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -122,8 +122,13 @@
                                 </div>                   
                         </div>
                         <div class="button">
-                        <div class="form-group item"> <!-- Submit Button -->
-                                    <button type="submit" name="save_taskBasics" class="btn btn-dark" value="Guardar">ENVIAR </button>
+                        <div style="width: 10em;" class="form-group item"> <!-- Submit Button -->
+                                    <button 
+                                    type="submit" 
+                                    name="save_taskBasics" 
+                                    class="btn btn-outline-success btn-block" 
+                                    value="Guardar">ENVIAR 
+                                </button>
                                 </div>
                         </div>
             </form>

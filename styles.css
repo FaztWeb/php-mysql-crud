@@ -34,10 +34,7 @@ font-family: 'Dosis', sans-serif!important;
 
     .containerWelcome .containerWelcome_Grid a{
         font-size: 26px;
-        background-color: rgb(35, 182, 6);
-        color: white;
-        border-radius: 20px;
-        box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) ;
+        
         margin-left: 40%;
         margin-right: 40%; 
         padding: 16px;
@@ -45,9 +42,7 @@ font-family: 'Dosis', sans-serif!important;
         cursor:pointer;
         }
 
-        .containerWelcome .containerWelcome_Grid a :hover{
-            color: rgb(172, 177, 182);
-        }
+     
 
 
 

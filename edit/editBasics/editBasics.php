@@ -85,9 +85,9 @@ if (isset($_POST['update'])) {
 }
 
 ?>
-<?php include('../../includes/header.php'); ?>
+<?php include('../../includes/header_basics.php'); ?>
         <!--  ESTILOS CSS -->
-    <link rel="stylesheet" href="./Assets/styles.css" >
+    <link rel="stylesheet" href="./Assets/style.css" >
         <!--  TIPO GRAFIA -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -177,7 +177,10 @@ if (isset($_POST['update'])) {
                 </div>
 
                 <div class="form-group itemTwo"> <!-- City-->
-                    <button class="btn-success" name="update">
+                    <button 
+                    class="btn btn-outline-success" 
+                    name="update"
+                    style="border-radius:8px;">
                         Actualizar
                     </button>
                     <br>

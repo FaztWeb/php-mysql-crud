@@ -9,11 +9,14 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
       <!--  ESTILOS CSS -->
-      <link rel="stylesheet" href="../Assets/styles.css" >
+      <link rel="stylesheet" href="../Assets/style.css" >
       <!--  TIPO GRAFIA -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+<!-- ICONOS Fontawesome -->
+    <script src="https://kit.fontawesome.com/272d0d9efe.js" crossorigin="anonymous"></script>
+
   </head>
   <body>
 
@@ -36,25 +39,52 @@
   </div>
   <div>
       <form action="../../../search/search.php" method="get" class="searchForm">
-          <div class="search">
-            <label class="labelTitle">titulo: </label>
-            <input class="searchInput" type="text" name="busquedaTitle" id="busquedaTitle" placeholder="Ejemplo: Nombres">
-          </div>
-          <div class="search">
-            <label class="labelTitle labelTitleLarge">parametro a buscar: </label>
-            <input class="searchInput" type="text" name="busquedaParams" id="busquedaParams" placeholder="Ejemplo: Adriana">
-          </div>
           
-            <div class="search">
-            <input type="submit" value="buscar" class="btn_search">
+          <div class="input-group mb-3">
+                <div class="input-group-append">
+                    <span 
+                    class="input-group-text"
+                    style="height:2.4em;
+                     border-radius:6px;
+                     position:absolute;
+                     margin-right:2em;"
+                    id="basic-addon2">Buscador
+                  </span>
+                </div>
+
+                  <input 
+                  name="busquedaParams" 
+                  id="busquedaParams" 
+                  type="text" 
+                  class="form-control" 
+                  placeholder="Recipient's username" 
+                  aria-label="Recipient's username" 
+                  aria-describedby="basic-addon2"
+                  style="border-radius:6px;margin-left:4.75em;"
+                  >
+
+                  <div style="width:3.5em; padding-left:8px;" class="search">
+                    <a 
+                      type="submit" 
+                      class="btn btn-outline-success btn-block">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                  </a>
+              </div>
+        </div>
+           
+          <div 
+            style=" display:flex;justify-content:flex-end;align-items:center;margin-bottom:20px;">
+            <a 
+              class="btn btn-outline-success btn-block" 
+              style="border-radius:6px;width:12em;" 
+              href="../basics.php">Agregar Basicos
+            </a>
           </div>
+
+          
       </form>
 
-          <div class="btnAgg ">
-          <a class="navbar-brand button" href="../basics.php">Agregar Basicos</a>
-          </div>
- 
-      
+        
   </div>
 
     <!--  TABLA QUE RENDERIZA LOS DATOS GUARDADOS EN LA BASE DE DATOS  -->

@@ -6,7 +6,7 @@
     <title>Sistema Novio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
      <!--  ESTILOS CSS -->
-    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="styles.css" >
   <!--  TIPO GRAFIA -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
         <div class="containerWelcome_Grid">
             <h1>BIENVENIDO A SISTEMA NOVIO!</h1>
             <label></label>
-            <a class="navbar-brand button" href="./login/login.php">Ingresar</a>
+            <a class="btn btn-outline-success" href="./login/login.php">Ingresar</a>
         </div>
     </div>
     

@@ -36,90 +36,206 @@ if  (isset($_GET['IdBasicos'])) {
 
 <main>
 <div class="table table-responsive">
-      <table class="table table-hover table-#dbd7d2"> 
-        <thead>
-        <tr>
-            <th scope="col">IdBasicos</th>
-            <th scope="col">IdEstado</th>
-            <th scope="col">IdTratamiento</th>
-            <th scope="col">TratamientoPersonal</th>
-            <th scope="col">Nombres</th>
-            <th scope="col">Apellidos</th>
-            <th scope="col">OtroAcompanante</th>
-            <th scope="col">IdAcompanantes</th>
-            <th scope="col">Cargo</th>
-            <th scope="col">Empresa</th>
-            <th scope="col">TelefonoEmpresa</th>
-            <th scope="col">TelefonoEmpresaDirecto</th>
-            <th scope="col">CelularEmpresa</th>
-            <th scope="col">CorreoEmpresarial</th>
-            <th scope="col">AsistenteSecretaria</th>
-            <th scope="col">CorreoAsistenteSecretaria</th>
-            <th scope="col">DireccionEmpresa</th>
-            <th scope="col">IDCiudadEmpresa</th>
-            <th scope="col">iDDepartamento</th>
-            <th scope="col">DireccionResidencia</th>
-            <th scope="col">IDCiudadResidencia</th>
-            <th scope="col">IdDepartamentoResidencia</th>
 
-            <th scope="col">TelefonoResidencia</th>
-            <th scope="col">CelularPersonal</th>
-            <th scope="col">CorreoPersonal</th>
-            <th scope="col">Cedula</th>
-            <th scope="col">idGenero</th>
-            
-
-            
-          </tr>
-        </thead>
-        <tbody >
-
-        <?php
+                            <?php
 
 
-          $query = "SELECT * FROM basicos WHERE IdBasicos=$IdBasicos";
-        //
-          $result_tasks = mysqli_query($conn, $query);
-          
+$query = "SELECT * FROM basicos WHERE IdBasicos=$IdBasicos";
+//
+$result_tasks = mysqli_query($conn, $query);
 
-          while($row = mysqli_fetch_assoc($result_tasks)) { ?>
-          <!-- DATOS A ITERAR --> 
-          <tr>
-          <td class="itremTD"><?php echo $row['IdBasicos']; ?></td>
-          <td class="itremTD"><?php echo $row['IdEstado']; ?></td>
-          <td class="itremTD"><?php echo $row['IdTratamiento']; ?></td>
-          <td class="itremTD"><?php echo $row['TratamientoPersonal']; ?></td>
-            <td class="itremTD"><?php echo $row['Nombres']; ?></td>
-            <td class="itremTD"><?php echo $row['Apellidos']; ?></td>
-            <td class="itremTD"><?php echo $row['OtroAcompanante']; ?></td>
-            <td class="itremTD"><?php echo $row['IdAcompanantes']; ?></td>
-            <td class="itremTD"><?php echo $row['Cargo']; ?></td>
-            <td class="itremTD"><?php echo $row['Empresa']; ?></td>
-            <td class="itremTD"><?php echo $row['TelefonoEmpresa']; ?></td>
-            <td class="itremTD"><?php echo $row['TelefonoEmpresaDirecto']; ?></td>
-            <td class="itremTD"><?php echo $row['CelularEmpresa']; ?></td>
-            <td class="itremTD"><?php echo $row['CorreoEmpresarial']; ?></td>
-            <td class="itremTD"><?php echo $row['AsistenteSecretaria']; ?></td>
-            <td class="itremTD"><?php echo $row['CorreoAsistenteSecretaria']; ?></td>
-            <td class="itremTD"><?php echo $row['DireccionEmpresa']; ?></td>
-            <td class="itremTD"><?php echo $row['IDCiudadEmpresa']; ?></td>
-            <td class="itremTD"><?php echo $row['iDDepartamento']; ?></td>
-            <td class="itremTD"><?php echo $row['DireccionResidencia']; ?></td>
-            <td class="itremTD"><?php echo $row['IDCiudadResidencia']; ?></td>
-            <td class="itremTD"><?php echo $row['IdDepartamentoResidencia']; ?></td>
-            <td class="itremTD"><?php echo $row['TelefonoResidencia']; ?></td>
-            <td class="itremTD"><?php echo $row['CelularPersonal']; ?></td>
-            <td class="itremTD"><?php echo $row['CorreoPersonal']; ?></td>
-            <td class="itremTD"><?php echo $row['Cedula']; ?></td>
-            <td class="itremTD"><?php echo $row['idGenero']; ?></td>
 
-            <!-- EDITAR DATOS  -->
-            
-          </tr>
-          <?php } ?>
-        </tbody>
-      </table>
+while($row = mysqli_fetch_assoc($result_tasks)) { ?>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Indicativo</th>
+      <th scope="col">-</th>
+      <th scope="col"> </th>
+      <th>Datos</th>
+      <th>
+        <p>
+            Click para volver a Detalle 
+            <a 
+            href="../detail_basics/detail_basics.php">
+                <strong>
+                    Basicos
+                </strong>
+            </a>
+        </p>
+      </th>
       
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">IdBasicos</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['IdBasicos']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">IdEstado</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['IdEstado']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">IdTratamiento</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['IdTratamiento']; ?></th></td>
+      
+      <tr>
+      <th scope="row">TratamientoPersonal</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['TratamientoPersonal']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">Nombres</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['Nombres']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">Apellidos</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['Apellidos']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">OtroAcompanante</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['OtroAcompanante']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">IdAcompanantes</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['IdAcompanantes']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">Cargo</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['Cargo']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">Empresa</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['Empresa']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">TelefonoEmpresa</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['TelefonoEmpresa']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">TelefonoEmpresaDirecto</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['TelefonoEmpresaDirecto']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">CelularEmpresa</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['CelularEmpresa']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">CorreoEmpresarial</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['CorreoEmpresarial']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">AsistenteSecretaria</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['AsistenteSecretaria']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">CorreoAsistenteSecretaria</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['CorreoAsistenteSecretaria']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">DireccionEmpresa</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['DireccionEmpresa']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">IDCiudadEmpresa</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['IDCiudadEmpresa']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">iDDepartamento</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['iDDepartamento']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">DireccionResidencia</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['DireccionResidencia']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">IDCiudadResidencia</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['IDCiudadResidencia']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">IdDepartamentoResidencia</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['IdDepartamentoResidencia']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">TelefonoResidencia</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['TelefonoResidencia']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">CelularPersonal</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['CelularPersonal']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">CorreoPersonal</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['CorreoPersonal']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">Cedula</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['Cedula']; ?></th></td>
+      
+    </tr>
+
+    <tr>
+      <th scope="row">idGenero</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['idGenero']; ?></th></td>
+      
+    </tr>
+    </tr>
+    <?php } ?>
+  </tbody>
+</table>
+
     </div>
 </main>
    
@@ -128,6 +244,3 @@ if  (isset($_GET['IdBasicos'])) {
  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
 <?php include('../../../includes/footer.php'); ?>
-
-
-
