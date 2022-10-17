@@ -9,11 +9,14 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
       <!--  ESTILOS CSS -->
-      <link rel="stylesheet" href="../Assets/styles.css" >
+      <link rel="stylesheet" href="../Assets/style.css" >
       <!--  TIPO GRAFIA -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+<!-- ICONOS Fontawesome -->
+    <script src="https://kit.fontawesome.com/272d0d9efe.js" crossorigin="anonymous"></script>
+
   </head>
   <body>
 
@@ -35,26 +38,53 @@
       </h1>
   </div>
   <div>
-      <form action="../../../search/search.php" method="get" class="searchForm">
-          <div class="search">
-            <label class="labelTitle">titulo: </label>
-            <input class="searchInput" type="text" name="busquedaTitle" id="busquedaTitle" placeholder="Ejemplo: Nombres">
-          </div>
-          <div class="search">
-            <label class="labelTitle labelTitleLarge">parametro a buscar: </label>
-            <input class="searchInput" type="text" name="busquedaParams" id="busquedaParams" placeholder="Ejemplo: Adriana">
-          </div>
+      <form  action="detail_basics.php" method="get" class="searchForm">
           
-            <div class="search">
-            <input type="submit" value="buscar" class="btn_search">
+          <div class="input-group mb-3">
+                <div class="input-group-append">
+                    <span 
+                    class="input-group-text"
+                    style="height:2.4em;
+                     border-radius:6px;
+                     position:absolute;
+                     margin-right:2em;"
+                    id="basic-addon2">Buscador
+                  </span>
+                </div>
+
+                  <input 
+                  name="busqueda" 
+                  id="campo" 
+                  type="text" 
+                  class="form-control" 
+                  placeholder="Ejemplo: adriana" 
+                  aria-label="Recipient's username" 
+                  aria-describedby="basic-addon2"
+                  style="border-radius:6px;margin-left:4.75em;"
+                  >
+
+                  <div style="width:3.5em; padding-left:8px;" class="search">
+                    <input 
+                      type="submit" 
+                      name="enviar"
+                      class="btn btn-outline-success btn-block">
+                      
+                  </a>
+              </div>
+        </div>
+           
+          <div 
+            style=" display:flex;justify-content:flex-end;align-items:center;margin-bottom:20px;">
+            <a 
+              class="btn btn-outline-success btn-block" 
+              style="border-radius:6px;width:12em;" 
+              href="../basics.php">Agregar Basicos
+            </a>
           </div>
+          <p>Clik en Enviar para desplegar datos </p>
       </form>
 
-          <div class="btnAgg ">
-          <a class="navbar-brand button" href="../basics.php">Agregar Basicos</a>
-          </div>
- 
-      
+        
   </div>
 
     <!--  TABLA QUE RENDERIZA LOS DATOS GUARDADOS EN LA BASE DE DATOS  -->
@@ -77,13 +107,19 @@
 
         <?php
 
+if(isset($_GET['enviar'])){
+  $busqueda = $_GET['busqueda'];
 
-          $query = "SELECT * FROM basicos ";
+          $query = "SELECT * FROM basicos WHERE Nombres  LIKE '%$busqueda%' 
+          OR Apellidos LIKE '%$busqueda%' 
+          OR Empresa LIKE '%$busqueda%'
+          OR TelefonoEmpresa LIKE '%$busqueda%'
+          OR CelularEmpresa LIKE '%$busqueda%'";
         //
           $result_tasks = mysqli_query($conn, $query);
           
 
-          while($row = mysqli_fetch_assoc($result_tasks)) { ?>
+          while($row = $result_tasks->fetch_array()) { ?>
           <!-- DATOS A ITERAR --> 
           <tr>
           <td class="itremTD"><a href="../detail_basics_id/detail_basics_id.php?IdBasicos=<?php echo $row['IdBasicos']?>"><?php echo $row['IdBasicos']; ?></a></td>
@@ -108,7 +144,9 @@
               </a>
             </td>
           </tr>
-          <?php } ?>
+
+          
+          <?php }} ?>
         </tbody>
       </table>
       <div class="paginador">
@@ -133,3 +171,26 @@
 </main>
   </body>
 </html>
+
+
+
+
+
+
+
+<?php
+  /*     if(isset($_GET['enviar'])){
+        $busqueda = $_GET['busqueda'];
+
+        $consulta = $conn->query("SELECT * FROM basicos WHERE Nombres  LIKE '%$busqueda%'");
+
+        while($row = $consulta->fetch_array()){
+          echo $row['Nombres']; 
+        }
+      } */
+?>
+
+
+
+
+

@@ -33,8 +33,15 @@
           <div class="form-group">
             <input type="text" name="Nivel" class="form-control" placeholder="Nivel" autofocus>
           </div>
-         
-          <input type="submit" name="save_task" class="btn btn-success btn-block" value="Guardar">
+          <div style=" display: flex;justify-content: center;align-items: center;">
+              <input 
+              class="btn btn-outline-success btn-block" 
+              style="border-radius:6px;width:12em;" 
+              type="submit" 
+              name="save_task" 
+              value="Guardar"
+              >
+          </div>
         </form>
       </div>
     </div>

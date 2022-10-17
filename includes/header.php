@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
      <!-- ICONO -->
      <link rel="icon" href=".././Assets/img/icon_sistema-novio.ico">
+      <!--  ESTILOS CSS -->
+      <link rel="stylesheet" href="../Assets/styles.css" >
   </head>
   <body>
 
-  <nav class="navbar navbar-dark bg-dark">
+  <nav style="background-color: black;" class="navbar navbar-dark ">
       <div style="display:flex; justify-content: flex-start;" class="container">
       <div>
         <img src=".././Assets/img/sistema_novio_icono.png" style="width:40px; height:40px;margin-right:16px;">
@@ -29,7 +31,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="../seekers/seeker.php">Busqueda Parametrizada</a></li>
-            <li><a class="dropdown-item" href="../screens/basics/detail_basics/detail_basics.php">Busqueda Parametrizada</a></li>
+            <li><a class="dropdown-item" href="../screens/basics/detail_basics/detail_basics.php"> Busqueda General</a></li>
           </ul>
         </li>
       </div>

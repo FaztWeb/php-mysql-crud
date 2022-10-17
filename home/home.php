@@ -22,167 +22,169 @@
      <!-- ICONO -->
      <link rel="icon" href="../Assets/img/icon_sistema-novio.ico">
   </head>
-  <body>
+<body>
     <div class="contentBody">
-    
-    <div class="grid ">
+            <div class="grid ">
 
-    <div class="col">
-  <div class="cart">
-      <div class="card-body">
-      <h5 class="card-title"><strong>Acompañantes</strong></h5>
-      
-      <a class="navbar-brand button" href="../screens/escorts.php">Ingresar</a>
-      </div>
+                        <div class="col">
+                        <div class="cart">
+                              <div class="card-body">
+                              <h5 class="card-title"><strong>Acompañantes</strong></h5>
+
+                              <p class="card-text">Esta tabla contiene la informacion de la tabla Acompañantes.</p>
+                              <a class="btn btn-outline-success" style="border-radius:6px ;" href="../screens/escorts.php">Ingresar</a>
+
+                              </div>
+                        </div>
+                        </div>
+
+                        <div class="col">
+                        <div class="cart">
+                              <div class="card-body">
+                              <h5 class="card-title"><strong>Actividades</strong></h5>
+                              <p class="card-text">Esta tabla contiene la informacion de las Actividades .</p>
+                              <a class="btn btn-outline-success" style="border-radius:6px ;" href="../screens/activities.php">Ingresar</a>
+                              </div>
+                        </div>
+                        </div>
+
+                        <div class="col">
+                        <div class="cart">
+                              <div class="card-body">
+                              <h5 class="card-title"><strong>Asistencia</strong></h5>
+
+                              <p class="card-text">Esta tabla contiene la informacion de la tabla Asistencia.</p>
+                              <a class="btn btn-outline-success" style="border-radius:6px ;" href="../screens/attendance.php">Ingresar</a>
+
+                              </div>
+                        </div>
+                        </div>
+
+                        <div class="col">
+                        <div class="cart">
+                              <div class="card-body">
+                              <h5 class="card-title"><strong>Basicos</strong></h5>
+                              <p class="card-text">Esta tabla contiene la informacion de los Basicos.</p>
+                              <a class="btn btn-outline-success" style="border-radius:6px ;" href="../screens/basics/detail_basics/detail_basics.php">Ingresar</a>
+                              </div>
+                        </div>
+                        </div>
+
+                        <div class="col colum"> 
+                        <div class="cart">
+                              <div class="card-body cardBody">
+                              <h5 class="card-title"><strong>Ciudades</strong></h5>
+                              <p class="card-text">Esta tabla contiene informacion de la ciudades</p>
+                              <a class="btn btn-outline-success" style="border-radius:6px ;" href="../screens/cities.php">Ingresar</a>
+                              </button>
+                              </div>
+                        </div>
+                        </div>
+
+                        <div class="col">
+                        <div class="cart">
+                              <div class="card-body">
+                              <h5 class="card-title"><strong>Departamentos</strong></h5>
+                              <p class="card-text">Esta tabla contiene la informacion de la tabla Departamento.</p>
+                              <a class="btn btn-outline-success" style="border-radius:6px ;" href="../screens/department.php">Ingresar</a>
+                              </div>
+                        </div>
+                        </div>
+
+                        <div class="col">
+                        <div class="cart">
+                              <div class="card-body">
+                              <h5 class="card-title"><strong>Estados</strong></h5>
+                              <p class="card-text">Esta tabla contiene la informacion de la tabla Estados.</p>
+                              <a class="btn btn-outline-success" style="border-radius:6px ;" href="../screens/state.php">Ingresar</a>
+                              </div>
+                        </div>
+                        </div>
+
+                        <div class="col">
+                        <div class="cart">
+                              <div class="card-body">
+                              <h5 class="card-title"><strong>Eventos</strong></h5>
+                              <p class="card-text">Esta tabla contiene la informacion de los Eeventos .</p>
+                              <a class="btn btn-outline-success" style="border-radius:6px ;" href="../screens/event.php">Ingresar</a>
+                              </div>
+                        </div>
+                        </div>
+
+                        <div class="col">
+                        <div class="cart">
+                              <div class="card-body">
+                              <h5 class="card-title"><strong>Generos</strong></h5>
+                              <p class="card-text">Esta tabla contiene la informacion de los Generos.</p>
+                              <a class="btn btn-outline-success" style="border-radius:6px ;" href="../screens/genders.php">Ingresar</a>
+                              </div>
+                        </div>
+                        </div>
+
+                        <div class="col">
+                        <div class="cart">
+                              <div class="card-body">
+                              <h5 class="card-title"><strong>Usuarios</strong></h5>
+                              <p class="card-text">Esta tabla contiene la informacion de los Usuarios .</p>
+                              <a class="btn btn-outline-success" style="border-radius:6px ;" href="../screens/users.php">Ingresar</a>
+                              </div>
+                        </div>
+                        </div>
+
+                        <div class="col">
+                        <div class="cart">
+                              <div class="card-body">
+                              <h5 class="card-title"><strong>Intereses</strong></h5>
+                              <p class="card-text">Esta tabla contiene la informacion de los Intereses .</p>
+                              <a class="btn btn-outline-success" style="border-radius:6px ;" href="../screens/interests.php">Ingresar</a>
+                              </div>
+                        </div>
+                        </div>
+
+                        <div class="col">
+                        <div class="cart">
+                              <div class="card-body">
+                              <h5 class="card-title"><strong>Invitados Por</strong></h5>
+                              <p class="card-text">Esta tabla contiene la informacion de los Invitados Por .</p>
+                              <a class="btn btn-outline-success" style="border-radius:6px ;" href="../screens/guestsFrom.php">Ingresar</a>
+                              </div>
+                        </div>
+                        </div>
+
+                        <div class="col">
+                        <div class="cart">
+                              <div class="card-body">
+                              <h5 class="card-title"><strong>Origen DB</strong></h5>
+                              <p class="card-text">Esta tabla contiene la informacion de la tabla Origen DB.</p>
+                              <a class="btn btn-outline-success" style="border-radius:6px ;" href="../screens/origindb.php">Ingresar</a>
+                              </div>
+                        </div>
+                        </div>
+
+                        <div class="col">
+                        <div class="cart">
+                              <div class="card-body">
+                              <h5 class="card-title"><strong>Rango Edad</strong></h5>
+                              <p class="card-text">Esta tabla contiene la informacion de la tabla Rango Edad.</p>
+                              <a class="btn btn-outline-success" style="border-radius:6px ;" href="../screens/rangeAge.php">Ingresar</a>
+                              </div>
+                        </div>
+                        </div>
+
+                        <div class="col">
+                        <div class="cart">
+                              <div class="card-body">
+                              <h5 class="card-title"><strong>Tratamiento</strong></h5>
+                              <p class="card-text">Esta tabla contiene la informacion de la tabla tratamiento.</p>
+                              <a class="btn btn-outline-success" style="border-radius:6px ;" href="../screens/treatment.php">Ingresar</a>
+                              </div>
+                        </div>
+                        </div>
+
+            </div>
     </div>
-  </div>
-
-  <div class="col">
-  <div class="cart">
-      <div class="card-body">
-      <h5 class="card-title"><strong>Actividades</strong></h5>
-        
-        <a class="navbar-brand button" href="../screens/activities.php">Ingresar</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-  <div class="cart">
-      <div class="card-body">
-      <h5 class="card-title"><strong>Asistencia</strong></h5>
-        
-        <a class="navbar-brand button" href="../screens/attendance.php">Ingresar</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-  <div class="cart">
-      <div class="card-body">
-      <h5 class="card-title"><strong>Basicos</strong></h5>
-        
-        <a class="navbar-brand button" href="../screens/basics/detail_basics/detail_basics.php">Ingresar</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col colum"> 
-    <div class="cart">
-      <div class="card-body cardBody">
-        <h5 class="card-title"><strong>Ciudades</strong></h5>
-        
-        <a class="navbar-brand button" href="../screens/cities.php">Ingresar</a>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-  <div class="cart">
-      <div class="card-body">
-      <h5 class="card-title"><strong>Departamentos</strong></h5>
-        
-        <a class="navbar-brand button" href="../screens/department.php">Ingresar</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-  <div class="cart">
-      <div class="card-body">
-      <h5 class="card-title"><strong>Estados</strong></h5>
-      
-      <a class="navbar-brand button" href="../screens/state.php">Ingresar</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-  <div class="cart">
-      <div class="card-body">
-      <h5 class="card-title"><strong>Eventos</strong></h5>
-        
-        <a class="navbar-brand button" href="../screens/event.php">Ingresar</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-  <div class="cart">
-      <div class="card-body">
-      <h5 class="card-title"><strong>Géneros</strong></h5>
-        
-        <a class="navbar-brand button" href="../screens/genders.php">Ingresar</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-  <div class="cart">
-      <div class="card-body">
-      <h5 class="card-title"><strong>Usuarios</strong></h5>
-        
-        <a class="navbar-brand button" href="../screens/users.php">Ingresar</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-  <div class="cart">
-      <div class="card-body">
-      <h5 class="card-title"><strong>Intereses</strong></h5>
-        
-        <a class="navbar-brand button" href="../screens/interests.php">Ingresar</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-  <div class="cart">
-      <div class="card-body">
-      <h5 class="card-title"><strong>Invitados Por</strong></h5>
-        
-        <a class="navbar-brand button" href="../screens/guestsFrom.php">Ingresar</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-  <div class="cart">
-      <div class="card-body">
-      <h5 class="card-title"><strong>Origen DB</strong></h5>
-      
-      <a class="navbar-brand button" href="../screens/origindb.php">Ingresar</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-  <div class="cart">
-      <div class="card-body">
-      <h5 class="card-title"><strong>Rango Edad</strong></h5>
-      
-      <a class="navbar-brand button" href="../screens/rangeAge.php">Ingresar</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-  <div class="cart">
-      <div class="card-body">
-      <h5 class="card-title"><strong>Tratamiento</strong></h5>
-      
-      <a class="navbar-brand button" href="../screens/treatment.php">Ingresar</a>
-      </div>
-    </div>
-  </div>
-
-    </div>
-  
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>
 
 <?php include('../includes/footer.php'); ?>
