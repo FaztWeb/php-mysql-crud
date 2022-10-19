@@ -28,9 +28,71 @@
                                 <div class="form-group item  select ">
                                 <div class="selectItems">
                                         <label  class="control-label">Tratamiento Personal</label>
-                                    <!--  tratamiento codigo -->
+                                    <select class="form-control " name="IdTratamiento">
+                                            <?php
+                                                $query = "SELECT * FROM tratamiento";
+                                                $result_tasks = mysqli_query($conn, $query);
+                                                while($row = mysqli_fetch_array($result_tasks)) { 
+                                                    $idTratamiento=$row['IdTratamiento'];
+                                                    $Tratamiento=$row['Tratamiento'];   
+                                                    ?>
+                                                   
+                                                    
+                                                <option 
+                                                        value="<?php echo $idTratamiento ?>" > <?php echo $row['Tratamiento']; ?>
+                                                </option>
+                                            <?php } ?>
+
+                                        </select>
                                     </div> 
                                 </div>
+
+
+                                <div class="form-group item  select ">
+                                <div class="selectItems">
+                                        <label  class="control-label">Acompanantes</label>
+                                    <select class="form-control " name="IdAcompanantes">
+                                            <?php
+                                                $query = "SELECT * FROM acompanantes";
+                                                $result_tasks = mysqli_query($conn, $query);
+                                                while($row = mysqli_fetch_array($result_tasks)) { 
+                                                    $IdAcompanantes=$row['IdAcompanantes'];
+                                                    $Acompanantes=$row['Acompanantes'];   
+                                                    ?>
+                                                   
+                                                    
+                                                <option 
+                                                        value="<?php echo $IdAcompanantes ?>" > <?php echo $row['Acompanantes']; ?>
+                                                </option>
+                                            <?php } ?>
+
+                                        </select>
+                                    </div> 
+                                </div>
+
+
+                                <div class="form-group item  select ">
+                                <div class="selectItems">
+                                        <label  class="control-label">Rango Edad</label>
+                                    <select class="form-control " name="IdRangosdeEdad">
+                                            <?php
+                                                $query = "SELECT * FROM rangoedad";
+                                                $result_tasks = mysqli_query($conn, $query);
+                                                while($row = mysqli_fetch_array($result_tasks)) { 
+                                                    $idRangoEdad=$row['idRangoEdad'];
+                                                    $RangoEdad=$row['RangoEdad'];   
+                                                    ?>
+                                                   
+                                                    
+                                                <option 
+                                                        value="<?php echo $idRangoEdad ?>" > <?php echo $row['RangoEdad']; ?>
+                                                </option>
+                                            <?php } ?>
+
+                                        </select>
+                                    </div> 
+                                </div>
+                                
 
                                 <div class="form-group item">
                                     <label  class="control-label">Nombre</label>
@@ -65,17 +127,7 @@
                                     <input type="text" class="form-control"  name="CelularEmpresa" placeholder="CelularEmpresa">
                                 </div>
 
-                                <div class="form-group select item gridSelect"> <!-- State Button -->
                                 
-                                    <div class="selectItems">
-                                        <label  class="control-label">Ciudad</label>
-                                        <!-- codigo ciudad -->
-                                    </div> 
-                                    <div class="selectItems">
-                                        <label  class="control-label">Genero</label>
-                                    <!-- poner aqui codigo de genero  -->
-                                    </div>
-                                </div>
                                 
                         </div>
                         <div class="container-space">
@@ -114,7 +166,98 @@
                                 <div class="form-group itemTwo">
                                     <label  class="control-label">Cedula</label>
                                     <input type="text" class="form-control"  name="Cedula" placeholder="Cedula">
-                                </div>                                
+                                </div>
+                                <div class="form-group select item gridSelect"> <!-- State Button -->
+                                
+                                <div class="selectItems">
+                                    <label  class="control-label">ciudad residencia</label>
+                                    <select class="form-control " name="IDCiudadResidencia">
+                                        <?php
+                                            $query = "SELECT * FROM ciudades";
+                                            $result_tasks = mysqli_query($conn, $query);
+                                            while($row = mysqli_fetch_array($result_tasks)) { 
+                                                $IdCiudad=$row['IdCiudad'];
+                                                $ciudad=$row['ciudad'];   
+                                                ?>
+                                               
+                                                
+                                            <option 
+                                                    value="<?php echo $IdCiudad ?>" > <?php echo $row['ciudad']; ?>
+                                            </option>
+                                        <?php } ?>
+
+                                    </select>
+                                </div> 
+                                <div class="selectItems">
+                                    <label  class="control-label">departamento residencia</label>
+                                    <select class="form-control " name="IdDepartamentoResidencia">
+                                        <?php
+                                            $query = "SELECT * FROM departamento";
+                                            $result_tasks = mysqli_query($conn, $query);
+                                            while($row = mysqli_fetch_array($result_tasks)) { 
+                                                $idDepartamento=$row['idDepartamento'];
+                                                $Departamento=$row['Departamento'];   
+                                                ?>
+                                               
+                                                
+                                            <option 
+                                                    value="<?php echo $idDepartamento ?>" > <?php echo $row['Departamento']; ?>
+                                            </option>
+                                        <?php } ?>
+
+                                    </select>
+                                </div>
+                                
+                                    
+                                    
+                            </div>
+
+
+                                <div class="form-group select item gridSelect"> <!-- State Button -->
+                                
+                                    <div class="selectItems">
+                                        <label  class="control-label">Genero</label>
+                                        <select class="form-control " name="IdGeneros">
+                                            <?php
+                                                $query = "SELECT * FROM generos";
+                                                $result_tasks = mysqli_query($conn, $query);
+                                                while($row = mysqli_fetch_array($result_tasks)) { 
+                                                    $IdGeneros=$row['IdGeneros'];
+                                                    $Genero=$row['Genero'];   
+                                                    ?>
+                                                   
+                                                    
+                                                <option 
+                                                        value="<?php echo $IdGeneros ?>" > <?php echo $row['Genero']; ?>
+                                                </option>
+                                            <?php } ?>
+
+                                        </select>
+                                    </div> 
+                                    <div class="selectItems">
+                                        <label  class="control-label">departamento</label>
+                                        <select class="form-control " name="iDDepartamento">
+                                            <?php
+                                                $query = "SELECT * FROM departamento";
+                                                $result_tasks = mysqli_query($conn, $query);
+                                                while($row = mysqli_fetch_array($result_tasks)) { 
+                                                    $idDepartamento=$row['idDepartamento'];
+                                                    $Departamento=$row['Departamento'];   
+                                                    ?>
+                                                   
+                                                    
+                                                <option 
+                                                        value="<?php echo $idDepartamento ?>" > <?php echo $row['Departamento']; ?>
+                                                </option>
+                                            <?php } ?>
+
+                                        </select>
+                                    </div>
+                                    
+                                        
+                                        
+                                </div>
+                                                                
                                 
                                 
                                 <div class="form-group itemTwo"> <!-- City-->
@@ -136,3 +279,4 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
+
