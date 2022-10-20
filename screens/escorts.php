@@ -3,6 +3,16 @@
 <?php include('../includes/header.php'); ?>
 
 <main class="container p-4">
+<script>
+      function confirmacion(){
+        const response = confirm("esta seguro que quiere eliminar el registro?");
+        if(respuesta==true){
+          return true;
+        }else{
+          return false
+        }
+      }
+  </script>
   <div class="row">
     <div class="col-md-4">
       <!-- SESSION MENSAJES -->
@@ -79,7 +89,10 @@
                 <i class="fas fa-marker"></i>
               </a>
               <!-- REDIRECCION ELIMINAR -->
-              <a href="../delete/delete_taskEscorts.php?IdAcompanantes=<?php echo $row['IdAcompanantes']?>" class="btn btn-danger">
+              <a href="../delete/delete_taskEscorts.php?IdAcompanantes=<?php echo $row['IdAcompanantes']?>" 
+              class="btn btn-danger"
+              onclick="return confirmacion()"
+              >
               <!-- ICONO ELIMINAR -->
                 <i class="far fa-trash-alt"></i>
               </a>

@@ -22,6 +22,16 @@
 
 
   <main class="container p-4">
+  <script>
+      function confirmacion(){
+        const response = confirm("esta seguro que quiere eliminar el registro?");
+        if(respuesta==true){
+          return true;
+        }else{
+          return false
+        }
+      }
+  </script>
   <div class="row">
 
   <?php if (isset($_SESSION['message'])) { ?>
@@ -138,7 +148,10 @@ if(isset($_GET['enviar'])){
                 <i class="fas fa-marker"></i>
               </a>
               <!-- REDIRECCION ELIMINAR -->
-              <a href="../../../delete/delete_taskBasics.php?IdBasicos=<?php echo $row['IdBasicos']?>" class="btn btn-danger">
+              <a href="../../../delete/delete_taskBasics.php?IdBasicos=<?php echo $row['IdBasicos']?>" 
+              class="btn btn-danger"
+              onclick="return confirmacion()"
+              >
               <!-- ICONO ELIMINAR -->
                 <i class="far fa-trash-alt"></i>
               </a>
