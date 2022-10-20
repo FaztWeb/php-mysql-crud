@@ -22,13 +22,15 @@ if (isset($_POST['save_taskBasics'])) {
   $CorreoPersonal = $_POST['CorreoPersonal'];
   $Cedula= $_POST['Cedula'];
 
-  $IdTratamiento= $_POST['IdTratamiento'];
-  /* $IdGeneros= $_POST['IdGeneros'];
-  $IdAcompanantes= $_POST['IdAcompanantes'];
-  $iDDepartamento= $_POST['iDDepartamento'];
-  $IDCiudadResidencia= $_POST['IDCiudadResidencia'];
-  $IdDepartamentoResidencia= $_POST['IdDepartamentoResidencia'];
-  $IdRangosdeEdad= $_POST['IdRangosdeEdad']; */
+  $Tratamiento= $_POST['Tratamiento'];
+  $Acompanantes= $_POST['Acompanantes'];
+  $Genero= $_POST['Genero'];
+  $IdCiudadEmpresa= $_POST['IdCiudadEmpresa'];
+  $Asistencia= $_POST['Asistencia'];
+  $Actividad= $_POST['Actividad'];
+
+
+ 
  
 
 
@@ -40,13 +42,8 @@ if (isset($_POST['save_taskBasics'])) {
     DireccionEmpresa,DireccionResidencia,TelefonoResidencia,
     CelularPersonal,CorreoPersonal,Cedula,
 
-    IdTratamiento,
-    /*  idGenero, 
-     IdAcompanantes, 
-     iDDepartamento, 
-     IDCiudadResidencia, 
-     IdDepartamentoResidencia, 
-     IdRangosdeEdad */
+    Tratamiento,Acompanantes,Genero,IdCiudadEmpresa,Asistencia,Actividad
+
     ) 
   VALUES (
     '$Nombres', '$Apellidos','$OtroAcompanante','$Cargo','$Empresa','$TelefonoEmpresa',
@@ -55,14 +52,7 @@ if (isset($_POST['save_taskBasics'])) {
     ,'$CelularPersonal','$CorreoPersonal','$Cedula',
     
     
-    '$IdTratamiento',
-    /* '$IdGeneros',
-    '$IdAcompanantes',
-    '$iDDepartamento',
-    '$IDCiudadResidencia',
-    '$IdDepartamentoResidencia',
-    '$IdRangosdeEdad', */
-    )";
+    $Tratamiento, $Acompanantes, $Genero, $IdCiudadEmpresa, $Asistencia, $Actividad)";
   $result = mysqli_query($conn, $query);
   if(!$result) {
     die("Query Failed.");
