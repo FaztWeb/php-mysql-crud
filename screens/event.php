@@ -25,8 +25,12 @@
             <input type="text" name="Evento" class="form-control" placeholder="Evento" autofocus>
           </div>
           <div class="form-group">
+            <input type="date" name="Fecha" class="form-control" placeholder="Fecha del Evento">
+          </div>
+          <div class="form-group">
             <textarea name="Observaciones" rows="2" class="form-control" placeholder="Observaciones"></textarea>
           </div>
+          
           <div style=" display: flex;justify-content: center;align-items: center;">
               <input 
               class="btn btn-outline-success btn-block" 

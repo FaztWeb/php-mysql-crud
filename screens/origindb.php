@@ -74,12 +74,12 @@
             <!-- EDITAR DATOS  -->
             <td>
               <!-- REDIRECCION EDITAR -->
-              <a href="../edit/editOrigindb.php?IdOrigenesBD=<?php echo $row['IdOrigenesBD']?>" class="btn btn-secondary">
+              <a href="../edit/editOrigindb.php?IdOrigenBD=<?php echo $row['IdOrigenBD']?>" class="btn btn-secondary">
               <!-- ICONO EDITAR -->
                 <i class="fas fa-marker"></i>
               </a>
               <!-- REDIRECCION ELIMINAR -->
-              <a href="../delete/delete_taskOrigindb.php?IdOrigenesBD=<?php echo $row['IdOrigenesBD']?>" class="btn btn-danger">
+              <a href="../delete/delete_taskOrigindb.php?IdOrigenBD=<?php echo $row['IdOrigenBD']?>" class="btn btn-danger">
               <!-- ICONO ELIMINAR -->
                 <i class="far fa-trash-alt"></i>
               </a>

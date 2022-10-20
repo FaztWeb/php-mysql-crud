@@ -8,13 +8,14 @@ include('../dbConnect/db.php');
 //
 if (isset($_POST['save_task'])) {
   $Evento = $_POST['Evento'];
-
+  $Fecha = $_POST['Fecha'];
   $Observaciones = $_POST['Observaciones'];
+  
   //
   //INSERTA LOS DATOS CON INSERT INTO, ESCRIBE EL NOMBRE DE LA TABLA EN ESTE CASO SERIA TASK DESCRIBE QUE VALORES VAS GUADAR EN TASK
   //( EN ESTE CASO SERIA  title, description) LOS CUALES ESTAN ALMACENADOS EN LAS VARIABLES VALUES('$title', '$description')";
   //
-  $query = "INSERT INTO eventos(Evento, Observaciones) VALUES ('$Evento', '$Observaciones')";
+  $query = "INSERT INTO eventos(Evento,Fecha, Observaciones ) VALUES ('$Evento','$Fecha','$Observaciones')";
   //
   // ENVIAR LOS DATOS A LA BASE DE DATOS ../dbConnect/db.php VARIAVLE $conn EN CASO DE ERROR MUESTRA EL ERROR
   //

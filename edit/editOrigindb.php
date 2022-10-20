@@ -3,9 +3,9 @@ include('../dbConnect/db.php');
 $OrigenBD = '';
 $Observaciones= '';
 
-if  (isset($_GET['IdOrigenesBD'])) {
-  $IdOrigenesBD = $_GET['IdOrigenesBD'];
-  $query = "SELECT * FROM origenbd WHERE IdOrigenesBD=$IdOrigenesBD";
+if  (isset($_GET['IdOrigenBD'])) {
+  $IdOrigenBD = $_GET['IdOrigenBD'];
+  $query = "SELECT * FROM origenbd WHERE IdOrigenBD=$IdOrigenBD";
   $result = mysqli_query($conn, $query);
   if (mysqli_num_rows($result) == 1) {
     $row = mysqli_fetch_array($result);
@@ -15,11 +15,11 @@ if  (isset($_GET['IdOrigenesBD'])) {
 }
 
 if (isset($_POST['update'])) {
-  $IdOrigenesBD = $_GET['IdOrigenesBD'];
+  $IdOrigenBD = $_GET['IdOrigenBD'];
   $OrigenBD= $_POST['OrigenBD'];
   $Observaciones = $_POST['Observaciones'];
 
-  $query = "UPDATE origenbd set OrigenBD = '$OrigenBD', Observaciones = '$Observaciones' WHERE IdOrigenesBD=$IdOrigenesBD";
+  $query = "UPDATE origenbd set OrigenBD = '$OrigenBD', Observaciones = '$Observaciones' WHERE IdOrigenBD=$IdOrigenBD";
   mysqli_query($conn, $query);
   $_SESSION['message'] = 'Tabla actualizada con exito!';   /*  MENSAJE EMERGENTE CUANDO SE ACTUALIZA UNA TABLA */
   $_SESSION['message_type'] = 'warning';
@@ -32,7 +32,7 @@ if (isset($_POST['update'])) {
   <div class="row">
     <div class="col-md-4 mx-auto">
       <div class="card card-body">
-      <form action="editOrigindb.php?IdOrigenesBD=<?php echo $_GET['IdOrigenesBD']; ?>" method="POST">
+      <form action="editOrigindb.php?IdOrigenBD=<?php echo $_GET['IdOrigenBD']; ?>" method="POST">
       <div>
           <h3>Editar origen-bd</h3>
       </div>

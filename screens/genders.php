@@ -74,12 +74,12 @@
             <!-- EDITAR DATOS  -->
             <td>
               <!-- REDIRECCION EDITAR -->
-              <a href="../edit/editGenders.php?IdGeneros=<?php echo $row['IdGeneros']?>" class="btn btn-secondary">
+              <a href="../edit/editGenders.php?IdGenero=<?php echo $row['IdGenero']?>" class="btn btn-secondary">
               <!-- ICONO EDITAR -->
                 <i class="fas fa-marker"></i>
               </a>
               <!-- REDIRECCION ELIMINAR -->
-              <a href="../delete/delete_taskGenders.php?IdGeneros=<?php echo $row['IdGeneros']?>" class="btn btn-danger">
+              <a href="../delete/delete_taskGenders.php?IdGenero=<?php echo $row['IdGenero']?>" class="btn btn-danger">
               <!-- ICONO ELIMINAR -->
                 <i class="far fa-trash-alt"></i>
               </a>

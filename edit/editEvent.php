@@ -1,6 +1,7 @@
 <?php
 include('../dbConnect/db.php');
 $Evento = '';
+$Fecha= '';
 $Observaciones= '';
 
 if  (isset($_GET['IdEvento'])) {
@@ -10,16 +11,19 @@ if  (isset($_GET['IdEvento'])) {
   if (mysqli_num_rows($result) == 1) {
     $row = mysqli_fetch_array($result);
     $Evento = $row['Evento'];
+    $Fecha = $row['Fecha'];
     $Observaciones = $row['Observaciones'];
+    
   }
 }
 
 if (isset($_POST['update'])) {
   $IdEvento = $_GET['IdEvento'];
-  $Ciudad= $_POST['Ciudad'];
+  $Evento= $_POST['Evento'];
+  $Fecha= $_POST['Fecha'];
   $Observaciones = $_POST['Observaciones'];
 
-  $query = "UPDATE eventos set Evento = '$Evento', Observaciones = '$Observaciones' WHERE IdEvento=$IdEvento";
+  $query = "UPDATE eventos set Evento = '$Evento',Fecha = '$Fecha', Observaciones = '$Observaciones' WHERE IdEvento=$IdEvento";
   mysqli_query($conn, $query);
   $_SESSION['message'] = 'Tabla actualizada con exito!';   /*  MENSAJE EMERGENTE CUANDO SE ACTUALIZA UNA TABLA */
   $_SESSION['message_type'] = 'warning';
@@ -37,8 +41,11 @@ if (isset($_POST['update'])) {
           <h3>Editar Eventos</h3>
       </div>
         <div class="form-group">
-          <input name="Evento" type="text" class="form-control" value="<?php echo $Evento; ?>" placeholder="Update Title">
+          <input name="Evento" type="text" class="form-control" value="<?php echo $Evento; ?>" placeholder="Evento">
         </div>
+        <div class="form-group">
+            <input type="date" name="Fecha" class="form-control" value="<?php echo $Fecha; ?>" placeholder="Fecha del Evento">
+          </div>
         <div class="form-group">
         <textarea name="Observaciones" class="form-control" cols="30" rows="10"><?php echo $Observaciones;?></textarea>
         </div>

@@ -76,15 +76,15 @@ while($row = mysqli_fetch_assoc($result_tasks)) { ?>
       
     </tr>
     <tr>
-      <th scope="row">IdEstado</th>
+      <th scope="row">Estado</th>
       <td>-</td>
-      <td><th scope="col" class="itremTD"><?php echo $row['IdEstado']; ?></th></td>
+      <td><th scope="col" class="itremTD"><?php echo $row['Estado']; ?></th></td>
       
     </tr>
     <tr>
-      <th scope="row">IdTratamiento</th>
+      <th scope="row">Tratamiento</th>
       <td>-</td>
-      <td><th scope="col" class="itremTD"><?php echo $row['IdTratamiento']; ?></th></td>
+      <td><th scope="col" class="itremTD"><?php echo $row['Tratamiento']; ?></th></td>
       
       <tr>
       <th scope="row">TratamientoPersonal</th>
@@ -113,7 +113,7 @@ while($row = mysqli_fetch_assoc($result_tasks)) { ?>
     <tr>
       <th scope="row">IdAcompanantes</th>
       <td>-</td>
-      <td><th scope="col" class="itremTD"><?php echo $row['IdAcompanantes']; ?></th></td>
+      <td><th scope="col" class="itremTD"><?php echo $row['Acompanantes']; ?></th></td>
       
     </tr>
     <tr>
@@ -171,15 +171,15 @@ while($row = mysqli_fetch_assoc($result_tasks)) { ?>
       
     </tr>
     <tr>
-      <th scope="row">IDCiudadEmpresa</th>
+      <th scope="row">IdCiudadEmpresa</th>
       <td>-</td>
-      <td><th scope="col" class="itremTD"><?php echo $row['IDCiudadEmpresa']; ?></th></td>
+      <td><th scope="col" class="itremTD"><?php echo $row['IdCiudadEmpresa']; ?></th></td>
       
     </tr>
     <tr>
-      <th scope="row">iDDepartamento</th>
+      <th scope="row">IdDepartamentoEmpresa</th>
       <td>-</td>
-      <td><th scope="col" class="itremTD"><?php echo $row['iDDepartamento']; ?></th></td>
+      <td><th scope="col" class="itremTD"><?php echo $row['IdDepartamentoEmpresa']; ?></th></td>
       
     </tr>
     <tr>
@@ -189,9 +189,9 @@ while($row = mysqli_fetch_assoc($result_tasks)) { ?>
       
     </tr>
     <tr>
-      <th scope="row">IDCiudadResidencia</th>
+      <th scope="row">IdCiudadResidencia</th>
       <td>-</td>
-      <td><th scope="col" class="itremTD"><?php echo $row['IDCiudadResidencia']; ?></th></td>
+      <td><th scope="col" class="itremTD"><?php echo $row['IdCiudadResidencia']; ?></th></td>
       
     </tr>
     <tr>
@@ -226,9 +226,58 @@ while($row = mysqli_fetch_assoc($result_tasks)) { ?>
     </tr>
 
     <tr>
-      <th scope="row">idGenero</th>
+      <th scope="row">Genero</th>
       <td>-</td>
-      <td><th scope="col" class="itremTD"><?php echo $row['idGenero']; ?></th></td>
+      <td><th scope="col" class="itremTD"><?php echo $row['Genero']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">Actividad</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['Actividad']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">Interes</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['Interes']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">OrigenBD</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['OrigenBD']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">Fecha Actualizacion</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['FechaActualizacion']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">Evento</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['Evento']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">Asistencia</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['Asistencia']; ?></th></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">InvitadoPor</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['InvitadoPor']; ?></th></td>
+      
+    </tr>
+
+    <tr>
+      <th scope="row">IdRangoEdad</th>
+      <td>-</td>
+      <td><th scope="col" class="itremTD"><?php echo $row['IdRangoEdad']; ?></th></td>
       
     </tr>
     </tr>
