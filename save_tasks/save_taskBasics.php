@@ -40,6 +40,9 @@ if (isset($_POST['save_taskBasics'])) {
   $IdDepartamentoResidencia= $_POST['IdDepartamentoResidencia'];
   $IdCiudadResidencia= $_POST['IdCiudadResidencia'];
 
+  $FechaActualizacion= $_POST['FechaActualizacion'];
+  $TratamientoPersonal= $_POST['TratamientoPersonal'];
+
 
  
  
@@ -56,7 +59,8 @@ if (isset($_POST['save_taskBasics'])) {
     Tratamiento,Acompanantes,Genero,IdCiudadEmpresa,Asistencia,Actividad,
     IdRangoEdad,Interes,Estado,Evento,OrigenBD,InvitadoPor,
 
-    IdDepartamentoEmpresa,IdDepartamentoResidencia,IdCiudadResidencia
+    IdDepartamentoEmpresa,IdDepartamentoResidencia,IdCiudadResidencia,
+    FechaActualizacion,TratamientoPersonal
 
     ) 
   VALUES (
@@ -67,8 +71,9 @@ if (isset($_POST['save_taskBasics'])) {
     
     
     $Tratamiento, $Acompanantes, $Genero, $IdCiudadEmpresa, $Asistencia, $Actividad,
-    $IdRangoEdad, $Interes, $Estado, $Evento, $InvitadoPor, 
-    $IdDepartamentoEmpresa, $IdDepartamentoResidencia, $IdCiudadResidencia  )";
+    $IdRangoEdad, $Interes, $Estado, $Evento,$OrigenBD, $InvitadoPor, 
+    $IdDepartamentoEmpresa, $IdDepartamentoResidencia, $IdCiudadResidencia,
+    '$FechaActualizacion','$TratamientoPersonal')";
   $result = mysqli_query($conn, $query);
   if(!$result) {
     die("Query Failed.");

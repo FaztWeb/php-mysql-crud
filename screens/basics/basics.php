@@ -9,7 +9,7 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!--  ESTILOS CSS -->
-    <link rel="stylesheet" href="./Assets/styless.css" >
+    <link rel="stylesheet" href="./Assets/stylex.css" >
     <!--  TIPO GRAFIA -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,7 +64,10 @@
                                         </select>
                                     </div> 
                                 </div>
-
+                                <div class="form-group item">
+                                    <label  class="control-label">Tratamiento Personal</label>
+                                    <input type="text" class="form-control"  name="TratamientoPersonal" placeholder="Tratamiento Personal">
+                                </div>
                                 <div class="form-group item">
                                     <label  class="control-label">Nombre</label>
                                     <input type="text" class="form-control"  name="Nombres" placeholder="Nombre">
@@ -214,6 +217,11 @@
 
                                         </select>
                                     </div>  
+                                </div>
+
+                                <div class="form-group item">
+                                    <label  class="control-label">Fecha Actualizacion</label>
+                                    <input type="text" class="form-control"  name="FechaActualizacion" placeholder="Fecha Actualizacion">
                                 </div>
 
                                 
@@ -377,7 +385,7 @@
 
                                 <div class="form-group itemTwo   ">
                                 <div class="selectItems">
-                                        <label  class="control-label">Departamento Residencia</label>
+                                        <label  class="control-label">Departamento Empresa</label>
                                     <select class="form-control " name="IdDepartamentoEmpresa">
                                             <?php
                                                 $query = "SELECT * FROM departamento";
