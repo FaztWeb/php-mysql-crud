@@ -3,13 +3,13 @@
 <?php include('../includes/header.php'); ?>
 
 <main class="container p-4">
-  <script>
-      function confirmacion(){
-        const response = confirm("esta seguro que quiere eliminar el registro?");
-        if(respuesta===true){
+  <script type="text/javascript">
+      function confirmacion(e){
+        var response = confirm("esta seguro que quiere eliminar el registro?");
+        if(respuesta == true){
           return true;
         }else{
-          return false
+          e.preventDefault();
         }
       }
   </script>
@@ -36,7 +36,7 @@
           </div>
           <div style=" display: flex;justify-content: center;align-items: center;">
               <input 
-              class="btn btn-outline-success btn-block" 
+              class="btn btn-outline-success btn-block table__item__link" 
               style="border-radius:6px;width:12em;" 
               type="submit" 
               name="save_task" 

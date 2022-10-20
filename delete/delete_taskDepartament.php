@@ -2,6 +2,8 @@
 
 include("../dbConnect/db.php"); 
 
+
+
 if(isset($_GET['IdDepartamento'])) {
   $IdDepartamento = $_GET['IdDepartamento'];
   $query = "DELETE FROM departamento WHERE IdDepartamento = $IdDepartamento";
