@@ -21,7 +21,6 @@ if (isset($_POST['save_taskBasics'])) {
   $CelularPersonal= $_POST['CelularPersonal'];
   $CorreoPersonal = $_POST['CorreoPersonal'];
   $Cedula= $_POST['Cedula'];
-
   $Tratamiento= $_POST['Tratamiento'];
   $Acompanantes= $_POST['Acompanantes'];
   $Genero= $_POST['Genero'];
@@ -34,45 +33,27 @@ if (isset($_POST['save_taskBasics'])) {
   $Evento= $_POST['Evento'];
   $OrigenBD= $_POST['OrigenBD'];
   $InvitadoPor= $_POST['InvitadoPor'];
-
-  
   $IdDepartamentoEmpresa= $_POST['IdDepartamentoEmpresa'];
   $IdDepartamentoResidencia= $_POST['IdDepartamentoResidencia'];
   $IdCiudadResidencia= $_POST['IdCiudadResidencia'];
-
   $FechaActualizacion= $_POST['FechaActualizacion'];
   $TratamientoPersonal= $_POST['TratamientoPersonal'];
 
-
- 
- 
-
-
-
-
   $query = "INSERT INTO basicos(
     Nombres, Apellidos, OtroAcompanante, Cargo, Empresa, TelefonoEmpresa, TelefonoEmpresaDirecto, 
-    CelularEmpresa,CorreoEmpresarial,AsistenteSecretaria,CorreoAsistenteSecretaria,
-    DireccionEmpresa,DireccionResidencia,TelefonoResidencia,
-    CelularPersonal,CorreoPersonal,Cedula,
-
-    Tratamiento,Acompanantes,Genero,IdCiudadEmpresa,Asistencia,Actividad,
-    IdRangoEdad,Interes,Estado,Evento,OrigenBD,InvitadoPor,
-
-    IdDepartamentoEmpresa,IdDepartamentoResidencia,IdCiudadResidencia,
-    FechaActualizacion,TratamientoPersonal
-
-    ) 
+    CelularEmpresa,CorreoEmpresarial,AsistenteSecretaria,CorreoAsistenteSecretaria,DireccionEmpresa,
+    DireccionResidencia,TelefonoResidencia,CelularPersonal,CorreoPersonal,Cedula,Tratamiento,
+    Acompanantes,Genero,IdCiudadEmpresa,Asistencia,Actividad,IdRangoEdad,Interes,Estado,Evento,
+    OrigenBD,InvitadoPor,IdDepartamentoEmpresa,IdDepartamentoResidencia,IdCiudadResidencia,
+    FechaActualizacion,TratamientoPersonal)
+     
   VALUES (
     '$Nombres', '$Apellidos','$OtroAcompanante','$Cargo','$Empresa','$TelefonoEmpresa',
     '$TelefonoEmpresaDirecto','$CelularEmpresa','$CorreoEmpresarial','$AsistenteSecretaria',
-    '$CorreoAsistenteSecretaria','$DireccionEmpresa','$DireccionResidencia','$TelefonoResidencia'
-    ,'$CelularPersonal','$CorreoPersonal','$Cedula',
-    
-    
-    $Tratamiento, $Acompanantes, $Genero, $IdCiudadEmpresa, $Asistencia, $Actividad,
-    $IdRangoEdad, $Interes, $Estado, $Evento,$OrigenBD, $InvitadoPor, 
-    $IdDepartamentoEmpresa, $IdDepartamentoResidencia, $IdCiudadResidencia,
+    '$CorreoAsistenteSecretaria','$DireccionEmpresa','$DireccionResidencia','$TelefonoResidencia',
+    '$CelularPersonal','$CorreoPersonal','$Cedula',$Tratamiento, $Acompanantes, $Genero, 
+    $IdCiudadEmpresa, $Asistencia, $Actividad,$IdRangoEdad, $Interes, $Estado, $Evento,
+    $OrigenBD, $InvitadoPor, $IdDepartamentoEmpresa, $IdDepartamentoResidencia, $IdCiudadResidencia,
     '$FechaActualizacion','$TratamientoPersonal')";
   $result = mysqli_query($conn, $query);
   if(!$result) {

@@ -9,9 +9,15 @@ if  (isset($_GET['IdBasicos'])) {
   $result = mysqli_query($conn, $query);
   if (mysqli_num_rows($result) == 1) {
     $row = mysqli_fetch_array($result);
+    
+  $Estado = $row['Estado'];
+  $Tratamiento = $row['Tratamiento'];
+  $TratamientoPersonal = $row['TratamientoPersonal'];
+
   $Nombres = $row['Nombres'];
   $Apellidos= $row['Apellidos'];
   $OtroAcompanante = $row['OtroAcompanante'];
+  
   $Cargo= $row['Cargo'];
   $Empresa= $row['Empresa'];
   $TelefonoEmpresa = $row['TelefonoEmpresa'];

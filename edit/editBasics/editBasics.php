@@ -1,5 +1,9 @@
 <?php
 include('../.././dbConnect/db.php');
+$Tratamiento = '';
+$Acompanantes = '';
+$TratamientoPersonal = '';
+
 $Nombres = '';
 $Apellidos= '';
 $OtroAcompanante= '';
@@ -24,6 +28,10 @@ if  (isset($_GET['IdBasicos'])) {
   $result = mysqli_query($conn, $query);
   if (mysqli_num_rows($result) == 1) {
     $row = mysqli_fetch_array($result);
+    $Tratamiento = $row['Tratamiento'];
+    $Acompanantes = $row['Acompanantes'];
+    $TratamientoPersonal = $row['TratamientoPersonal'];
+
     $Nombres = $row['Nombres'];
     $Apellidos= $row['Apellidos'];
     $OtroAcompanante = $row['OtroAcompanante'];
@@ -46,6 +54,9 @@ if  (isset($_GET['IdBasicos'])) {
 
 if (isset($_POST['update'])) {
   $IdBasicos = $_GET['IdBasicos'];
+  $Tratamiento = $_POST['Tratamiento'];
+  $Acompanantes = $_POST['Acompanantes'];
+  $TratamientoPersonal = $_POST['TratamientoPersonal'];
 
   $Nombres = $_POST['Nombres'];
   $Apellidos= $_POST['Apellidos'];
@@ -66,6 +77,10 @@ if (isset($_POST['update'])) {
   $Cedula= $_POST['Cedula'];
   
   $query = "UPDATE basicos set 
+ Tratamiento = '$Tratamiento',
+ Acompanantes = '$Acompanantes',
+ TratamientoPersonal = '$TratamientoPersonal',
+
    Nombres = '$Nombres',
   Apellidos = '$Apellidos', OtroAcompanante = '$OtroAcompanante',
   Cargo = '$Cargo',Empresa = '$Empresa', TelefonoEmpresa = '$TelefonoEmpresa',
@@ -102,6 +117,51 @@ if (isset($_POST['update'])) {
 <div class="card-body conainer">
     <form action="editBasics.php?IdBasicos=<?php echo $_GET['IdBasicos']; ?>" method="POST">
         <div class="container-space">
+        <div class="form-group item gridSelect select ">
+                                <div class="selectItems">
+                                        <label  class="control-label">Tratamiento Personal</label>
+                                    <select class="form-control " name="Tratamiento">
+                                            <?php
+                                                $query = "SELECT * FROM tratamiento";
+                                                $result_tasks = mysqli_query($conn, $query);
+                                                while($row = mysqli_fetch_array($result_tasks)) { 
+                                                    $idTratamiento=$row['IdTratamiento'];
+                                                    $Tratamiento=$row['Tratamiento'];   
+                                                    ?>
+                                                <option 
+                                                        value="<?php echo $idTratamiento ?>" > <?php echo $row['Tratamiento']; ?>
+                                                </option>
+                                            <?php } ?>
+
+                                        </select>
+                                    </div> 
+                                
+
+                                
+                                <div class="selectItems">
+                                        <label  class="control-label">Acompañantes</label>
+                                    <select class="form-control " name="Acompanantes">
+                                            <?php
+                                                $query = "SELECT * FROM acompanantes";
+                                                $result_tasks = mysqli_query($conn, $query);
+                                                while($row = mysqli_fetch_array($result_tasks)) { 
+                                                    $IdAcompanantes=$row['IdAcompanantes'];
+                                                    $Acompanantes=$row['Acompanantes'];   
+                                                    ?>
+                                                <option 
+                                                        value="<?php echo $IdAcompanantes ?>" > <?php echo $row['Acompanantes']; ?>
+                                                </option>
+                                            <?php } ?>
+
+                                        </select>
+                                    </div> 
+                                </div>
+                                <div class="form-group item">
+                                    <label  class="control-label">Tratamiento Personal</label>
+                                    <input type="text" class="form-control"  name="TratamientoPersonal"value="<?php echo $TratamientoPersonal; ?>" placeholder="Tratamiento Personal">
+                                </div>
+
+
 
                 <div class="form-group item">
                     <label  class="control-label">Nombres</label>
