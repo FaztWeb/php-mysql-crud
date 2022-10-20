@@ -9,7 +9,7 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!--  ESTILOS CSS -->
-    <link rel="stylesheet" href="./Assets/styles.css" >
+    <link rel="stylesheet" href="./Assets/styless.css" >
     <!--  TIPO GRAFIA -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -139,16 +139,16 @@
                                 <div class="form-group item gridSelect select ">
                                 <div class="selectItems">
                                         <label  class="control-label">Interes</label>
-                                    <select class="form-control " name="Tratamiento">
+                                    <select class="form-control " name="Interes">
                                             <?php
-                                                $query = "SELECT * FROM tratamiento";
+                                                $query = "SELECT * FROM intereses";
                                                 $result_tasks = mysqli_query($conn, $query);
                                                 while($row = mysqli_fetch_array($result_tasks)) { 
-                                                    $idTratamiento=$row['IdTratamiento'];
-                                                    $Tratamiento=$row['Tratamiento'];   
+                                                    $IdInteres=$row['IdInteres'];
+                                                    $Interes=$row['Interes'];   
                                                     ?>
                                                 <option 
-                                                        value="<?php echo $idTratamiento ?>" > <?php echo $row['Tratamiento']; ?>
+                                                        value="<?php echo $IdInteres ?>" > <?php echo $row['Interes']; ?>
                                                 </option>
                                             <?php } ?>
 
@@ -159,21 +159,61 @@
                                 
                                 <div class="selectItems">
                                         <label  class="control-label">Rango Edad</label>
-                                    <select class="form-control " name="Acompanantes">
+                                    <select class="form-control " name="IdRangoEdad">
                                             <?php
-                                                $query = "SELECT * FROM acompanantes";
+                                                $query = "SELECT * FROM rangoedad";
                                                 $result_tasks = mysqli_query($conn, $query);
                                                 while($row = mysqli_fetch_array($result_tasks)) { 
-                                                    $IdAcompanantes=$row['IdAcompanantes'];
-                                                    $Acompanantes=$row['Acompanantes'];   
+                                                    $IdRangoEdad=$row['IdRangoEdad'];
+                                                    $RangoEdad=$row['RangoEdad'];   
                                                     ?>
                                                 <option 
-                                                        value="<?php echo $IdAcompanantes ?>" > <?php echo $row['Acompanantes']; ?>
+                                                        value="<?php echo $IdRangoEdad ?>" > <?php echo $row['RangoEdad']; ?>
                                                 </option>
                                             <?php } ?>
 
                                         </select>
                                     </div> 
+                                </div>
+
+                                <div class="form-group item gridSelect select ">
+                                <div class="selectItems">
+                                        <label  class="control-label">Departamento Residencia</label>
+                                    <select class="form-control " name="IdDepartamentoResidencia">
+                                            <?php
+                                                $query = "SELECT * FROM departamento";
+                                                $result_tasks = mysqli_query($conn, $query);
+                                                while($row = mysqli_fetch_array($result_tasks)) { 
+                                                    $IdDepartamento=$row['IdDepartamento'];
+                                                    $Departamento=$row['Departamento'];   
+                                                    ?>
+                                                <option 
+                                                        value="<?php echo $IdDepartamento ?>" > <?php echo $row['Departamento']; ?>
+                                                </option>
+                                            <?php } ?>
+
+                                        </select>
+                                    </div> 
+                                
+
+                                
+                                    <div class="selectItems">
+                                        <label  class="control-label">Ciudad Residencia </label>
+                                    <select class="form-control " name="IdCiudadResidencia">
+                                            <?php
+                                                $query = "SELECT * FROM ciudades";
+                                                $result_tasks = mysqli_query($conn, $query);
+                                                while($row = mysqli_fetch_array($result_tasks)) { 
+                                                    $IdCiudad=$row['IdCiudad'];
+                                                    $Ciudad=$row['Ciudad'];   
+                                                    ?>
+                                                <option 
+                                                        value="<?php echo $IdCiudad ?>" > <?php echo $row['Ciudad']; ?>
+                                                </option>
+                                            <?php } ?>
+
+                                        </select>
+                                    </div>  
                                 </div>
 
                                 
@@ -208,19 +248,20 @@
                                     <label  class="control-label">CelularPersonal</label>
                                     <input type="text" class="form-control"  name="CelularPersonal" placeholder="CelularPersonal">
                                 </div>
+
                                 <div class="form-group item gridSelect select ">
                                 <div class="selectItems">
                                         <label  class="control-label">Invitado Por</label>
-                                    <select class="form-control " name="Tratamiento">
+                                    <select class="form-control " name="InvitadoPor">
                                             <?php
-                                                $query = "SELECT * FROM tratamiento";
+                                                $query = "SELECT * FROM invitadospor";
                                                 $result_tasks = mysqli_query($conn, $query);
                                                 while($row = mysqli_fetch_array($result_tasks)) { 
-                                                    $idTratamiento=$row['IdTratamiento'];
-                                                    $Tratamiento=$row['Tratamiento'];   
+                                                    $IdInvitadoPor=$row['IdInvitadoPor'];
+                                                    $InvitadoPor=$row['InvitadoPor'];   
                                                     ?>
                                                 <option 
-                                                        value="<?php echo $idTratamiento ?>" > <?php echo $row['Tratamiento']; ?>
+                                                        value="<?php echo $IdInvitadoPor ?>" > <?php echo $row['InvitadoPor']; ?>
                                                 </option>
                                             <?php } ?>
 
@@ -231,22 +272,23 @@
                                 
                                 <div class="selectItems">
                                         <label  class="control-label">Origen BD</label>
-                                    <select class="form-control " name="Acompanantes">
+                                    <select class="form-control " name="OrigenBD">
                                             <?php
-                                                $query = "SELECT * FROM acompanantes";
+                                                $query = "SELECT * FROM origenbd";
                                                 $result_tasks = mysqli_query($conn, $query);
                                                 while($row = mysqli_fetch_array($result_tasks)) { 
-                                                    $IdAcompanantes=$row['IdAcompanantes'];
-                                                    $Acompanantes=$row['Acompanantes'];   
+                                                    $IdOrigenBD=$row['IdOrigenBD'];
+                                                    $OrigenBD=$row['OrigenBD'];   
                                                     ?>
                                                 <option 
-                                                        value="<?php echo $IdAcompanantes ?>" > <?php echo $row['Acompanantes']; ?>
+                                                        value="<?php echo $IdOrigenBD ?>" > <?php echo $row['OrigenBD']; ?>
                                                 </option>
                                             <?php } ?>
 
                                         </select>
                                     </div> 
                                 </div>
+
                                 <div class="form-group itemTwo">
                                     <label  class="control-label">CorreoPersonal</label>
                                     <input type="text" class="form-control"  name="CorreoPersonal" placeholder="CorreoPersonal">
@@ -297,16 +339,16 @@
                                 <div class="form-group item gridSelect select  ">
                                 <div class="selectItems">
                                         <label  class="control-label">Estado</label>
-                                    <select class="form-control " name="IdCiudadEmpresa">
+                                    <select class="form-control " name="Estado">
                                             <?php
-                                                $query = "SELECT * FROM ciudades";
+                                                $query = "SELECT * FROM estado";
                                                 $result_tasks = mysqli_query($conn, $query);
                                                 while($row = mysqli_fetch_array($result_tasks)) { 
-                                                    $IdCiudad=$row['IdCiudad'];
-                                                    $Ciudad=$row['Ciudad'];   
+                                                    $IdEstado=$row['IdEstado'];
+                                                    $Estado=$row['Estado'];   
                                                     ?>
                                                 <option 
-                                                        value="<?php echo $IdCiudad ?>" > <?php echo $row['Ciudad']; ?>
+                                                        value="<?php echo $IdEstado ?>" > <?php echo $row['Estado']; ?>
                                                 </option>
                                             <?php } ?>
 
@@ -315,22 +357,42 @@
 
                                     <div class="selectItems">
                                         <label  class="control-label">Evento</label>
-                                    <select class="form-control " name="Genero">
+                                    <select class="form-control " name="Evento">
                                             <?php
-                                                $query = "SELECT * FROM generos";
+                                                $query = "SELECT * FROM eventos";
                                                 $result_tasks = mysqli_query($conn, $query);
                                                 while($row = mysqli_fetch_array($result_tasks)) { 
-                                                    $IdGenero=$row['IdGenero'];
-                                                    $Genero=$row['Genero'];   
+                                                    $IdEvento=$row['IdEvento'];
+                                                    $Evento=$row['Evento'];   
                                                     ?>
                                                 <option 
-                                                        value="<?php echo $IdGenero ?>" > <?php echo $row['Genero']; ?>
+                                                        value="<?php echo $IdEvento ?>" > <?php echo $row['Evento']; ?>
                                                 </option>
                                             <?php } ?>
 
                                         </select>
                                     </div> 
 
+                                </div>
+
+                                <div class="form-group itemTwo   ">
+                                <div class="selectItems">
+                                        <label  class="control-label">Departamento Residencia</label>
+                                    <select class="form-control " name="IdDepartamentoEmpresa">
+                                            <?php
+                                                $query = "SELECT * FROM departamento";
+                                                $result_tasks = mysqli_query($conn, $query);
+                                                while($row = mysqli_fetch_array($result_tasks)) { 
+                                                    $IdDepartamento=$row['IdDepartamento'];
+                                                    $Departamento=$row['Departamento'];   
+                                                    ?>
+                                                <option 
+                                                        value="<?php echo $IdDepartamento ?>" > <?php echo $row['Departamento']; ?>
+                                                </option>
+                                            <?php } ?>
+
+                                        </select>
+                                    </div>
                                 </div>
                                 
 
