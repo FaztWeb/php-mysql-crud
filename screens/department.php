@@ -1,7 +1,7 @@
 <!-- INCLUIR BASE DE DATOS Y HEADER -->
 <?php include("../dbConnect/db.php"); ?>
 <?php include('../includes/header.php'); ?>
-
+<meta charset="UTF-8">
 <main class="container p-4">
   <script type="text/javascript">
       function confirmDelete(){

@@ -30,7 +30,7 @@ body{font-family: 'Dosis', sans-serif!important;
 }
 .container-space{
     margin: 25px;
-    height: 39em;
+    height: 62em;
 }
 .item{
     margin: 10px;
@@ -70,7 +70,7 @@ body{font-family: 'Dosis', sans-serif!important;
 
 .searchForm{
 display: grid;
-grid-template-columns: 25% 25% 25% 25%;
+grid-template-columns:  50% 50%;
 }
 
 .search{
@@ -83,10 +83,33 @@ grid-template-columns: 25% 25% 25% 25%;
    font-size: 22px;
 }
 
-.form-control{
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
+
+.paginador ul{
+    padding: 15px;
+    list-style: none;
+    background: white;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+
 }
+
+.paginador a, .pageSelected{
+    color: #428bca;
+    border: 1px solid #ddd;
+    padding: 5px;
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    width: 35px;
+}
+
+.paginador a:hover{
+    background:#ddd ;
+}
+.pageSelected{
+    color: rgb(14, 13, 13);
+    
+    border: 1px solid #428bca;
+}
+

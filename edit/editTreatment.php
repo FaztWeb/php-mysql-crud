@@ -28,6 +28,7 @@ if (isset($_POST['update'])) {
 
 ?>
 <?php include('../includes/header.php'); ?>
+<meta charset="UTF-8">
 <div class="container p-4">
   <div class="row">
     <div class="col-md-4 mx-auto">

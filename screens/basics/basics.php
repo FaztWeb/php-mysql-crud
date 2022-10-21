@@ -4,7 +4,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -28,7 +28,7 @@
 
                                 <div class="form-group item gridSelect select ">
                                 <div class="selectItems">
-                                        <label  class="control-label">Tratamiento Personal</label>
+                                        <label  class="control-label">Tratamiento</label>
                                     <select class="form-control " name="Tratamiento">
                                             <?php
                                                 $query = "SELECT * FROM tratamiento";
@@ -222,7 +222,7 @@
 
                                 <div class="form-group item">
                                     <label  class="control-label">Fecha Actualizacion</label>
-                                    <input type="text" class="form-control"  name="FechaActualizacion" placeholder="Fecha Actualizacion">
+                                    <input type="date" class="form-control"  name="FechaActualizacion" placeholder="Fecha Actualizacion">
                                 </div>
 
                                 
