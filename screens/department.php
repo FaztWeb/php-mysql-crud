@@ -12,7 +12,6 @@
           return false
         }
       }
-
   </script>
   <div class="row">
     <div class="col-md-4">

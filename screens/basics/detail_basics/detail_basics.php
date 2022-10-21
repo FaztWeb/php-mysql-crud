@@ -22,10 +22,10 @@
 
 
   <main class="container p-4">
-  <script>
-      function confirmacion(){
-        const response = confirm("esta seguro que quiere eliminar el registro?");
-        if(respuesta==true){
+  <script type="text/javascript">
+      function confirmDelete(){
+        var respuesta = confirm("esta seguro que quiere eliminar el registro?");
+        if(respuesta === true){
           return true;
         }else{
           return false
@@ -150,7 +150,7 @@ if(isset($_GET['enviar'])){
               <!-- REDIRECCION ELIMINAR -->
               <a href="../../../delete/delete_taskBasics.php?IdBasicos=<?php echo $row['IdBasicos']?>" 
               class="btn btn-danger"
-              onclick="return confirmacion()"
+              onclick="return confirmDelete()"
               >
               <!-- ICONO ELIMINAR -->
                 <i class="far fa-trash-alt"></i>
