@@ -4,14 +4,15 @@
 
 <main class="container p-4">
   <script type="text/javascript">
-      function confirmacion(e){
-        var response = confirm("esta seguro que quiere eliminar el registro?");
-        if(respuesta == true){
+      function confirmDelete(){
+        var respuesta = confirm("esta seguro que quiere eliminar el registro?");
+        if(respuesta === true){
           return true;
         }else{
-          e.preventDefault();
+          return false
         }
       }
+
   </script>
   <div class="row">
     <div class="col-md-4">
@@ -89,7 +90,7 @@
               <a 
               href="../delete/delete_taskDepartament.php?IdDepartamento=<?php echo $row['IdDepartamento']?>" 
               class="btn btn-danger"
-              onclick="return confirmacion()"
+              onclick="return confirmDelete()"
               >
               <!-- ICONO ELIMINAR -->
                 <i class="far fa-trash-alt"></i>
