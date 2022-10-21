@@ -9,7 +9,7 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
       <!--  ESTILOS CSS -->
-      <link rel="stylesheet" href="../Assets/style.css" >
+      <link rel="stylesheet" href="../Assets/stylex.css" >
       <!--  TIPO GRAFIA -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,10 +70,10 @@
                   placeholder="Ejemplo: adriana" 
                   aria-label="Recipient's username" 
                   aria-describedby="basic-addon2"
-                  style="border-radius:6px;margin-left:4.75em;"
+                  style="border-radius:6px;margin-left:4.50em; "
                   >
 
-                  <div style="width:3.5em; padding-left:8px;" class="search">
+                  <div style="width:5em; padding-left:8px;" class="search">
                     <input 
                       type="submit" 
                       name="enviar"
