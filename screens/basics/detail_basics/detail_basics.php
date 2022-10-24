@@ -117,6 +117,24 @@
 
         <?php
 
+        $sql_registe = mysqli_query($conn, "SELECT COUNT(*) AS all_registers FROM basicos WHERE statusNumber = 1");
+        $result_register = mysqli_fetch_array($sql_registe);
+        $all_registers = $result_register['all_registers'];
+
+        $for_page = 50;
+
+        if(empty($_GET['page'])){
+          $page = 1;
+        }else{
+          $page =$_GET['page'];
+        };
+
+
+
+$since = ($page-1) * $for_page;
+$all_pages = ceil($all_registers / $for_page);
+
+
 if(isset($_GET['enviar'])){
   $busqueda = $_GET['busqueda'];
 
@@ -124,7 +142,7 @@ if(isset($_GET['enviar'])){
           OR Apellidos LIKE '%$busqueda%' 
           OR Empresa LIKE '%$busqueda%'
           OR TelefonoEmpresa LIKE '%$busqueda%'
-          OR CelularEmpresa LIKE '%$busqueda%'";
+          OR CelularEmpresa LIKE '%$busqueda%' LIMIT $since,$for_page ";
         //
           $result_tasks = mysqli_query($conn, $query);
           
@@ -191,19 +209,5 @@ if(isset($_GET['enviar'])){
 
 
 
-<?php
-  /*     if(isset($_GET['enviar'])){
-        $busqueda = $_GET['busqueda'];
-
-        $consulta = $conn->query("SELECT * FROM basicos WHERE Nombres  LIKE '%$busqueda%'");
-
-        while($row = $consulta->fetch_array()){
-          echo $row['Nombres']; 
-        }
-      } */
-?>
-
-
-
-
+<!-- UPDATE basicos SET statusNumber = 1; -->
 
