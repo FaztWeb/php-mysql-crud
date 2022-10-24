@@ -48,7 +48,7 @@
       </h1>
   </div>
   <div>
-      <form  action="detail_basics.php" method="get" class="searchForm">
+     <!--  <form  action="detail_basics.php" method="get" class="searchForm">
           
           <div class="input-group mb-3">
                 <div class="input-group-append">
@@ -92,7 +92,7 @@
             </a>
           </div>
           <p>Clik en Enviar para desplegar datos </p>
-      </form>
+      </form> -->
 
         
   </div>
@@ -107,8 +107,12 @@
             <th scope="col">Apellidos</th>
 
             <th scope="col">Empresa</th>
-            <th scope="col">TelefonoEmpresa</th>
-            <th scope="col">CelularEmpresa</th>
+            <th scope="col">Telefono Empresa Directo</th>
+            <th scope="col">ciudad Residencia</th>
+            <th scope="col">CiudadEmpresa</th>
+
+            
+            
             
             <th scope="col">Acccion</th>
           </tr>
@@ -135,19 +139,20 @@ $since = ($page-1) * $for_page;
 $all_pages = ceil($all_registers / $for_page);
 
 
-if(isset($_GET['enviar'])){
-  $busqueda = $_GET['busqueda'];
-
-          $query = "SELECT * FROM basicos WHERE Nombres  LIKE '%$busqueda%' 
-          OR Apellidos LIKE '%$busqueda%' 
-          OR Empresa LIKE '%$busqueda%'
-          OR TelefonoEmpresa LIKE '%$busqueda%'
-          OR CelularEmpresa LIKE '%$busqueda%' LIMIT $since,$for_page ";
-        //
-          $result_tasks = mysqli_query($conn, $query);
+$query = mysqli_query($conn,"SELECT b.IdBasicos, b.Nombres, b.Apellidos, b.Empresa, b.TelefonoEmpresaDirecto, b.CelularEmpresa, 
+                                    c.Ciudad AS ciudadResidencia,s.Ciudad AS CiudadEmpresa
+                                    FROM basicos b 
+                                    INNER JOIN ciudades c ON b.IdCiudadResidencia = c.IdCiudad
+                                    INNER JOIN ciudades s ON b.IdCiudadEmpresa = s.IdCiudad;
+                                    ");
+                                  
+          $results = mysqli_num_rows($query);
+          if($results > 0){
+            while($row = mysqli_fetch_array($query)) { ?>
+          
           
 
-          while($row = $result_tasks->fetch_array()) { ?>
+          
           <!-- DATOS A ITERAR --> 
           <tr>
           <td class="itremTD"><a href="../detail_basics_id/detail_basics_id.php?IdBasicos=<?php echo $row['IdBasicos']?>"><?php echo $row['IdBasicos']; ?></a></td>
@@ -156,8 +161,13 @@ if(isset($_GET['enviar'])){
             <td class="itremTD"><?php echo $row['Apellidos']; ?></td>
 
             <td class="itremTD"><?php echo $row['Empresa']; ?></td>
-            <td class="itremTD"><?php echo $row['TelefonoEmpresa']; ?></td>
+            <td class="itremTD"><?php echo $row['TelefonoEmpresaDirecto']; ?></td>
             <td class="itremTD"><?php echo $row['CelularEmpresa']; ?></td>
+            <td class="itremTD"><?php echo $row['ciudadResidencia']; ?></td>
+            <td class="itremTD"><?php echo $row['CiudadEmpresa']; ?></td>
+
+           
+            
             <!-- EDITAR DATOS  -->
             <td class="itremTD" >
               <!-- REDIRECCION EDITAR -->
@@ -176,19 +186,23 @@ if(isset($_GET['enviar'])){
             </td>
           </tr>
 
-          
-          <?php }} ?>
+          <?php
+          }
+           } ?>
         </tbody>
       </table>
       <div class="paginador">
             <ul>
                 <li><a href="#">|<</a></li> <!-- 7:51 Paginador con php y mysql-21 -->
                 <li><a href="#"><<</a></li>
-                <li class="pageSelected">1</li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
+                <?php
+                for($i=1; $i < $all_pages; $i++){
+
+                  echo '<li><a  href="?page='.$i.'">'.$i.'</a></li>';
+                }
+                 ?>
+                
+              
                 <li><a href="#">>></a></li>
                 <li><a href="#">>|</a></li>
 
@@ -210,4 +224,3 @@ if(isset($_GET['enviar'])){
 
 
 <!-- UPDATE basicos SET statusNumber = 1; -->
-

@@ -46,7 +46,40 @@ if  (isset($_GET['IdBasicos'])) {
                             <?php
 
 
-$query = "SELECT * FROM basicos WHERE IdBasicos=$IdBasicos";
+$query = "SELECT 
+
+
+b.IdBasicos,b.TratamientoPersonal, b.Nombres, b.Apellidos, b.OtroAcompanante,b.Cargo, b.Empresa,b.TelefonoEmpresa, b.TelefonoEmpresaDirecto, b.CelularEmpresa,
+b.CorreoEmpresarial,b.AsistenteSecretaria,b.CorreoAsistenteSecretaria,
+b.DireccionEmpresa,b.DireccionResidencia,b.TelefonoResidencia,b.CelularPersonal,
+b.CorreoPersonal,b.Cedula,b.FechaActualizacion,i.Interes, o.OrigenBD,evn.Evento,
+ asi.Asistencia,inv.InvitadoPor,r.RangoEdad,
+
+e.Estado,t.Tratamiento, a.Acompanantes,g.Genero,ac.Actividad,
+
+c.Ciudad AS ciudadRes,s.Ciudad AS CiudadEmpresa,
+d.Departamento AS departamentoEmpresa,dr.Departamento AS departamenResidencia
+
+
+FROM basicos b
+
+INNER JOIN ciudades s ON b.IdCiudadEmpresa = s.IdCiudad
+INNER JOIN ciudades c ON b.IdCiudadResidencia = c.IdCiudad
+INNER JOIN departamento dr ON b.IdDepartamentoResidencia = dr.IdDepartamento 
+INNER JOIN departamento d ON b.IdDepartamentoEmpresa = d.IdDepartamento
+INNER JOIN estado e ON b.Estado = e.IdEstado
+INNER JOIN tratamiento t ON b.Tratamiento = t.IdTratamiento
+INNER JOIN acompanantes a ON b.Acompanantes = a.IdAcompanantes
+INNER JOIN generos g ON b.Genero = g.IdGenero
+INNER JOIN actividades ac ON b.Actividad = ac.IdActividad
+INNER JOIN intereses i ON b.Interes = i.IdInteres
+INNER JOIN origenbd o ON b.OrigenBD = o.IdOrigenBD
+INNER JOIN eventos evn ON b.Evento = evn.IdEvento
+INNER JOIN asistencia asi ON b.Asistencia = asi.IdAsistencia
+INNER JOIN invitadospor inv ON b.InvitadoPor = inv.IdInvitadoPor
+INNER JOIN rangoedad r ON b.IdRangoEdad = r.IdRangoEdad
+
+WHERE IdBasicos=$IdBasicos";
 //
 $result_tasks = mysqli_query($conn, $query);
 
@@ -177,15 +210,15 @@ while($row = mysqli_fetch_assoc($result_tasks)) { ?>
       
     </tr>
     <tr>
-      <th scope="row">IdCiudadEmpresa</th>
+      <th scope="row">Ciudad Empresa</th>
       <td>-</td>
-      <td><th scope="col" class="itremTD"><?php echo $row['IdCiudadEmpresa']; ?></th></td>
+      <td><th scope="col" class="itremTD"><?php echo $row['CiudadEmpresa']; ?></th></td>
       
     </tr>
     <tr>
-      <th scope="row">IdDepartamentoEmpresa</th>
+      <th scope="row">departamento Empresa</th>
       <td>-</td>
-      <td><th scope="col" class="itremTD"><?php echo $row['IdDepartamentoEmpresa']; ?></th></td>
+      <td><th scope="col" class="itremTD"><?php echo $row['departamentoEmpresa']; ?></th></td>
       
     </tr>
     <tr>
@@ -195,15 +228,15 @@ while($row = mysqli_fetch_assoc($result_tasks)) { ?>
       
     </tr>
     <tr>
-      <th scope="row">IdCiudadResidencia</th>
+      <th scope="row">ciudad Residencia</th>
       <td>-</td>
-      <td><th scope="col" class="itremTD"><?php echo $row['IdCiudadResidencia']; ?></th></td>
+      <td><th scope="col" class="itremTD"><?php echo $row['ciudadRes']; ?></th></td>
       
     </tr>
     <tr>
-      <th scope="row">IdDepartamentoResidencia</th>
+      <th scope="row">departamen Residencia</th>
       <td>-</td>
-      <td><th scope="col" class="itremTD"><?php echo $row['IdDepartamentoResidencia']; ?></th></td>
+      <td><th scope="col" class="itremTD"><?php echo $row['departamenResidencia']; ?></th></td>
       
     </tr>
     <tr>
@@ -283,7 +316,7 @@ while($row = mysqli_fetch_assoc($result_tasks)) { ?>
     <tr>
       <th scope="row">IdRangoEdad</th>
       <td>-</td>
-      <td><th scope="col" class="itremTD"><?php echo $row['IdRangoEdad']; ?></th></td>
+      <td><th scope="col" class="itremTD"><?php echo $row['RangoEdad']; ?></th></td>
       
     </tr>
     </tr>
@@ -304,4 +337,24 @@ while($row = mysqli_fetch_assoc($result_tasks)) { ?>
 
 
 
-                               
+
+                               <!-- SELECT 
+ 
+ inv.InvitadoPor,
+r.RangoEdad,
+
+
+c.Ciudad AS ciudadRes,s.Ciudad AS CiudadEmpresa, 
+d.Departamento AS departamentoEmpresa,dr.Departamento AS departamenResidencia
+
+FROM basicos b
+
+
+
+ INNER JOIN invitadospor inv ON b.InvitadoPor = inv.IdInvitadoPor
+INNER JOIN rangoedad r ON b.IdRangoEdad = r.IdRangoEdad
+
+WHERE IdBasicos=$IdBasicos -->
+
+
+<!-- SELECT * FROM basicos WHERE IdBasicos=$IdBasicos -->

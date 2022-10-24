@@ -32,16 +32,16 @@
       <div class="card card-body">
         <form action="../save_tasks/save_taskUsers.php" method="POST">
           <div class="form-group">
-            <input type="text" name="Usuario" class="form-control" placeholder="Usuario" autofocus>
+            <input type="text" name="Usuario" class="form-control" placeholder="Usuario" required autofocus>
           </div>
           <div class="form-group">
-            <input type="text" name="clave" class="form-control" placeholder="clave" autofocus>
+            <input type="text" name="clave" class="form-control" placeholder="clave" required autofocus>
           </div>
           <div class="form-group">
-            <input type="text" name="Nombre" class="form-control" placeholder="Nombre" autofocus>
+            <input type="text" name="Nombre" class="form-control" required placeholder="Nombre" autofocus>
           </div>
           <div class="form-group">
-            <input type="text" name="Nivel" class="form-control" placeholder="Nivel" autofocus>
+            <input type="text" name="Nivel" class="form-control" required placeholder="Nivel" autofocus>
           </div>
           <div style=" display: flex;justify-content: center;align-items: center;">
               <input 
