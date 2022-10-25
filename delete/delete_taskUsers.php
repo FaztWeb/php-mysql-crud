@@ -12,7 +12,7 @@ if(isset($_GET['IdUsuarios'])) {
 
  /*  MENSAJE EMERGENTE CUANDO SE ELIMINA UNA TABLA */
 
- $_SESSION['message'] = 'Dato eliminada con exito!';
+ $_SESSION['message'] = 'Dato eliminado con exito!';
   $_SESSION['message_type'] = 'danger';
   header('Location:../screens/users.php');
 }

@@ -48,7 +48,7 @@
       </h1>
   </div>
   <div>
-      <form  action="detail_basics.php" method="get" class="searchForm">
+  <form  action="detail_basics.php" method="get" class="searchForm">
           
           <div class="input-group mb-3">
                 <div class="input-group-append">
@@ -107,8 +107,12 @@
             <th scope="col">Apellidos</th>
 
             <th scope="col">Empresa</th>
-            <th scope="col">TelefonoEmpresa</th>
-            <th scope="col">CelularEmpresa</th>
+            <th scope="col">Telefono Empresa Directo</th>
+            <th scope="col">ciudad Residencia</th>
+            <th scope="col">CiudadEmpresa</th>
+
+            
+            
             
             <th scope="col">Acccion</th>
           </tr>
@@ -117,19 +121,40 @@
 
         <?php
 
-if(isset($_GET['enviar'])){
-  $busqueda = $_GET['busqueda'];
+        $sql_registe = mysqli_query($conn, "SELECT COUNT(*) AS all_registers FROM basicos WHERE statusNumber = 1");
+        $result_register = mysqli_fetch_array($sql_registe);
+        $all_registers = $result_register['all_registers'];
 
-          $query = "SELECT * FROM basicos WHERE Nombres  LIKE '%$busqueda%' 
-          OR Apellidos LIKE '%$busqueda%' 
-          OR Empresa LIKE '%$busqueda%'
-          OR TelefonoEmpresa LIKE '%$busqueda%'
-          OR CelularEmpresa LIKE '%$busqueda%'";
-        //
-          $result_tasks = mysqli_query($conn, $query);
+        $for_page = 50;
+
+        if(empty($_GET['page'])){
+          $page = 1;
+        }else{
+          $page =$_GET['page'];
+        };
+
+
+
+$since = ($page-1) * $for_page;
+$all_pages = ceil($all_registers / $for_page);
+
+
+$query = mysqli_query($conn,"SELECT b.IdBasicos, b.Nombres, b.Apellidos, b.Empresa, b.TelefonoEmpresaDirecto, b.CelularEmpresa, 
+                                    c.Ciudad AS ciudadResidencia,s.Ciudad AS CiudadEmpresa
+                                    FROM basicos b 
+                                    INNER JOIN ciudades c ON b.IdCiudadResidencia = c.IdCiudad
+                                    INNER JOIN ciudades s ON b.IdCiudadEmpresa = s.IdCiudad WHERE statusNumber = 1
+                                    ORDER BY b.IdBasicos ASC 
+                                    LIMIT $since,$for_page
+                                    ");
+                                  
+          $results = mysqli_num_rows($query);
+          if($results > 0){
+            while($row = mysqli_fetch_array($query)) { ?>
+          
           
 
-          while($row = $result_tasks->fetch_array()) { ?>
+          
           <!-- DATOS A ITERAR --> 
           <tr>
           <td class="itremTD"><a href="../detail_basics_id/detail_basics_id.php?IdBasicos=<?php echo $row['IdBasicos']?>"><?php echo $row['IdBasicos']; ?></a></td>
@@ -138,8 +163,13 @@ if(isset($_GET['enviar'])){
             <td class="itremTD"><?php echo $row['Apellidos']; ?></td>
 
             <td class="itremTD"><?php echo $row['Empresa']; ?></td>
-            <td class="itremTD"><?php echo $row['TelefonoEmpresa']; ?></td>
+            <td class="itremTD"><?php echo $row['TelefonoEmpresaDirecto']; ?></td>
             <td class="itremTD"><?php echo $row['CelularEmpresa']; ?></td>
+            <td class="itremTD"><?php echo $row['ciudadResidencia']; ?></td>
+            <td class="itremTD"><?php echo $row['CiudadEmpresa']; ?></td>
+
+           
+            
             <!-- EDITAR DATOS  -->
             <td class="itremTD" >
               <!-- REDIRECCION EDITAR -->
@@ -158,22 +188,40 @@ if(isset($_GET['enviar'])){
             </td>
           </tr>
 
-          
-          <?php }} ?>
+          <?php
+          }
+           } ?>
         </tbody>
       </table>
       <div class="paginador">
             <ul>
-                <li><a href="#">|<</a></li> <!-- 7:51 Paginador con php y mysql-21 -->
-                <li><a href="#"><<</a></li>
-                <li class="pageSelected">1</li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">>></a></li>
-                <li><a href="#">>|</a></li>
 
+            <?php
+            if($page != 1){
+
+            
+            ?>
+                <li><a href="?page=<?php echo 1; ?>">|<</a></li> <!-- 7:51 Paginador con php y mysql-21 -->
+                <li><a href="?page=<?php echo $page -1; ?>"><<</a></li>
+                <?php
+}
+                for($i=1; $i < $all_pages; $i++){
+                  if($i == $page){
+                    echo '<li class="pageSelected" >'.$i.'</li>';
+                  }else{
+                    echo '<li><a  href="?page='.$i.'">'.$i.'</a></li>';
+                  }
+                 
+                }
+                if($page != $all_pages){
+
+                
+                 ?>
+                
+              
+                <li><a href="?page=<?php echo $page +1; ?>">>></a></li>
+                <li><a href="?page=<?php echo $all_pages; ?>">>|</a></li>
+            <?php  } ?>
             </ul>
       </div>
     </div>
@@ -191,14 +239,4 @@ if(isset($_GET['enviar'])){
 
 
 
-<?php
-  /*     if(isset($_GET['enviar'])){
-        $busqueda = $_GET['busqueda'];
-
-        $consulta = $conn->query("SELECT * FROM basicos WHERE Nombres  LIKE '%$busqueda%'");
-
-        while($row = $consulta->fetch_array()){
-          echo $row['Nombres']; 
-        }
-      } */
-?>
+<!-- UPDATE basicos SET statusNumber = 1; -->
