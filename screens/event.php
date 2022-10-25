@@ -32,7 +32,7 @@
       <div class="card card-body">
         <form action="../save_tasks/save_taskEvent.php" method="POST">
           <div class="form-group">
-            <input type="text" name="Evento" class="form-control" placeholder="Evento" autofocus>
+            <input type="text" name="Evento" class="form-control" placeholder="Evento" required autofocus>
           </div>
           <div class="form-group">
             <input type="date" name="Fecha" class="form-control" placeholder="Fecha del Evento">

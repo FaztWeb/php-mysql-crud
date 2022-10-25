@@ -32,7 +32,7 @@
       <div class="card card-body">
         <form action="../save_tasks/save_taskState.php" method="POST">
           <div class="form-group">
-            <input type="text" name="Estado" class="form-control" placeholder="Estado" autofocus>
+            <input type="text" name="Estado" class="form-control" placeholder="Estado" required autofocus>
           </div>
           <div class="form-group">
             <textarea name="Observaciones" rows="2" class="form-control" placeholder="Observaciones"></textarea>

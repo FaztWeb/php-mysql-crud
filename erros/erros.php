@@ -7,15 +7,9 @@
 <br>
 <div  class="container text-center">
   <div class="row">
-    <div class="col">
-    <button type="button" class="btn btn-primary btn-lg">Large button</button>
-    </div>
-    <div class="col order-5">
-    <button type="button" class="btn btn-primary btn-lg">Large button</button>
-    </div>
-    <div class="col order-1">
-    <button type="button" class="btn btn-primary btn-lg">Large button</button>
-    </div>
+    
+
+  
   </div>
 </div>
 

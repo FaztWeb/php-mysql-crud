@@ -21,7 +21,7 @@ if (isset($_POST['update'])) {
 
   $query = "UPDATE departamento set Departamento = '$Departamento' WHERE IdDepartamento=$IdDepartamento";
   mysqli_query($conn, $query);
-  $_SESSION['message'] = 'Tabla actualizada con exito!';   /*  MENSAJE EMERGENTE CUANDO SE ACTUALIZA UNA TABLA */
+  $_SESSION['message'] = 'Dato actualizado con exito!';   /*  MENSAJE EMERGENTE CUANDO SE ACTUALIZA UNA TABLA */
   $_SESSION['message_type'] = 'warning';
   header('Location:../screens/department.php');
 }

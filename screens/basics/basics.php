@@ -90,16 +90,16 @@
                                     <input type="text" class="form-control"  name="Empresa" placeholder="Empresa">
                                 </div>
                                 <div class="form-group item">
-                                    <label  class="control-label">TelefonoEmpresa</label>
-                                    <input type="text" class="form-control"  name="TelefonoEmpresa" placeholder="TelefonoEmpresa">
+                                    <label  class="control-label">Telefono Empresa</label>
+                                    <input type="number" class="form-control"  name="TelefonoEmpresa" placeholder="Telefono Empresa">
                                 </div>
                                 <div class="form-group item">
-                                    <label  class="control-label">TelefonoEmpresaDirecto</label>
-                                    <input type="text" class="form-control"  name="TelefonoEmpresaDirecto" placeholder="TelefonoEmpresaDirecto">
+                                    <label  class="control-label">Telefono Empresa Directo</label>
+                                    <input type="number" class="form-control"  name="TelefonoEmpresaDirecto" placeholder="Telefono Empresa Directo">
                                 </div>
                                 <div class="form-group item">
                                     <label  class="control-label">CelularEmpresa</label>
-                                    <input type="text" class="form-control"  name="CelularEmpresa" placeholder="CelularEmpresa">
+                                    <input type="number" class="form-control"  name="CelularEmpresa" placeholder="CelularEmpresa">
                                 </div>
                                 <div class="form-group item gridSelect select  ">
                                 <div class="selectItems">
@@ -230,32 +230,32 @@
                         </div>
                         <div class="container-space">
                                 <div class="form-group itemTwo">
-                                    <label  class="control-label">CorreoEmpresarial</label>
-                                    <input type="text" class="form-control"  name="CorreoEmpresarial" placeholder="CorreoEmpresarial">
+                                    <label  class="control-label">Correo Empresarial</label>
+                                    <input type="email" class="form-control"  name="CorreoEmpresarial" placeholder="Correo Empresarial">
                                 </div>
                                 <div class="form-group itemTwo">
-                                    <label  class="control-label">AsistenteSecretaria</label>
-                                    <input type="text" class="form-control"  name="AsistenteSecretaria" placeholder="AsistenteSecretaria">
+                                    <label  class="control-label">Asistente Secretaria</label>
+                                    <input type="text" class="form-control"  name="AsistenteSecretaria" placeholder="Asistente Secretaria">
                                 </div>
                                 <div class="form-group itemTwo">
                                     <label  class="control-label">CorreoAsistenteSecretaria</label>
-                                    <input type="text" class="form-control"  name="CorreoAsistenteSecretaria" placeholder="CorreoAsistenteSecretaria">
+                                    <input type="email" class="form-control"  name="CorreoAsistenteSecretaria" placeholder="CorreoAsistente Secretaria">
                                 </div>
                                 <div class="form-group itemTwo">
-                                    <label  class="control-label">DireccionEmpresa</label>
-                                    <input type="text" class="form-control"  name="DireccionEmpresa" placeholder="DireccionEmpresa">
+                                    <label  class="control-label">Direccion Empresa</label>
+                                    <input type="text" class="form-control"  name="DireccionEmpresa" placeholder="Direccion Empresa">
                                 </div>
                                 <div class="form-group itemTwo">
-                                    <label  class="control-label">DireccionResidencia</label>
-                                    <input type="text" class="form-control"  name="DireccionResidencia" placeholder="DireccionResidencia">
+                                    <label  class="control-label">Direccion Residencia</label>
+                                    <input type="text" class="form-control"  name="DireccionResidencia" placeholder="Direccion Residencia">
                                 </div>
                                 <div class="form-group itemTwo">
                                     <label  class="control-label">TelefonoResidencia</label>
-                                    <input type="text" class="form-control"  name="TelefonoResidencia" placeholder="TelefonoResidencia">
+                                    <input type="number" class="form-control"  name="TelefonoResidencia" placeholder="Telefono Residencia">
                                 </div>
                                 <div class="form-group itemTwo">
                                     <label  class="control-label">CelularPersonal</label>
-                                    <input type="text" class="form-control"  name="CelularPersonal" placeholder="CelularPersonal">
+                                    <input type="number" class="form-control"  name="CelularPersonal" placeholder="Celular Personal">
                                 </div>
 
                                 <div class="form-group item gridSelect select ">
@@ -300,11 +300,11 @@
 
                                 <div class="form-group itemTwo">
                                     <label  class="control-label">CorreoPersonal</label>
-                                    <input type="text" class="form-control"  name="CorreoPersonal" placeholder="CorreoPersonal">
+                                    <input type="email" class="form-control"  name="CorreoPersonal" placeholder="CorreoPersonal">
                                 </div>
                                 <div class="form-group itemTwo">
                                     <label  class="control-label">Cedula</label>
-                                    <input type="text" class="form-control"  name="Cedula" placeholder="Cedula">
+                                    <input type="number" class="form-control"  name="Cedula" placeholder="Cedula">
                                 </div>
                                 <div class="form-group item gridSelect select  ">
                                 <div class="selectItems">

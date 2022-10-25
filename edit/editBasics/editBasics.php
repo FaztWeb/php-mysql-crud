@@ -150,7 +150,7 @@ if (isset($_POST['update'])) {
    WHERE IdBasicos=$IdBasicos";
 
   mysqli_query($conn, $query);
-  $_SESSION['message'] = 'Tabla actualizada con exito!';   /*  MENSAJE EMERGENTE CUANDO SE ACTUALIZA UNA TABLA */
+  $_SESSION['message'] = 'Dato actualizado con exito!';    /*  MENSAJE EMERGENTE CUANDO SE ACTUALIZA UNA TABLA */
   $_SESSION['message_type'] = 'warning';
   header('Location:../../screens/basics/detail_basics/detail_basics.php');
 }

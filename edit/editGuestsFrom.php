@@ -21,7 +21,7 @@ if (isset($_POST['update'])) {
 
   $query = "UPDATE invitadospor set InvitadoPor = '$InvitadoPor', Observaciones = '$Observaciones' WHERE IdInvitadoPor=$IdInvitadoPor";
   mysqli_query($conn, $query);
-  $_SESSION['message'] = 'Tabla actualizada con exito!';   /*  MENSAJE EMERGENTE CUANDO SE ACTUALIZA UNA TABLA */
+  $_SESSION['message'] = 'Dato actualizado con exito!';     /*  MENSAJE EMERGENTE CUANDO SE ACTUALIZA UNA TABLA */
   $_SESSION['message_type'] = 'warning';
   header('Location:../screens/guestsFrom.php');
 }

@@ -21,7 +21,7 @@ if (isset($_POST['update'])) {
 
   $query = "UPDATE estado set Estado = '$Estado', Observaciones = '$Observaciones' WHERE IdEstado=$IdEstado";
   mysqli_query($conn, $query);
-  $_SESSION['message'] = 'Tabla actualizada con exito!';   /*  MENSAJE EMERGENTE CUANDO SE ACTUALIZA UNA TABLA */
+  $_SESSION['message'] = 'Dato actualizado con exito!';    /*  MENSAJE EMERGENTE CUANDO SE ACTUALIZA UNA TABLA */
   $_SESSION['message_type'] = 'warning';
   header('Location:../screens/state.php');
 }

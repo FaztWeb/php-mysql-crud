@@ -30,7 +30,7 @@
             Buscador
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="../.././seekers/seeker.php">Busqueda Parametrizada</a></li>
+            <li><a class="dropdown-item" href="../.././screens/basics/detail_basics/detail_basics.php">Busqueda Parametrizada</a></li>
           </ul>
         </li>
       </div>
