@@ -48,7 +48,7 @@
       </h1>
   </div>
   <div>
-  <form  action="detail_basics.php" method="get" class="searchForm">
+  <form  action="../../../search/search.php" method="get" class="searchForm">
           
           <div class="input-group mb-3">
                 <div class="input-group-append">
@@ -63,8 +63,9 @@
                 </div>
 
                   <input 
-                  name="busqueda" 
-                  id="campo" 
+                  name="search" 
+                  id="search"
+                  value="<?php echo $search; ?>" 
                   type="text" 
                   class="form-control" 
                   placeholder="Ejemplo: adriana" 
@@ -75,10 +76,9 @@
 
                   <div style="width:5em; padding-left:8px;" class="search">
                     <input 
-                      type="submit" 
-                      name="enviar"
+                    type="submit" 
+                      value="Buscar"
                       class="btn btn-outline-success btn-block">
-                      
                   </a>
               </div>
         </div>
@@ -233,10 +233,3 @@ $query = mysqli_query($conn,"SELECT b.IdBasicos, b.Nombres, b.Apellidos, b.Empre
   </body>
 </html>
 
-
-
-
-
-
-
-<!-- UPDATE basicos SET statusNumber = 1; -->

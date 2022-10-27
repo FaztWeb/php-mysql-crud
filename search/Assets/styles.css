@@ -9,10 +9,14 @@ body{font-family: 'Dosis', sans-serif!important;
 }
 .conainer{
     background-color: rgb(24, 132, 0);
-    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25); 
-    border-radius: 20px;  
-    padding: 20px;
-    margin: 20px;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    padding: 12px;
+    margin: 12px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
 .form-group input, .select{
     width: 80%;
@@ -20,13 +24,13 @@ body{font-family: 'Dosis', sans-serif!important;
 
 .conainer form  {
     background-color:white;
-   
+   border: 2px solid black;
     display: grid;
     grid-template-columns: 50% 50%;
 }
 .container-space{
     margin: 25px;
-    height: 48em;
+    height: 62em;
 }
 .item{
     margin: 10px;
@@ -66,7 +70,7 @@ body{font-family: 'Dosis', sans-serif!important;
 
 .searchForm{
 display: grid;
-grid-template-columns: 25% 25% 25% 25%;
+grid-template-columns:  50% 50%;
 }
 
 .search{
@@ -77,4 +81,34 @@ grid-template-columns: 25% 25% 25% 25%;
 
 .labelTitle{
    font-size: 22px;
+}
+
+
+.paginador ul{
+    padding: 15px;
+    list-style: none;
+    background: white;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.paginador a, .pageSelected{
+    color: #428bca;
+    border: 1px solid #ddd;
+    padding: 5px;
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    width: 35px;
+}
+
+.paginador a:hover{
+    background:#ddd ;
+}
+.pageSelected{
+    color: rgb(14, 13, 13);
+    
+    border: 1px solid #428bca;
 }
