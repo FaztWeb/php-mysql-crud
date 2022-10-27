@@ -224,15 +224,15 @@ LIMIT $since,$for_page
 
             
             ?>
-                <li><a href="?page=<?php echo 1; ?>">|<</a></li> <!-- 7:51 Paginador con php y mysql-21 -->
-                <li><a href="?page=<?php echo $page -1; ?>"><<</a></li>
+                <li><a href="?page=<?php echo 1; ?>&search=<?php echo $search; ?> ">|<</a></li> <!-- 7:51 Paginador con php y mysql-21 -->
+                <li><a href="?page=<?php echo $page -1; ?>&search=<?php echo $search; ?>"><<</a></li>
                 <?php
 }
                 for($i=1; $i < $all_pages; $i++){
                   if($i == $page){
                     echo '<li class="pageSelected" >'.$i.'</li>';
                   }else{
-                    echo '<li><a  href="?page='.$i.'">'.$i.'</a></li>';
+                    echo '<li><a  href="?page='.$i.'&search='.$search.'">'.$i.'</a></li>';
                   }
                  
                 }
@@ -242,8 +242,8 @@ LIMIT $since,$for_page
                  ?>
                 
               
-                <li><a href="?page=<?php echo $page +1; ?>">>></a></li>
-                <li><a href="?page=<?php echo $all_pages; ?>">>|</a></li>
+                <li><a href="?page=<?php echo $page +1; ?>&search=<?php echo $search; ?>">>></a></li>
+                <li><a href="?page=<?php echo $all_pages; ?>&search=<?php echo $search; ?>">>|</a></li>
             <?php  } ?>
             </ul>
       </div>
