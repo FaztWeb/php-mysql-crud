@@ -95,7 +95,7 @@
             <a 
               class="btn btn-outline-success btn-block" 
               style="border-radius:6px;width:12em;" 
-              href="../basics.php">Agregar Basicos
+              href="../screens/basics/basics.php">Agregar Basicos
             </a>
           </div>
           <p>Clik en Enviar para desplegar datos </p>
@@ -180,8 +180,8 @@ LIMIT $since,$for_page
           
           <!-- DATOS A ITERAR --> 
           <tr>
-          <td class="itremTD"><a href="../detail_basics_id/detail_basics_id.php?IdBasicos=<?php echo $row['IdBasicos']?>"><?php echo $row['IdBasicos']; ?></a></td>
-            
+          
+          <td class="itremTD"><a href="../screens/basics/detail_basics_id/detail_basics_id.php?IdBasicos=<?php echo $row['IdBasicos']?>"><?php echo $row['IdBasicos']; ?></a></td>
             <td class="itremTD"><?php echo $row['Nombres']; ?></td>
             <td class="itremTD"><?php echo $row['Apellidos']; ?></td>
 
@@ -196,12 +196,12 @@ LIMIT $since,$for_page
             <!-- EDITAR DATOS  -->
             <td class="itremTD" >
               <!-- REDIRECCION EDITAR -->
-              <a href="../../../edit/editBasics/editBasics.php?IdBasicos=<?php echo $row['IdBasicos']?>" class="btn btn-secondary">
+              <a href="..//edit/editBasics/editBasics.php?IdBasicos=<?php echo $row['IdBasicos']?>" class="btn btn-secondary">
               <!-- ICONO EDITAR -->
                 <i class="fas fa-marker"></i>
               </a>
               <!-- REDIRECCION ELIMINAR -->
-              <a href="../../../delete/delete_taskBasics.php?IdBasicos=<?php echo $row['IdBasicos']?>" 
+              <a href="..//delete/delete_taskBasics.php?IdBasicos=<?php echo $row['IdBasicos']?>" 
               class="btn btn-danger"
               onclick="return confirmDelete()"
               >

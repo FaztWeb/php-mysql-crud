@@ -65,7 +65,7 @@
                   <input 
                   name="search" 
                   id="search"
-                  value="<?php echo $search; ?>" 
+                   
                   type="text" 
                   class="form-control" 
                   placeholder="Ejemplo: adriana" 
