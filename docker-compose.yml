@@ -7,9 +7,9 @@ services:
       context: .
       dockerfile: frontend
       args:
-        MYSQL_DATABASE: php_mysql_crud
-        MYSQL_DEFAULT_USER: root
-        MYSQL_ROOT_PASSWORD: password123
+        MYSQL_DATABASE: ${MYSQL_DATABASE}
+        MYSQL_DEFAULT_USER: ${MYSQL_DEFAULT_USER}
+        MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     restart: always
     ports:
       - 90:90
@@ -22,9 +22,9 @@ services:
     image: mysql:8.0.32
     restart: always
     environment:
-      MYSQL_DATABASE: php_mysql_crud
-      MYSQL_DEFAULT_USER: root
-      MYSQL_ROOT_PASSWORD: password123
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_DEFAULT_USER: ${MYSQL_DEFAULT_USER}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
             
     volumes:
       - db:/var/lib/mysql
