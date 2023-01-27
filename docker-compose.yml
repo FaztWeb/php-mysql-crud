@@ -3,14 +3,16 @@ version: '3.1'
 services:
 
   front:
-    image: 45f967f5b2ad
+    build:
+      context: .
+      dockerfile: frontend
+      args:
+        MYSQL_DATABASE: php_mysql_crud
+        MYSQL_DEFAULT_USER: root
+        MYSQL_ROOT_PASSWORD: password123
     restart: always
     ports:
       - 90:90
-    environment:
-      MYSQL_DATABASE: php_mysql_crud
-      MYSQL_DEFAULT_USER: root
-      MYSQL_ROOT_PASSWORD: password123
     networks:
        back:
          ipv4_address: 10.15.1.15
